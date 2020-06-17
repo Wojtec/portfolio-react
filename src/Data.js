@@ -9,7 +9,7 @@ const Aside = [
     {
       id: 2,
       title: "Contact Details",
-      phone: 602-410-491,
+      phone: "+34 602-410-491",
       email: "poninski.w@gmail.com",
       linkedIn: "https://www.linkedin.com/in/poninski",
       github: "https://github.com/Wojtec",
@@ -39,7 +39,6 @@ const Aside = [
       "EXPRESS.JS",
       "MONGODB",
       "PHP",
-      "LARAVEL",
       "RESTful API",
       "GIT/GITHUB",
       "BITBUCKET",
@@ -56,19 +55,18 @@ const Aside = [
       {
           id: 5,
           title: "Work Experience",
-          description: {
-              title: "Full Stack Web Developer",
+              name: "Full Stack Web Developer",
               school: "Assembler School",
-              date: new Date(7/10/2019),
-              content: "Bootcamp with 9-months intensive programing based of AGILE methodology building real world web applications based on HTML5, CSS3, Sass, JavaScript, Node.js, Express.js, Puppeteer, Vue.js, React, PHP, MySQL, MongoDB, RESTful APIs and Git/GitHub.",
+              date: "7/10/2019",
+              content: "Bootcamp with 9-months intensive programing based of AGILE methodology building real world web applications based on HTML5, CSS3, Sass, JavaScript, Node.js, Express.js, Puppeteer, Vue.js, React, PHP, MySQL, MongoDB, RESTful APIs, MVC pattern and Git/GitHub.",
               projects: {
                   property_app: "The real estate application, user can filter posts, publish posts with images, edit posts, check property on the map, send messages, login, register, update avatar and add post to favorites. Created with back-end: Node.js, Express.js, JWT, MongoDB, Node-Geocoder, Cloudinary, ESlint, Swagger.Front-end: React, mapQuest ",
-                  scraping_data: "Scraping application created for automatically generate and store data in database with images in cloud service. In this application I was used Node.js, Puppeteer, MongoDB and Cloudinary",
+                  scraping_data: "Scraping application created for automatically generate and store data in database with images in MongoDB and cloud service. In this application I was used Node.js, Puppeteer, MongoDB and Cloudinary",
                   music_library: "Music library application consume iTunes API. Users can search songs by name, artists, albums and videoclips, filter by country, by explicit content, and choice result limits. Created with JavaScript, jQuery, AJAX, JSON.",
                   custom_blog: "Blog application using PHP, MySQL and MVC pattern.Users can create, edit, update and publish articles, can login and logout, search for a post by title and contents.",
                   portfolio: "This portfolio application created with React. User can download my curriculum vitae in pdf document."
               }
-          }
+          
       },
       {
         id: 6,

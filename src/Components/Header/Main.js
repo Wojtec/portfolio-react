@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import Image from './Image';
-
+import Content from './Content';
 
 class Header extends Component {
  
 
     render(){
-        const image = this.props.props.image;
+        const image = this.props.image;
 
         return(
-            <div>          
-              <Image img = {image }/>
-            </div>
+            <header>          
+              <Image img = { image }/>
+              <Content/>
+            </header>
         )
     }
 }

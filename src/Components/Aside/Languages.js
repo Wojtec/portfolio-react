@@ -4,8 +4,8 @@ const Languages = (props) =>{
     const {title, polish, spanish, english} = props.props;
     return(
         <section>
-            <div>
-                {title}
+         <h3>{title}</h3>
+            <div className="languages">
                 <p>Polish: {polish}</p>
                 <p>Spainsh: {spanish}</p>
                 <p>English: {english}</p>

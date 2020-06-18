@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Content extends Component {
     render(){
         return(
-            <div>Full Stack Web Developer</div>
+            <div className="content">Junior Web Developer</div>
         )
     }
 }

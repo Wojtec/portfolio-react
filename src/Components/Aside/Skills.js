@@ -5,10 +5,12 @@ const Skills = (props) =>{
 const {title, skills} = props.props;
     return (
         <section>
-            <div>
-                {title}
-                {skills.map((skill)=> {return <p key={skill}>{skill}</p>})}
-            </div>
+          <h3>{title}</h3>
+          <div>
+          <ul className="skills">
+                {skills.map((skill)=> {return <li key={skill}>{skill}</li>})}
+            </ul>
+          </div>
         </section>
     )
 }

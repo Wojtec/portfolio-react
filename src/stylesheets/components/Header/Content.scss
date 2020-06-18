@@ -1,0 +1,12 @@
+.content {
+    width: 50%;
+    margin-left: 45px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    transition: {
+        property: font-size;
+        duration: 4s;
+    };
+    &:hover { font-size: 36px; }
+
+}

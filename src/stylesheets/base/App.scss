@@ -1,0 +1,18 @@
+@import '../components/Header/Main.scss';
+@import '../components/Aside/Main.scss';
+@import '../components/Bside/Main.scss';
+
+.App {
+  text-align: center;
+  width: 1244px;
+  height: auto;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.main{
+  display: flex;
+  background-color: green;
+  height: auto;
+
+}

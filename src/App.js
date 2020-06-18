@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
+
+import './stylesheets/base/App.scss';
+
 import Header from './Components/Header/Main';
 import Aside from './Components/Aside/Main';
 import Bside from './Components/Bside/Main';
@@ -10,7 +12,7 @@ class App extends Component {
     return (
       <Fragment>
        <Header image = { data.image }/>
-       <main className="App">
+       <main className="main">
        <Aside aside = { data.Aside }/>
        <Bside bside = { data.Bside }/>
       </main>

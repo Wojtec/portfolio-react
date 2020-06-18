@@ -2,10 +2,14 @@ import React from 'react';
 
 
 const Profile = (props) =>{
+    const {title, description} = props.props;
     console.log(props);
 return (
     <section>
-        {props.props.description}
+    <h3>{title}</h3>
+    <div className="profile">
+    <p>{description}</p>
+    </div>
     </section>
 )
 }

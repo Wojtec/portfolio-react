@@ -6,8 +6,8 @@ const Education = (props) =>{
     const {title, school} = props.props;
     return (
         <section>
-            <div>
-                {title}
+        <h3>{title}</h3>
+            <div className="education">
                 <p>{school.title}</p>
                 <p>{school.name}</p>
                 <p>{school.description}</p>

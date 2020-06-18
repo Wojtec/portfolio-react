@@ -4,19 +4,18 @@ import React from 'react';
 const Experience = (props) =>{
     const {title, name, school, date, content} = props.props;
     console.log(props.props.date);
-     const {property_app, scraping_data, music_library, custom_blog, portfolio} = props.props.projects;
+     const {title_project, property_app, scraping_data, music_library, custom_blog, portfolio} = props.props.projects;
 
     return (
         <section>
-        <div>
-            {title}
+            <h3>{title}</h3> 
+        <div className="experienceContent">
             <p>{name}</p>
-            <p>{school}</p>
-            <p>{date}</p>
+            <p>{school} {date}</p>
             <p>{content}</p>
         </div>
-        <div>
-            Projects:
+        <h3>{title_project}</h3>
+        <div className= "projects">
             <p>The real estate: {property_app}</p>
             <p>Scraping data maker: {scraping_data}</p>
             <p>Music Library: {music_library}</p>

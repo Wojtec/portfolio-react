@@ -60,6 +60,7 @@ const Aside = [
               date: "7/10/2019",
               content: "Bootcamp with 9-months intensive programing based of AGILE methodology building real world web applications based on HTML5, CSS3, Sass, JavaScript, Node.js, Express.js, Puppeteer, Vue.js, React, PHP, MySQL, MongoDB, RESTful APIs, MVC pattern and Git/GitHub.",
               projects: {
+                  title_project: "Projects",
                   property_app: "The real estate application, user can filter posts, publish posts with images, edit posts, check property on the map, send messages, login, register, update avatar and add post to favorites. Created with back-end: Node.js, Express.js, JWT, MongoDB, Node-Geocoder, Cloudinary, ESlint, Swagger.Front-end: React, mapQuest ",
                   scraping_data: "Scraping application created for automatically generate and store data in database with images in MongoDB and cloud service. In this application I was used Node.js, Puppeteer, MongoDB and Cloudinary",
                   music_library: "Music library application consume iTunes API. Users can search songs by name, artists, albums and videoclips, filter by country, by explicit content, and choice result limits. Created with JavaScript, jQuery, AJAX, JSON.",

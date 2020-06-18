@@ -15,7 +15,7 @@ class Aside extends Component {
         const skills = this.props.aside[3];
 
         return (
-            <aside>
+            <aside className="aside">
             <Profile props = { profile }/>
             <Contact props = { contact }/>
             <Language props = { languages }/>

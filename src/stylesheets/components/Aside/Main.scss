@@ -1,0 +1,14 @@
+//  Font size
+$sFont: 90%;
+
+@import './Profile.scss';
+@import './Contact.scss';
+@import './Languages.scss';
+@import './Skills.scss';
+
+
+.aside{
+    width: 30%;
+    background-color: whitesmoke;
+    position: relative;
+}

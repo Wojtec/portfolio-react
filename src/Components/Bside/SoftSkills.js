@@ -5,8 +5,8 @@ const SoftSkills = (props) => {
 
     return (
         <section>
-            <div>
-                {title}
+              <h3>{title}</h3>
+            <div className= "softSkill">
                 {skills.map(skill => {return <p key={skill}>{skill}</p>})}
             </div>
         </section>

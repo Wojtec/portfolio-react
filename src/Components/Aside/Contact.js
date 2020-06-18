@@ -4,8 +4,8 @@ const Contact = (props) =>{
    const {title, phone, email, linkedIn, github} = props.props;
     return (
         <section>
+       <h3>{title}</h3>
         <div className="contact">
-        {title}
         <p>Phone: {phone}</p>
         <p>Email: {email}</p>
         <p>LinkedIn: {linkedIn}</p>

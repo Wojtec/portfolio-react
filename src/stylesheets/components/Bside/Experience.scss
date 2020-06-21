@@ -1,13 +1,19 @@
 
 .experienceContent {
-    background-color: darksalmon;
+    background-color: whitesmoke;
     font-size: $sFont;
-    margin: 0;
-    padding: 5px;
-    text-align: justify;
-    line-height: 150%;
+    padding: 10px;
 
 }
 .projects {
-    background-color: green;
+    background-color: whitesmoke;
+    font-size: $sFont;
+    padding: 10px;
+}
+.projects p {
+    margin-bottom: 15px;
+}
+.projects p strong{
+    font-size: 22px;
+
 }

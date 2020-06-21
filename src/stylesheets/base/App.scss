@@ -1,18 +1,31 @@
 @import '../components/Header/Main.scss';
 @import '../components/Aside/Main.scss';
 @import '../components/Bside/Main.scss';
+@import '../components/wrapper.scss';
 
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 .App {
+  position: relative;
   text-align: center;
   width: 1244px;
   height: auto;
   margin: 0 auto;
-  background-color: red;
+
 }
 
 .main{
+  position: relative;
   display: flex;
-  background-color: green;
   height: auto;
+  background-color: white;
+  z-index: 20;
 
 }

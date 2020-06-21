@@ -33,6 +33,7 @@ const Aside = [{
   {
     id: 2,
     title: "Contact Details",
+    city: "Barcelona",
     phone: "+34 602-410-491",
     email: "poninski.w@gmail.com",
     linkedIn: "https://www.linkedin.com/in/poninski",

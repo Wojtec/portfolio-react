@@ -10,7 +10,6 @@ class Icon extends Component {
     componentDidMount = async () =>{
         if(this.state.icons.length != 0){
             this.fadeIn();
-
         }
     }
 
@@ -21,24 +20,21 @@ class Icon extends Component {
         return (
             icons.map((icon) => { 
                 let top = Math.floor(Math.random() * (Math.floor(1300) - Math.ceil(100)) + Math.ceil(100));
-                let right = Math.floor(Math.random() * (Math.floor(350) - Math.ceil(50)) + Math.ceil(50));
+                let right = Math.floor(Math.random() * (Math.floor(180) - Math.ceil(50)) + Math.ceil(50));
                 let tt = num % 2;
                    
                         if(tt === 1){
                             num++;
-
-                            return( <img key={icon} className="icon" id={icon} width="200px" height="200px" style={{
+                            return( <img key={icon} className="icon" id={icon} width="150px" height="150px" style={{
                             top:top + 'px',
                             right: right + 'px',
                             }} src={icon} alt="img"></img>
                             )
 
-                        }
-    
-                        if(tt === 0){
+                        }else{
                             num++;
 
-                            return <img key={icon} className="icon" id={icon} width="200px" height="200px" style={{
+                            return <img key={icon} className="icon" id={icon} width="150px" height="150px" style={{
                                 top:top + 'px',
                                 left: right + 'px',
                                 }} src={icon} alt="img"></img>
@@ -56,12 +52,10 @@ class Icon extends Component {
         const icon = document.getElementsByClassName('icon');
         const randomEle = Math.floor(Math.random() * icon.length);
             let op = 0.1;
-            let lot =  icon[randomEle];
-              console.log("rand", randomEle);
-            
-                let inter = window.setInterval(()=>{
-                    lot.style.display = 'block';
-        
+            let lot =  icon[randomEle];            
+            let inter = window.setInterval(()=>{
+                 lot.style.display = 'block';
+    
                     if(op >= 1.0){
                         clearInterval(inter);
                         let opt = 1.0;

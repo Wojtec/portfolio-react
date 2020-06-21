@@ -12,19 +12,15 @@ class App extends Component {
   render(){
     return (
       <Fragment>
-        <div className="container">
         <Wrapper icons = { data.icons }/>
 
         <div className="App">
        <Header image = { data.image }/>
        <main className="main">
-       <img src={data.logos} alt=""/>
        <Aside aside = { data.Aside }/>
        <Bside bside = { data.Bside }/>
       </main>
       </div>
-      </div>
-
       </Fragment>
      
     );

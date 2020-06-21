@@ -82,7 +82,7 @@ const Bside = [{
     title: "Work Experience",
     name: "Full Stack Web Developer",
     school: "Assembler School in Barcelona.",
-    date: "7/10/2019",
+    date: "07/10/2019",
     content: "Bootcamp with 9-months intensive programing based of AGILE methodology building real world web applications based on HTML5, CSS3, Sass, JavaScript, Node.js, Express.js, Puppeteer, Vue.js, React, PHP, MySQL, MongoDB, RESTful APIs, MVC pattern and Git/GitHub.",
     projects: {
       title_project: "Projects",

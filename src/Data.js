@@ -28,7 +28,7 @@ const icons = [
 const Aside = [{
     id: 1,
     title: "Professional Profile",
-    description: "Full Stack Web Developer, my passion for programming began two years ago, since then I have been gaining new experience in this field every day. I have a full-time nine-month bootcamp finished.",
+    description: "Full Stack Web Developer, my passion for programming began two years ago, since then I have been gaining new experience in this field every day. My favorite language is Javascript and everything associated with it.",
   },
   {
     id: 2,

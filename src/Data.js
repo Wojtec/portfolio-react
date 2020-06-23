@@ -36,6 +36,7 @@ const Aside = [{
     city: "Barcelona",
     phone: "+34 602-410-491",
     email: "poninski.w@gmail.com",
+    portfolio:"https://poninski.herokuapp.com",
     linkedIn: "https://www.linkedin.com/in/poninski",
     github: "https://github.com/Wojtec",
 

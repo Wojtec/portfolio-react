@@ -9,16 +9,16 @@ const Experience = (props) =>{
     return (
         <Fragment>
         <section>
-            <h3>{title}</h3> 
         <div className="experienceContent">
+            <h3>{title}</h3> 
             <p>{date} - {school}</p>
             <p><strong>{name}</strong></p>
             <p>{content}</p>
         </div>
         </section>
         <section>
-        <h3>{title_project}</h3>
         <div className= "projects">
+            <h3>{title_project}</h3>
             <p><strong>The real estate: </strong>{property_app}</p>
             <p><strong>Scraping data maker:</strong> {scraping_data}</p>
             <p><strong>Music Library:</strong> {music_library}</p>

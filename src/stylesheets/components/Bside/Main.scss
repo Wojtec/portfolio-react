@@ -1,31 +1,28 @@
 //font size
-$sFont: 18px;
+$sFont: 15px;
 
 @import './Experience.scss';
 @import './Education.scss';
 @import './SoftSkills.scss';
 
-@mixin box-shadow($params...) {
-    -webkit-box-shadow: $params;
-    -moz-box-shadow: $params;
-    box-shadow: $params;
-  }
+
 .bside{
     width: 100%;
-
+    text-align: left;
 }
 .bside section{
     padding: 10px;
 }
 .bside h3{
-    border: solid 1px black;
-    padding: 15px;
+    padding: 10px;
     background-color: gainsboro;
     margin-top: 0px;
 
 }
 .bside p {
-    font-size: 18px;
+    padding: 2px;
+    margin: 2px;
+    font-size: 15px;
     line-height: 1.6;
     text-align: left;
 

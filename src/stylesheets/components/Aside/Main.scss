@@ -1,40 +1,38 @@
 //  Font size
-$sFont: 18px;
+$sFont: 15px;
 
 @import './Profile.scss';
 @import './Contact.scss';
 @import './Languages.scss';
 @import './Skills.scss';
-@mixin box-shadow($params...) {
-    -webkit-box-shadow: $params;
-    -moz-box-shadow: $params;
-    box-shadow: $params;
-  }
+
 
 .aside{
 
-    width: auto;
+    width: 50%;
     position: relative;
 }
 .aside section{
     padding: 10px;
+
 }
 .aside h3{
-    border: solid 1px black;
-    padding: 15px;
+    padding: 10px;
     background-color: gainsboro;
     margin-top: 0px;
 }
 
 .aside p {
-    width: 400px;
-    font-size: 18px;
+    padding: 2px;
+    margin: 2px;
+    font-size: $sFont;
     line-height: 1.6;
     text-align: left;
     
 }
+
 .aside li {
-    font-size: 18px;
+    font-size: $sFont;
     line-height: 1.6;
     text-align: left;
 

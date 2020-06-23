@@ -6,8 +6,8 @@ const Profile = (props) =>{
     console.log(props);
 return (
     <section>
-    <h3>{title}</h3>
     <div className="profile">
+    <h3>{title}</h3>
     <p>{description}</p>
     </div>
     </section>

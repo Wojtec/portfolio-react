@@ -6,7 +6,7 @@ import Header from './Components/Header/Main';
 import Aside from './Components/Aside/Main';
 import Bside from './Components/Bside/Main';
 import Wrapper from './Components/Wrapper';
-import ButtonPDF from './Components/ButtonPDF';
+import IconBar from './Components/IconBar';
 import data from "./Data";
 
 class App extends Component {
@@ -14,14 +14,13 @@ class App extends Component {
     return (
       <Fragment>
         <Wrapper icons = { data.icons }/>
-
         <div className="App">
        <Header image = { data.image }/>
-       <ButtonPDF/>
-       <main className="main">
+       <IconBar icons = { data.smallImg }/>
+       <section className="main">
        <Aside aside = { data.Aside }/>
        <Bside bside = { data.Bside }/>
-      </main>
+      </section>
       </div>
       </Fragment>
      

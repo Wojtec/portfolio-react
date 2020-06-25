@@ -19,7 +19,7 @@ class Icon extends Component {
 
         return (
             icons.map((icon) => { 
-                let top = Math.floor(Math.random() * (Math.floor(1300) - Math.ceil(100)) + Math.ceil(100));
+                let top = Math.floor(Math.random() * (Math.floor(1100) - Math.ceil(50)) + Math.ceil(50));
                 let right = Math.floor(Math.random() * (Math.floor(180) - Math.ceil(50)) + Math.ceil(50));
                 let tt = num % 2;
                    

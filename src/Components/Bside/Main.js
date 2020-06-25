@@ -11,11 +11,11 @@ class Bside extends Component {
         const softSkill = this.props.bside[2];
 
         return (
-            <aside className="bside">
+            <main className="bside">
                 <Experience props = { experience }/>
                 <Education props = { education }/>
                 <SoftSkill props = { softSkill }/>
-            </aside>
+            </main>
         )
     }
 }

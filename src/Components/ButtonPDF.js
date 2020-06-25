@@ -13,7 +13,7 @@ class Button extends Component {
 render(){
     return(
         <div>
-            <button onClick={()=>this.getPDF()}>Version PDF!</button>
+            <button onClick={()=>this.getPDF()} data-html2canvas-ignore="true">Version PDF!</button>
         </div>
     )
 }

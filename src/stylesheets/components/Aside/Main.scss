@@ -17,14 +17,14 @@ $sFont: 15px;
 
 }
 .aside h3{
+    text-align: left;
     padding: 10px;
     background-color: gainsboro;
     margin-top: 0px;
 }
 
 .aside p {
-    padding: 2px;
-    margin: 2px;
+    padding: 5px;
     font-size: $sFont;
     line-height: 1.6;
     text-align: left;
@@ -35,5 +35,4 @@ $sFont: 15px;
     font-size: $sFont;
     line-height: 1.6;
     text-align: left;
-
 }

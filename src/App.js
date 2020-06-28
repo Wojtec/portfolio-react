@@ -7,6 +7,7 @@ import Aside from './Components/Aside/Main';
 import Bside from './Components/Bside/Main';
 import Wrapper from './Components/Wrapper';
 import IconBar from './Components/IconBar';
+import Navbar from './Components/Navbar';
 import data from "./Data";
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <Fragment>
         <Wrapper icons = { data.icons }/>
+        <Navbar/>
         <div className="App">
        <Header image = { data.image }/>
        <IconBar icons = { data.smallImg }/>

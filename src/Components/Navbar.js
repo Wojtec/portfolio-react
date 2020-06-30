@@ -5,7 +5,7 @@ class Navbar extends Component {
 
     render(){
         return(
-            <section>
+            <nav>
                 <div className="navbar">
                     <ul>
                         <li>
@@ -19,7 +19,7 @@ class Navbar extends Component {
                         </li>
                     </ul>
                 </div>
-            </section>
+            </nav>
         )
     }
 

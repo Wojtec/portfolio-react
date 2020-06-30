@@ -9,11 +9,11 @@ class IconBar extends Component {
     render(){
         return(
             <section>
-                <div>
+                {/* <div>
                     {this.state.icons.map(icon =>{
                         return <img src=''  alt="img"/>
                     })}
-                </div>
+                </div> */}
                 <ButtonPDF/>
             </section>
         )

@@ -48,7 +48,7 @@ const smallImg = [
 const Aside = [{
     id: 1,
     title: "Professional Profile",
-    description: "Full Stack Web Developer, my passion for programming began two years ago, since then I have been gaining new knowledge in this field every day. My favorite language is Javascript and everything associated with it.",
+    description: "My passion for programming began two years ago, since then I have been gaining new knowledge in this field every day. My favorite language is Javascript and everything associated with it.",
   },
   {
     id: 2,
@@ -142,9 +142,9 @@ const Bside = [{
     id: 5,
     title: "Work Experience",
     name: "Full Stack Web Developer",
-    school: "Assembler School in Barcelona.",
+    school: "Assembler School of Software Engineering, Barcelona, Spain",
     date: "07/10/2019",
-    content: "Bootcamp with 9-months intensive programing based of AGILE methodology building real world web applications based on HTML5, CSS3, Sass, JavaScript, Node.js, Express.js, Puppeteer, Vue.js, React, PHP, MySQL, MongoDB, RESTful APIs, MVC pattern and Git/GitHub.",
+    content: "Full time 9-months intensive programing based of AGILE methodology building real world web applications based on HTML5, CSS3, Sass, JavaScript, Node.js, Express.js, Puppeteer, Vue.js, React, PHP, MySQL, MongoDB, RESTful APIs, MVC pattern and Git/GitHub.",
     projects: {
       title_project: "Projects",
       property_app: "The real estate application, user can filter posts, publish posts with images, edit posts, check property on the map, send messages, login, register, update avatar and add post to favorites. Created with back-end: Node.js, Express.js, JWT, MongoDB, Node-Geocoder, Cloudinary, ESlint, Swagger.Front-end: React, mapQuest.",
@@ -160,8 +160,8 @@ const Bside = [{
     title: "Education",
     school: {
       title: "Full Stack Web Developer",
-      name: "Assembler School",
-      description: "7 October 2019 - 12 June 2020 (9 months Bootcamp, more than 1300h).",
+      name: "Assembler School of Software Engineering, Barcelona, Spain",
+      description: "7 October 2019 - 12 June 2020 (9 months Master, more than 1300h).",
     }
   },
   {

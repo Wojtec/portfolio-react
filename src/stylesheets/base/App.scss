@@ -4,6 +4,57 @@
 @import '../components/Navbar.scss';
 @import '../components/wrapper.scss';
 
+
+// Small screen tablets
+$screen-sm-min: 576px;
+
+// Small portatil view
+$screen-md-mim: 768px;
+
+// large desktops
+$screen-lg-min:992px;
+
+// x-large desktops
+$screen-xl-min:1200px;
+// small device
+@mixin sm {
+
+  @media (min-width: #{$screen-sm-min}){
+    @content;
+  }
+
+}
+// medium device
+@mixin md {
+
+  @media (min-width: #{$screen-md-mim}){
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+// x-large device
+@mixin xl {
+
+  @media (min-width: #{$screen-xl-min}){
+    @content;
+  }
+}
+
+// custom device
+@mixin rwd($screen) {
+
+  @media (min-width: #{$screen + 'px'}){
+    @content;
+  }
+  
+}
+
 *{
   margin: 0px;
   padding: 0px;
@@ -14,15 +65,29 @@
   height: 100%;
 }
 .App {
-  position: relative;
-  text-align: center;
-  width: 1244px;
-  height: auto;
-  margin: 0 auto;
+  @include sm {
+    padding: 0 20px;
+  }
+  @include lg {
+    position: relative;
+    text-align: center;
+    width: 1244px;
+    height: auto;
+    margin: 0 auto;
+  }
+  @include rwd(1400) {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 
 }
 
 .main{
+  @include sm {
+    padding: 0 20px;
+  }
+  @include lg {
+
   position: relative;
   display: flex;
   height: auto;
@@ -30,4 +95,11 @@
   z-index: 20;
   padding: 10px;
   margin: 10px;
+  }
+
+  @include rwd(1400) {
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
+}
+

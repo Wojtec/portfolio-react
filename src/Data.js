@@ -1,6 +1,8 @@
 const image = '/image.png';
-
-
+const hero = {
+  img: '/hero.jpg',
+  content: "Hi! My name is Wojtek, I'm a Full Stack Developer"
+}
 const icons = [
   '/img/asana.svg',
   '/img/bitbucket.svg',
@@ -182,5 +184,6 @@ export default {
   Bside,
   image,
   icons,
-  smallImg
+  smallImg,
+  hero
 };

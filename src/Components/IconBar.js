@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import ButtonPDF from './ButtonPDF';
 
 class IconBar extends Component {
     state = {
-        icons: this.props.icons,
+        icons: this.props.icons
     }
-    render(){
-        return(
+    render() {
+        return (
             <section>
                 {/* <div>
                     {this.state.icons.map(icon =>{
@@ -18,8 +18,6 @@ class IconBar extends Component {
             </section>
         )
     }
-
-
 
 }
 export default IconBar;

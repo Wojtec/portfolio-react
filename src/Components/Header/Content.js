@@ -9,7 +9,6 @@ class Content extends Component {
     animation = async ()=>{
         const ele = document.getElementById("content");
         ele.style.fontSize = 0 + "px";
-        console.log(ele);
         let size = 0;
         let frame = ()=>{
             if(size == 36 ){

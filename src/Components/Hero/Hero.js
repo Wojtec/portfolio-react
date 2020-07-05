@@ -4,12 +4,13 @@ import Content from './Content';
 
 class Hero extends Component {
 
+
     render() {
         return (
             <section>
                 <div className="heroContainer">
                     <Content content={this.props.hero.content}/>
-                    <img src={this.props.hero.img} width="600px" height="800px" alt="img"/>
+                    <img src={this.props.hero.img} alt="img"/>
                 </div>
             </section>
         )

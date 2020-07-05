@@ -10,8 +10,15 @@ import Wrapper from './Components/Wrapper';
 import IconBar from './Components/IconBar';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero/Hero';
+import animation from './Services/textAnimation';
+
+
 
 class App extends Component {
+
+  componentDidMount =()=>{
+    animation();
+  }
     render() {
         return (
             <Fragment>

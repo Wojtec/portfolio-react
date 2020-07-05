@@ -5,8 +5,8 @@ import genPDF from '../Services/pdfConvertor';
 
 class Button extends Component {
 
-    getPDF = async ()=> {
-        await genPDF();
+    getPDF = () => {
+         genPDF();
     }
 
 

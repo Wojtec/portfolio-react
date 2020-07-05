@@ -1,44 +1,38 @@
-import React, {Component} from 'react';
-
+import React, {Component, Fragment} from 'react';
 class Content extends Component {
-    state = {
-        content: this.props.content
-    }
-    title = () => {
-        let content = this.state.content;
-        content.split(/[\s,]+/);
+
+    content = () => {
+        let content = this.props.content;
         let cont = [...content];
-        let top = 50;
-        let left = 50;
+        let hi = "";
+        let myName = "";
+        let im = "";
+
+        cont.map((leter, index) => {
+            if (index >= 0 && index <= 2) {
+                return hi += leter;
+            }
+            if (index >= 2 && index <= 21) {
+                return myName += leter;
+            }
+            if (index >= 21 && index <= 48) {
+                return im += leter;
+            }
+        })
 
         return (
-    cont.map((leter, index) => { 
-
-        if(index <= 0 && index >= 3  ){
-
-            top += 50;
-            left += 50;
-            let tt = leter += "\n";
-            console.log(index);
-            
-           return <p style={{top: top, left: left }}>{tt}</p> 
-        }
-        if(index >= 3 && index <= 6 )
-        top += 50;
-        left += 50;
-        let tt = leter += "\n";
-        console.log(index);
-        
-       return <p style={{top: top, left: left }}>{tt}</p> 
-    })
-
-        )
+            <Fragment>
+                <div className="hi">{hi}</div>
+                <div className="myName">{myName}</div>
+                <div className="im">{im}</div>
+            </Fragment>)
 
     }
+
     render() {
         return (
-            <div>
-                {this.title()}
+            <div className="contentContainer">
+                {this.content()}
             </div>
         )
     }

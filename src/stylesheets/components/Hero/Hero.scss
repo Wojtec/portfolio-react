@@ -22,31 +22,30 @@
     font-size: 4rem;
     line-height: 10vh;
     font-family: sans-serif;
-    top:200px;
+    top:150px;
 
 }
 .hi{
+    color: white;
     position: absolute;
-    left: 0px;
+    left: 350px;
     z-index: 999;
-    top:50px;
-    text-shadow: 1px 1px white;
 }
 
 .myName{
+    color: white;
     position: absolute;
-    left: 0px;
-    top:150px;
+    left: 175px;
+    top:100px;
     z-index: 999;
-    text-shadow: 2px 2px 8px white;
 }
 
 .im{
+    color: white;
     position: absolute;
-    left: 0px;
-    top:250px;
+    left: 50px;
+    top:200px;
     z-index: 999;
-    text-shadow: 2px 2px 8px white;
 
 }
 span{
@@ -56,5 +55,9 @@ span{
     transform: translateY(50px);
 }
 span.fade{
+    color: black;
     opacity: 1;
+}
+span.white{
+    color:white;
 }

@@ -15,7 +15,7 @@ class Content extends Component {
             if (index >= 2 && index <= 21) {
                 return myName += leter;
             }
-            if (index >= 21 && index <= 48) {
+            if (index >= 21 && index <= 49) {
                 return im += leter;
             }
         })

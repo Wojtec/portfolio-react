@@ -4,6 +4,9 @@
 @import '../components/Navbar.scss';
 @import '../components/Wrapper.scss';
 @import '../components/Hero/Hero.scss';
+@import '../components/Hero/Button.scss';
+@import '../components/Hero/Social.scss';
+
 
 // Small screen tablets
 $screen-sm-min: 576px;
@@ -16,35 +19,6 @@ $screen-lg-min:992px;
 
 // x-large desktops
 $screen-xl-min:1200px;
-// small device
-@mixin sm {
-
-  @media (min-width: #{$screen-sm-min}){
-    @content;
-  }
-
-}
-// medium device
-@mixin md {
-
-  @media (min-width: #{$screen-md-mim}){
-    @content;
-  }
-}
-
-// Large devices
-@mixin lg {
-  @media (min-width: #{$screen-lg-min}) {
-      @content;
-  }
-}
-// x-large device
-@mixin xl {
-
-  @media (min-width: #{$screen-xl-min}){
-    @content;
-  }
-}
 
 // custom device
 @mixin rwd($screen) {
@@ -55,40 +29,28 @@ $screen-xl-min:1200px;
   
 }
 
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-
-}
-.container{
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 .App {
-  @include sm {
-    padding: 0 20px;
-  }
-  @include lg {
+    @include rwd(360){
+      position: relative;
+      text-align: center;
+      width: 1244px;
+      height: auto;
+      margin: 0 auto;
+    }
+    @include rwd(1920){
     position: relative;
     text-align: center;
     width: 1244px;
     height: auto;
     margin: 0 auto;
-  }
-  @include rwd(1400) {
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
+    padding: 0 20px;
+    }
+
 
 }
 
 .main{
-  @include sm {
-    padding: 0 20px;
-  }
-  @include lg {
+
 
   position: relative;
   display: flex;
@@ -97,11 +59,7 @@ $screen-xl-min:1200px;
   z-index: 20;
   padding: 10px;
   margin: 10px;
-  }
 
-  @include rwd(1400) {
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
-}
+
 

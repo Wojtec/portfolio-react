@@ -1,4 +1,7 @@
 import React, {Component, Fragment} from 'react';
+
+import Button from './Button';
+import Media from './Media';
 class Content extends Component {
 
     content = () => {
@@ -33,6 +36,8 @@ class Content extends Component {
         return (
             <div className="contentContainer">
                 {this.content()}
+                <Media/>
+                <Button/>
             </div>
         )
     }

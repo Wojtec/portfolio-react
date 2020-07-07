@@ -1,18 +1,14 @@
 import React, {Component} from 'react';
-
 import Content from './Content';
-
 class Hero extends Component {
-
-
     render() {
         return (
-            <section>
+            <header>
                 <div className="heroContainer">
                     <Content content={this.props.hero.content}/>
-                    <img src={this.props.hero.img} alt="img"/>
+                    <img className="heroImg" src='./hero.jpg' alt="img"/>
                 </div>
-            </section>
+            </header>
         )
     }
 

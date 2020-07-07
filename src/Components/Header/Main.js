@@ -9,10 +9,10 @@ class Header extends Component {
         const image = this.props.image;
 
         return(
-            <header id="header" className="header">
+            <section id="header" className="header">
               <Content/>       
               <Image img = { image }/>
-            </header>
+            </section>
         )
     }
 }

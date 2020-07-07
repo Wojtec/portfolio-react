@@ -1,0 +1,30 @@
+.social-container{
+    visibility: visible;
+    position: absolute;
+    z-index: 999;
+    width: 40%;
+    top: 6.5em;
+    left: 325px;
+    text-align: left;
+}
+
+
+.faGithub{
+    position: relative;
+    padding: 5px;
+    color: black;
+    margin: 5px;
+}
+.faGoogle{
+    position: relative;
+    padding: 5px;
+    color: tomato;
+    margin: 5px;
+}
+.faLinked{
+    position: relative;
+    padding: 5px;
+    top:3px;
+    color: rgb(82, 82, 255);
+    margin: 5px;
+}

@@ -1,34 +1,86 @@
+// custom device
+@mixin rwd($screen) {
+    
+    @media (min-width: #{$screen + 'px'}) and (max-width: #{$screen +'px'}){
+      @content;
+    }
+
+  }
 
 
 .navbar {
-
+    @include rwd(1920){
+        display: flex;
         width: 100%;
-        height: 50px;
+        overflow: visible;
+        background-color: white;
         position: relative;
-        border-bottom: 1px solid rgba(0,0,0,.15);
-        transition: border-bottom 83ms;
-    
+        border-bottom: 0.5px solid rgba(0,0,0,.15);
+    }
+    @include rwd(360){
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    }
 
 
 }
-.navbar ul {
+.navbar .navbarContainer {
+    @include rwd(1920){
+        display: flex;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    @include rwd(360){
+    display: none;
+    }
+}
+.navbar a {
+    @include rwd(1920){
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    @include rwd(360){
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
     display: flex;
-    width: 20%;
-    height: 50px;
-    margin: 0 auto;
+    }
     
 }
-.navbar ul li {
-    cursor: pointer;
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
-    padding-top: 10px;
-    font-size: 18px;
-    list-style-type: none;
-    text-align: center;
+.navbar .navbarIcon {
+    @include rwd(1920){
+        display: none;
+    }
+    @include rwd(360){
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
 }
-.navbar ul li:hover {
-    color: gainsboro;
-  
+.navbar a:hover {
+    @include rwd(1920){
+        background-color:  rgba(0,0,0,.15);
+        color: black;
+    }
+    @include rwd(360){
+    background-color: #ddd;
+    color: black;
+    }
+}
+.logo{
+    @include rwd(1920){
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+    @include rwd(360){
+    background-color: white;
+    color: black;
+    }
 }

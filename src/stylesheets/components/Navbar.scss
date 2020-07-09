@@ -83,10 +83,13 @@
         background-color:  rgba(0,0,0,.15);
         color: black;
     }
+
+}
+.navbar .center a:active{
     @include rwd(360){
-    background-color: #ddd;
-    color: black;
-    }
+        background-color: #ddd;
+        color: black;
+        }
 }
 .logo{
     @include rwd(1920){

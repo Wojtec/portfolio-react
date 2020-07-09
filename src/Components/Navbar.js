@@ -40,8 +40,8 @@ burger = () =>{
                 <a className="navbarIcon" onClick={()=>{this.burger()}}>
                 <FontAwesomeIcon icon={faBars} />
                 </a>
-            </div>
                 <Media/>
+            </div>
             </nav>
         )
     }

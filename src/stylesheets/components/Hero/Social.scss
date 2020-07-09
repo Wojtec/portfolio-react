@@ -21,6 +21,7 @@
         left: 125px;
         text-align: center;
         display: flex;
+        top:0px;
     }
     @include rwd(375){
         visibility: visible;

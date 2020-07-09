@@ -15,12 +15,12 @@
         text-align: left;
     }
     @include rwd(360){
-        visibility: visible;
-        width: 100%;
+        position: absolute;
         margin: 0 auto;
-        font-size: 34px;
+        width: 50%;
+        left: 125px;
+        text-align: center;
         display: flex;
-        margin-left: 25px;
     }
     @include rwd(375){
         visibility: visible;

@@ -25,6 +25,7 @@ class App extends Component {
                 <Wrapper icons={data.icons}/>
                 <Navbar/>
                 <main className="App">
+
                     <Hero hero={data.hero}/>
                     <Header image={data.image}/>
                     <IconBar icons={data.smallImg}/>

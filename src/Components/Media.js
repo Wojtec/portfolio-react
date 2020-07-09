@@ -9,7 +9,7 @@ import {
   } from "@fortawesome/free-brands-svg-icons";
 
 function media(){
-    return<div class="social-container">
+    return<div className="social-container">
       <a href="https://github.com/Wojtec"
         className="faGithub">
         <FontAwesomeIcon icon={faGithub} size="sm" />
@@ -20,7 +20,7 @@ function media(){
       </a>
       <a href="https://github.com/Wojtec"
         className="faLinked">
-        <FontAwesomeIcon icon={faLinkedin} size="1x" />
+        <FontAwesomeIcon icon={faLinkedin} size="sm" />
       </a>
 </div>
 

@@ -10,6 +10,7 @@ import Wrapper from './Components/Wrapper';
 import IconBar from './Components/IconBar';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero/Hero';
+import Abilities from './Components/Abilities';
 import animation from './Services/textAnimation';
 
 
@@ -27,6 +28,7 @@ class App extends Component {
                 <main className="App">
 
                     <Hero hero={data.hero}/>
+                    <Abilities/>
                     <Header image={data.image}/>
                     <IconBar icons={data.smallImg}/>
                     <section className="main">

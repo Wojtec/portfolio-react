@@ -14,6 +14,12 @@
         min-height: 850px;
         width: 100%;
     }
+    @include rwd(1280){
+        display: flex;
+        position: relative;
+        min-height: 850px;
+        width: 100%;
+    }
     @include rwd(360){
         display: flex;
         position: relative;
@@ -36,7 +42,15 @@
     width: 600px;
     height: 800px;
     filter: brightness(70%);
-
+    }
+    @include rwd(1280){
+        position: absolute;
+        right: 50px;
+        padding: 5px;
+        margin: 5px;
+        width: 600px;
+        height: 800px;
+        filter: brightness(70%);
     }
     @include rwd(360){
         width: 100%;
@@ -62,6 +76,18 @@
         z-index: 999;
         text-align: left;
     }
+    @include rwd(1280){
+        width: 70%;
+        visibility: hidden;
+        height: auto;
+        margin: auto;        
+        font-size: 4rem;
+        font-family: sans-serif;
+        position: relative;
+        z-index: 999;
+        text-align: left;
+        left: 65px;
+    }
     @include rwd(360){
         width: 100%;
         visibility: hidden;
@@ -86,21 +112,22 @@
 .hi{
     @include rwd(1920){
         color: white;
-        z-index: 999;
+        top:2em;
+    }
+    @include rwd(1280){
+        color: white;
         top:2em;
     }
     @include rwd(360){
         color: white;
         margin: 0 auto;
         width: 100%;
-        z-index: 999;
         font-size: 3rem;
     }
     @include rwd(375){
         color: black;
         margin: 0 auto;
         width: 100%;
-        z-index: 999;
         font-size: 3rem; 
     }
 
@@ -110,20 +137,21 @@
     @include rwd(1920){
         color: white;
         top:3.5em;
-        z-index: 999;
+    }
+    @include rwd(1280){
+        color: white;
+        top:3.5em;
     }
     @include rwd(360){
         color: white;
         margin: 0 auto;
         width: 100%;
-        z-index: 999;
         font-size: 3rem;
     }
     @include rwd(375){
         color: black;
         margin: 0 auto;
         width: 100%;
-        z-index: 999;
         font-size: 3rem;
     }
 }
@@ -132,7 +160,10 @@
     @include rwd(1920){
     color: white;
     top:5em;
-    z-index: 999;
+    }
+    @include rwd(1280){
+        color: white;
+        top:5em;
     }
     @include rwd(360){
         color: white;
@@ -157,6 +188,12 @@ span{
     transition: all 0.5s ease;
     transform: translateY(50px);
     }
+    @include rwd(1280){
+        visibility: visible;
+        opacity: 0;
+        transition: all 0.5s ease;
+        transform: translateY(50px);  
+    }
     @include rwd(360){
         visibility: visible;
         opacity: 0;
@@ -175,6 +212,10 @@ span.fade{
     color: black;
     opacity: 1;
     }
+    @include rwd(1280){
+        color: black;
+        opacity: 1;
+    }
     @include rwd(360){
         color: white;
         opacity: 1;
@@ -187,6 +228,9 @@ span.fade{
 span.white{
     @include rwd(1920){
         color:white;
+    }
+    @include rwd(1280){
+        color: white;
     }
     @include rwd(360){
         color: white;
@@ -202,7 +246,13 @@ span.twoColors{
   background: linear-gradient(to right, black 50%, white 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;}
+    
+    @include rwd(1280){
+        background: linear-gradient(to right, black 50%, white 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
+}
 
 .visible{
     @include rwd(1920){

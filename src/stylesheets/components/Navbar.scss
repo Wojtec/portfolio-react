@@ -87,8 +87,7 @@
 }
 .navbar .center a:active{
     @include rwd(360){
-        background-color: #ddd;
-        color: black;
+        background-color: white;
         }
 }
 .logo{
@@ -98,6 +97,6 @@
         cursor: pointer;
     }
     @include rwd(360){
-    color: black;
+    width: 30%;
     }
 }

@@ -90,7 +90,7 @@
         top:2em;
     }
     @include rwd(360){
-        color: black;
+        color: white;
         margin: 0 auto;
         width: 100%;
         z-index: 999;
@@ -113,7 +113,7 @@
         z-index: 999;
     }
     @include rwd(360){
-        color: black;
+        color: white;
         margin: 0 auto;
         width: 100%;
         z-index: 999;
@@ -135,7 +135,7 @@
     z-index: 999;
     }
     @include rwd(360){
-        color: black;
+        color: white;
         margin: 0 auto;
         width: 100%;
         z-index: 999;

@@ -6,7 +6,7 @@
 @import '../components/Hero/Hero.scss';
 @import '../components/Hero/Button.scss';
 @import '../components/Hero/Social.scss';
-
+@import '../base/BreakPoints.scss';
 
 // Small screen tablets
 $screen-sm-min: 576px;
@@ -30,7 +30,7 @@ $screen-xl-min:1200px;
 }
 
 .App {
-    @include rwd(360){
+    @include media("<=phone"){
       position: relative;
       text-align: center;
       width: 1244px;

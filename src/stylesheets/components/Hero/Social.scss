@@ -1,3 +1,5 @@
+@import '../base/BreakPoints.scss';
+
 // custom device
 @mixin rwd($screen) {
     
@@ -17,7 +19,7 @@
         margin-left: 0px;
         margin-right: 0px;
     }
-    @include rwd(1280){
+    @include media("<=desktop"){
         position: absolute;
         margin: 0 auto;
         right: 0;
@@ -25,7 +27,7 @@
         display: flex;
         top:0px;
     }
-    @include rwd(360){
+    @include media("<=phone"){
         position: absolute;
         margin: 0 auto;
         width: 50%;

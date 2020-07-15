@@ -12,14 +12,14 @@
 
 
 .social-container{
-    @include rwd(1920){
+    @include media("<=desktop"){
         visibility: visible;
         text-align: left;
         margin: auto;
         margin-left: 0px;
         margin-right: 0px;
     }
-    @include media("<=desktop"){
+    @include media("<=tablet"){
         position: absolute;
         margin: 0 auto;
         right: 0;
@@ -31,7 +31,7 @@
         position: absolute;
         margin: 0 auto;
         width: 50%;
-        left: 125px;
+        left: 80px;
         text-align: center;
         display: flex;
         top:0px;

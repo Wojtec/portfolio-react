@@ -30,13 +30,12 @@ $screen-xl-min:1200px;
 }
 
 .App {
-    @include media("<=phone"){
       position: relative;
       text-align: center;
       width: 1244px;
       height: auto;
       margin: 0 auto;
-    }
+    
     @include rwd(1920){
     position: relative;
     text-align: center;

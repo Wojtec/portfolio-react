@@ -11,7 +11,7 @@
 
 
 .navbar {
-    @include rwd(1920){
+    @include media("<=desktop"){
         display: flex;
         width: 100%;
         overflow: visible;
@@ -35,7 +35,7 @@
 
 }
 .navbar .center {
-    @include rwd(1920){
+    @include media("<=desktop"){
         display: flex;
         text-align: center;
         width: 1244px;
@@ -52,7 +52,7 @@
     }
 }
 .navbar .center .navbarContainer {
-    @include rwd(1920){
+    @include media("<=desktop"){
         display: flex;
         margin: 0 auto;
         cursor: pointer;
@@ -83,7 +83,7 @@
     border-right: 1px solid rgba(0,0,0,.15);
 }
 .navbar  a {
-    @include rwd(1920){
+    @include media("<=desktop"){
         color: black;
         padding: 14px 16px;
         text-decoration: none;
@@ -108,7 +108,7 @@
     
 }
 .navbar .navbarIcon {
-    @include rwd(1920){
+    @include media("<=desktop"){
         display: none;
     }
     @include media("<=tablet"){
@@ -125,7 +125,7 @@
     }
 }
 .navbar  .center a:hover {
-    @include rwd(1920){
+    @include media("<=desktop"){
         background-color:  rgba(0,0,0,.15);
         color: black;
         top: 0px;
@@ -148,7 +148,7 @@
         }
 }
 .logo{
-    @include rwd(1920){
+    @include media("<=desktop"){
         color: black;
         cursor: pointer;
     }

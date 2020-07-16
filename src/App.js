@@ -23,18 +23,11 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-                <Wrapper icons={data.icons}/>
                 <Navbar/>
                 <main className="App">
 
                     <Hero hero={data.hero}/>
-                    <Abilities/>
-                    <Header image={data.image}/>
-                    <IconBar icons={data.smallImg}/>
-                    <section className="main">
-                        <Aside aside={data.Aside}/>
-                        <Bside bside={data.Bside}/>
-                    </section>
+                   
                 </main>
             </Fragment>
 

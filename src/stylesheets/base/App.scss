@@ -30,19 +30,27 @@ $screen-xl-min:1200px;
 }
 
 .App {
+  @include media(">=desktop", "<=LGdesktop"){
+
       position: relative;
       text-align: center;
       width: 1244px;
       height: auto;
       margin: 0 auto;
-    
-    @include rwd(1920){
+  }
+  @include media(">=tablet","<=desktop"){
     position: relative;
     text-align: center;
-    width: 1244px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 0 20px;
+  }
+  @include media(">=phone", "<=tablet"){
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     }
 
 

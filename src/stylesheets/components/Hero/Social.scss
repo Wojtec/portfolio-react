@@ -12,14 +12,14 @@
 
 
 .social-container{
-    @include media("<=desktop"){
+    @include media(">=desktop", "<=LGdesktop"){
         visibility: visible;
         text-align: left;
         margin: auto;
         margin-left: 0px;
         margin-right: 0px;
     }
-    @include media("<=tablet"){
+    @include media(">=tablet","<=desktop"){
         position: absolute;
         margin: 0 auto;
         right: 0;
@@ -27,7 +27,7 @@
         display: flex;
         top:0px;
     }
-    @include media("<=phone"){
+    @include media(">=phone", "<=tablet"){
         position: absolute;
         margin: 0 auto;
         width: 50%;

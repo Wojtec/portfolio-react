@@ -10,29 +10,29 @@
   }
 
 .heroContainer{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         display: flex;
         position: relative;
         min-height: 850px;
         width: 100%;
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         display: flex;
         position: relative;
         min-height: 850px;
         width: 100%;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         display: flex;
         position: relative;
         min-height: 740px;
-        width: 360px;
+        width: 100%;
 
     }
 
 }
 .heroContainer img{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
     position: absolute;
     right: 50px;
     padding: 5px;
@@ -42,7 +42,7 @@
     filter: brightness(70%);
     }
     
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         position: absolute;
         right: 50px;
         padding: 5px;
@@ -50,8 +50,10 @@
         width: 600px;
         height: 800px;
         filter: brightness(70%);
+
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
+        position: relative;
         width: 100%;
         height: 740px;
         filter: brightness(50%);
@@ -61,8 +63,7 @@
 
 }
 .contentContainer{
-    @include media(">desktop", "<=1920px"){
-        width: 70%;
+    @include media(">=desktop", "<=LGdesktop"){
         visibility: hidden;
         height: auto;
         margin: auto;        
@@ -71,9 +72,9 @@
         position: relative;
         z-index: 999;
         text-align: left;
+        left: -7px;
     }
-    @include media(">tablet","<=1280px"){
-        width: 70%;
+    @include media(">=tablet","<=desktop"){
         visibility: hidden;
         height: auto;
         margin: auto;        
@@ -81,30 +82,32 @@
         font-family: sans-serif;
         position: relative;
         z-index: 999;
+        left: 11px;
         text-align: left;
-        left: 34px;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         width: 100%;
         visibility: hidden;
         line-height: 10vh;
         font-family: sans-serif;
         position: absolute;
-        z-index: 999;
         top: 5rem;
         padding: 5px;
+        z-index: 999;
+        text-align: center;
+
     }
 
 
 }
 .hi{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         color: white;
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         color: white;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         color: white;
         margin: 0 auto;
         width: 100%;
@@ -114,13 +117,13 @@
 }
 
 .myName{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         color: white;
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         color: white;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         color: white;
         margin: 0 auto;
         width: 100%;
@@ -130,13 +133,13 @@
 }
 
 .im{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         color: white;
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         color: white;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         color: white;
         margin: 0 auto;
         width: 100%;
@@ -146,19 +149,19 @@
 
 }
 span{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
     visibility: visible;
     opacity: 0;
     transition: all 0.5s ease;
     transform: translateY(50px);
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         visibility: visible;
         opacity: 0;
         transition: all 0.5s ease;
         transform: translateY(50px);  
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         visibility: visible;
         opacity: 0;
         transition: all 0.5s ease;
@@ -167,40 +170,40 @@ span{
 
 }
 span.fade{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         color: black;
         opacity: 1;
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         color: black;
         opacity: 1;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         color: white;
         opacity: 1;
     }
 
 }
 span.white{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         color:white;
     }
-    @include media(">tablet","<=1280px"){
+    @include media(">=tablet","<=desktop"){
         color: white;
     }
-    @include media(">=phone", "<=414px"){
+    @include media(">=phone", "<=tablet"){
         color: white;
     }
 
 }
 
 span.twoColors{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         background: linear-gradient(to right, black 50%, white 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;}
     
-        @include media(">tablet","<=1280px"){
+        @include media(">=tablet","<=desktop"){
             background: linear-gradient(to right, black 50%, white 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -208,7 +211,7 @@ span.twoColors{
 }
 
 .visible{
-    @include media(">desktop", "<=1920px"){
+    @include media(">=desktop", "<=LGdesktop"){
         display: inline !important;
     }
 }

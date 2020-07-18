@@ -21,15 +21,19 @@
     }
     @include media(">=tablet","<=desktop"){
         overflow: hidden;
-        background-color: #333;
+        background-color: white;
         position: relative;
         display: flex;
+        border-bottom: 0.5px solid rgba(0,0,0,.15);
+
     }
     @include media(">=phone", "<=tablet"){
         overflow: hidden;
-    background-color: #333;
-    position: relative;
-    display: flex;
+        background-color: white;
+        position: relative;
+        display: flex;
+        border-bottom: 0.5px solid rgba(0,0,0,.15);
+
     }
 
 
@@ -61,26 +65,47 @@
         display: flex;
         margin: 0 auto;
         cursor: pointer;
+        
     }
     @include media(">=phone", "<=tablet"){
         display: none;
     }
 }
 .navbarContainer a:nth-child(-n+3):after{
+    @include media(">=desktop", "<=LGdesktop"){
     content: '';
     position: relative;
     bottom: 0px;
     right: -16px;
     height: 50%;
     border-right: 1px solid rgba(0,0,0,.15);
+    }
+    @include media(">=tablet","<=desktop"){
+        content: '';
+        position: relative;
+        bottom: 0px;
+        right: -16px;
+        height: 50%;
+        border-right: 1px solid rgba(0,0,0,.15);
+    }
 }
 .navbarContainer a:nth-child(-n+1):before{
+    @include media(">=desktop", "<=LGdesktop"){
     content: '';
     position: relative;
     bottom: 0px;
     left: -16px;
     height: 50%;
     border-right: 1px solid rgba(0,0,0,.15);
+    }
+    @include media(">=tablet","<=desktop"){
+        content: '';
+        position: relative;
+        bottom: 0px;
+        left: -16px;
+        height: 50%;
+        border-right: 1px solid rgba(0,0,0,.15);
+    }
 }
 .navbar  a {
     @include media(">=desktop", "<=LGdesktop"){
@@ -90,22 +115,31 @@
         font-size: 17px;
     }
     @include media(">=tablet","<=desktop"){
-        color: white;
+        color: black;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
         display: block;
         cursor: pointer;
+
     }
     @include media(">=phone", "<=tablet"){
-    color: white;
+    color: black;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     display: block;
     cursor: pointer;
+
     }
     
+}
+.navbarContainer a:nth-child(n+1){
+    @include media(">=phone", "<=tablet"){
+
+        border-bottom: 0.5px solid rgba(0,0,0,.15);
+    
+        }
 }
 .navbar .navbarIcon {
     @include media(">=desktop", "<=LGdesktop"){
@@ -133,8 +167,8 @@
 
     }
     @include media(">=tablet","<=desktop"){
-        background-color:  rgba(255, 255, 255, 0.15);
-        color: white;
+        background-color:  rgba(0,0,0,.15);
+        color: black;
     }
 
 }

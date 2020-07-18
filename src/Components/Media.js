@@ -9,7 +9,8 @@ import {
   } from "@fortawesome/free-brands-svg-icons";
 
 function media(){
-    return<div className="social-container">
+    return(
+    <div className="social-container">
       <a href="https://github.com/Wojtec"
         className="faGithub">
         <FontAwesomeIcon icon={faGithub} size="sm" />
@@ -18,11 +19,12 @@ function media(){
         className="faGoogle">
         <FontAwesomeIcon icon={faGoogle} size="sm" />
       </a>
-      <a href="https://github.com/Wojtec"
+      <a href="https://www.linkedin.com/in/poninski"
         className="faLinked">
         <FontAwesomeIcon icon={faLinkedin} size="sm" />
       </a>
 </div>
+    )
 
 }
 export default media;

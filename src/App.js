@@ -27,7 +27,7 @@ class App extends Component {
                 <main className="App">
 
                     <Hero hero={data.hero}/>
-                   
+                    <Abilities/>
                 </main>
             </Fragment>
 

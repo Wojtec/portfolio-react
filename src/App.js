@@ -1,8 +1,10 @@
 import React, {Component, Fragment} from 'react';
 
-import './stylesheets/base/App.scss';
 import data from "./Data";
+// Sass
+import './stylesheets/base/App.scss';
 
+// Components
 import Header from './Components/Header/Main';
 import Aside from './Components/Aside/Main';
 import Bside from './Components/Bside/Main';
@@ -25,7 +27,6 @@ class App extends Component {
             <Fragment>
                 <Navbar/>
                 <main className="App">
-
                     <Hero hero={data.hero}/>
                     <Abilities/>
                 </main>

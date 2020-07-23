@@ -7,18 +7,8 @@
 @import '../components/Hero/Button.scss';
 @import '../components/Hero/Social.scss';
 @import '../base/BreakPoints.scss';
+@import '../components/Grid.scss';
 
-// Small screen tablets
-$screen-sm-min: 576px;
-
-// Small portatil view
-$screen-md-mim: 768px;
-
-// large desktops
-$screen-lg-min:992px;
-
-// x-large desktops
-$screen-xl-min:1200px;
 
 // custom device
 @mixin rwd($screen) {
@@ -31,7 +21,6 @@ $screen-xl-min:1200px;
 
 .App {
   @include media(">=desktop", "<=LGdesktop"){
-
       position: relative;
       text-align: center;
       width: 1244px;
@@ -59,7 +48,6 @@ $screen-xl-min:1200px;
 .main{
 
   position: relative;
-  display: flex;
   height: auto;
   background-color: white;
   z-index: 20;

@@ -1,0 +1,16 @@
+
+.row{
+    display: grid;
+    grid-template: 3;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+$columns: 6;
+
+@for $i from 1 through $columns {
+    .col-#{$i}{
+        flex: 0 0 100% / $columns * $i
+
+    }
+}

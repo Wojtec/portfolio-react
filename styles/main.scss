@@ -1,6 +1,23 @@
 @import './shared/fonts';
 @import './index';
 
+@import './header';
+
 html, body {
-    font-family: 'Lobster', 'Helvetica';
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Aleo', 'Helvetica';
+}
+
+.self-type{
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+}
+
+.absolute{
+    position: absolute;
 }

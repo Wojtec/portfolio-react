@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import auth0 from '../../services/auth0';
 import Link from 'next/link';
 
 import {
@@ -8,18 +9,36 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavbarText
 } from 'reactstrap';
 
 const BsNavLink = (props) => {
 const { route, title } = props;
-
   return (
     <Link href={route}>
         <a className="nav-link port-navbar-link">{title}</a>
     </Link>
+  )
+}
+
+const Login = () => {
+    return (
+      <span 
+        onClick={auth0.login} 
+        className="nav-link port-navbar-link pointer"
+      >
+        Login
+      </span>
     )
 
+  
+}
+
+const Logout = () => {
+  return (
+    <span  onClick={() => 
+    logout({ returnTo: window.location.origin })} 
+    className="nav-link port-navbar-link pointer">Logout</span>
+  );
 }
 const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,8 +82,13 @@ const NavbarComponent = (props) => {
                     title="Cv"
                 />
             </NavItem>
+            <NavItem className="port-navbar-item">
+                <Login />
+            </NavItem>
+            <NavItem className="port-navbar-item">
+                <Logout />
+            </NavItem>
             </Nav>
-            <NavbarText className="social-media">Social Media</NavbarText>
         </Collapse>
       </Navbar>
     </div>

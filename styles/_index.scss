@@ -6,7 +6,7 @@
 
 .wrapper{
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100%;
     margin-top: 0;
     position: relative;
 }
@@ -99,7 +99,7 @@
 
 .background-image{
     width: 1762px;
-    height: 250px;
+    height: 70px;
     filter: brightness(70%);
 }
 
@@ -123,3 +123,10 @@
     border: 2px solid #f37d49;
     box-shadow: -17px 13px 41px rgba(13,78,158,0.3);
   }
+
+.self-type-row{
+    margin:0 auto;
+    width: 65%;
+    padding-bottom: 30px;
+    
+}

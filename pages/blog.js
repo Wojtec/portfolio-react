@@ -6,7 +6,7 @@ class Blog extends Component {
     render(){
         return(
             <>
-            <BaseLayout>
+            <BaseLayout {...this.props.auth}>
                 <BasePage>
                     <h1>Hi I'm Blog page</h1>
                 </BasePage>

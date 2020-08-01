@@ -1,5 +1,5 @@
 import BaseLayout from '../components/layouts/BaseLayout';
-import React, { Component, useEffect} from 'react';
+import React, { Component } from 'react';
 import { Row, Container, Col, Button } from 'reactstrap';
 import Typed from 'react-typed';
 
@@ -7,8 +7,9 @@ import Typed from 'react-typed';
 class Index extends Component {
 
     render(){
+        const { isAuthenticated, user } = this.props.auth;
         return (
-            <BaseLayout className="cover">
+            <BaseLayout className="cover" {...this.props.auth}>
                 <div className="main-section">
                     <div className="background-image">
                         <img src="/images/background-img2.png" alt="my background"/>
@@ -59,8 +60,11 @@ class Index extends Component {
                             <Col md="6" className="hero-welcome-wrapper">
                                 <section className="hero-welcome-bio">
                                     <h1>
-                                        Let's take a look on My ability.
+                                        { isAuthenticated && <span>Welcome { user.name }</span>}
                                     </h1>
+                                    <h2>
+                                        Let's take a look on My ability.
+                                    </h2>
                                     <Button color="info">
                                         My ability
                                     </Button>{' '}

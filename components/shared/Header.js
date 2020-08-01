@@ -24,8 +24,7 @@ const Login = () => {
     return (
       <span 
         onClick={auth0.login} 
-        className="nav-link port-navbar-link pointer"
-      >
+        className="nav-link port-navbar-link pointer">
         Login
       </span>
     )
@@ -35,16 +34,18 @@ const Login = () => {
 
 const Logout = () => {
   return (
-    <span  onClick={() => 
-    logout({ returnTo: window.location.origin })} 
-    className="nav-link port-navbar-link pointer">Logout</span>
+    <span 
+     onClick={auth0.logout } 
+     className="nav-link port-navbar-link pointer">
+     Logout
+     </span>
   );
 }
 const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
-
+  const  { isAuthenticated }  = props;
+  
   return (
     <div>
       <Navbar  className="port-navbar port-default absolute" color="transparent" light expand="md">
@@ -82,12 +83,16 @@ const NavbarComponent = (props) => {
                     title="Cv"
                 />
             </NavItem>
-            <NavItem className="port-navbar-item">
-                <Login />
-            </NavItem>
-            <NavItem className="port-navbar-item">
-                <Logout />
-            </NavItem>
+            { !isAuthenticated &&
+              <NavItem className="port-navbar-item">
+                  <Login />
+              </NavItem>
+            }
+            { isAuthenticated &&
+              <NavItem className="port-navbar-item">
+                  <Logout />
+              </NavItem>
+            }
             </Nav>
         </Collapse>
       </Navbar>

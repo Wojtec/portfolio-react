@@ -6,14 +6,20 @@ import withAuth from '../components/hoc/withAuth';
 
 class Secret extends Component {
 
+   static getInitialProps() {
+        const superSecretValue = 'Super secret value';
+
+        return { superSecretValue };
+    }
 
     render(){
-        console.log(this.props);
+        const { superSecretValue } = this.props;
         return(
             <>
                <BaseLayout {...this.props.auth}>
                     <BasePage>
-                        <h1>You need login first!</h1>
+                        <h1>Welcome, you are login now!</h1>
+                        <h2>{ superSecretValue }</h2>
                     </BasePage>
                     <style jsx>{`
                         h1{

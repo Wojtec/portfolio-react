@@ -10,9 +10,9 @@ class Secret extends Component {
         secretData : []
     }
 
-   static async getInitialProps() {
-        const anotherSecret = process.browser ? await getSecretData() : getSecretDataServer();
-        console.log(anotherSecret);
+   static async getInitialProps({req}) {
+        const anotherSecret =  await getSecretData(req);
+       
         return { anotherSecret };
     }
 
@@ -40,7 +40,6 @@ class Secret extends Component {
 
     render(){
         const { superSecretValue } = this.props;
-        console.log(this.state);
         return(
             <>
                <BaseLayout {...this.props.auth}>

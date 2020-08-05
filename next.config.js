@@ -1,4 +1,9 @@
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
-
-module.exports = withCSS(withSass());
+require('dotenv').config();
+module.exports =  {
+    publicRuntimeConfig: {
+        domain: process.env.NEXT_PUBLIC_DOMAIN,
+       
+      },
+}

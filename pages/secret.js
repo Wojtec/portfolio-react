@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage';
 import withAuth from '../components/hoc/withAuth';
-import axios from 'axios';
+
+import { getSecretData, getSecretDataServer } from '../actions';
 
 class Secret extends Component {
     state = {
         secretData : []
     }
 
-   static getInitialProps() {
-        const superSecretValue = 'Super secret value';
-
-        return { superSecretValue };
+   static async getInitialProps() {
+        const anotherSecret = process.browser ? await getSecretData() : getSecretDataServer();
+        console.log(anotherSecret);
+        return { anotherSecret };
     }
+
    async componentDidMount() {
-        const res = await axios.get('/api/v1/secret');
-        const secretData = res.data;
+        const secretData = await getSecretData();
 
         this.setState({
             secretData
@@ -28,7 +29,7 @@ class Secret extends Component {
 
        return ( secretData && secretData.length > 0 ) ? 
        ( secretData.map((data) => (
-           <div>
+           <div key={data.id}>
            <p>{data.title}</p>
            <p>{data.description}</p>
            </div>

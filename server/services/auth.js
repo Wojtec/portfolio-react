@@ -1,6 +1,7 @@
 const jwt = require('express-jwt');
 const jwksRsa = require('jwks-rsa');
 
+const nameSpace = 'http://localhost:3000//';
 // MIDDLEWARE
 exports.checkJWT = jwt({
     secret: jwksRsa.expressJwtSecret({
@@ -15,3 +16,14 @@ exports.checkJWT = jwt({
     algorithms: ['RS256']
 
 })
+
+exports.checkRole = role => (req, res, next) => {
+    const user = req.user;
+
+    if(user && user[nameSpace + 'role'] === role){
+        next();
+    } else {
+        return res.status(401).send({title: "Not Authorized", detail: "You are not authorized to check this data"});
+    }
+}
+

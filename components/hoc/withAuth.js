@@ -16,7 +16,6 @@ const withAuth = role => Index =>
         renderProtectedPage() {
             const { isAuthenticated, user } = this.props.auth;
             const userRole = user && user[`${nameSpace}role`];
-            console.log(userRole);
             let isAuthorized = false;
 
             if(role){

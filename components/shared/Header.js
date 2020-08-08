@@ -44,11 +44,11 @@ const Logout = () => {
 const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const  { isAuthenticated }  = props;
+  const  { isAuthenticated, className }  = props;
   
   return (
     <div>
-      <Navbar  className="port-navbar port-default absolute" color="transparent" light expand="md">
+      <Navbar  className={`port-navbar port-nav-base absolute ${className}`} color="transparent" light expand="md">
         <NavbarBrand  className="port-navbar-brand" href="/"><span className="logo">W</span> Poninski</NavbarBrand>
           <NavbarToggler onClick={toggle} />
              <Collapse isOpen={isOpen} navbar>

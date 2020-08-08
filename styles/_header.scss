@@ -1,8 +1,5 @@
-.absoulte{
-    position: absolute;
-}
 
-.port-navbar.port-default{
+.port-navbar.port-nav-base{
     width: 100%;
     z-index: 15;
     padding: 40px;
@@ -50,4 +47,9 @@
     font-size: 34px;
     margin: 5px;
     padding: 5px;
+}
+
+.port-navbar.port-nav-base.port-nav-default {
+    padding: 40px;
+    background-color: black !important;
 }

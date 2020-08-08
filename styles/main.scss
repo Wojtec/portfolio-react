@@ -1,4 +1,5 @@
 @import './shared/fonts';
+@import './shared/colors.scss';
 @import './index';
 
 @import './header';
@@ -23,10 +24,24 @@ html, body {
     position: absolute;
 }
 
-.base-page {
-    padding-top: 150px;
-    
-}
 .pointer {
     cursor: pointer;
 }
+
+.base-page {
+    padding-top: 150px;
+    color: white;
+    background-color: #eeccee;
+    min-height: 100vh;
+
+    .page-header {
+        .page-header-title {
+            font-weight: 700;
+            color: wheat;
+            display: inline-block;
+            margin-bottom: 20px;
+    
+        }
+    }
+}
+

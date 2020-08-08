@@ -50,7 +50,8 @@
 }
 
 .hero-welcome-text {
-    
+        min-height: 250px;
+        margin-top: 35px;
         > h1 {
         color: white;
         text-transform: uppercase;
@@ -100,7 +101,7 @@
 .background-image{
     width: 1762px;
     height: 70px;
-    filter: brightness(70%);
+    filter: brightness(90%);
 }
 
 .shadow-custom {

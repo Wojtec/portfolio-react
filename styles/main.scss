@@ -3,6 +3,7 @@
 @import './index';
 
 @import './header';
+@import './portfolio';
 
 html, body {
     height: 100%;
@@ -31,7 +32,6 @@ html, body {
 .base-page {
     padding-top: 150px;
     color: white;
-    background-color: #eeccee;
     min-height: 100vh;
 
     .page-header {
@@ -45,3 +45,9 @@ html, body {
     }
 }
 
+.on {
+    display: flex;
+}
+.off {
+    display: none;
+}

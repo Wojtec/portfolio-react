@@ -2,22 +2,23 @@ import BaseLayout from '../components/layouts/BaseLayout';
 import React, { Component } from 'react';
 import { Row, Container, Col, Button } from 'reactstrap';
 import Typed from 'react-typed';
-
+import Portfolio from './portfolio';
 
 class Index extends Component {
 
     render(){
         const { isAuthenticated, user } = this.props.auth;
+
         return (
             <BaseLayout className="cover" {...this.props.auth} headerType="index">
                 <div className="main-section">
                     <div className="background-image">
-                        <img src="/images/background-img2.png" alt="my background"/>
+                        <img src="/images/background-img2.png" alt="my-background"/>
                     </div>
                     <Row className="self-type-row">
-                        <Col md="12">
+                        <Col xs="12">
                             <section className="hero-welcome-text">
-                                <h1>
+                                <Row>
                                     <Typed
                                         loop
                                         typeSpeed={60}
@@ -33,7 +34,7 @@ class Index extends Component {
                                         showCursor
                                         cursorChar="|"
                                     />                        
-                                </h1>
+                                </Row>
                             </section>
                         </Col>
                     </Row>
@@ -71,6 +72,7 @@ class Index extends Component {
                                 </section>
                             </Col>
                         </Row>
+                        <Portfolio landingPage="off" />
                     </Container>
                 </div>
             </BaseLayout>        

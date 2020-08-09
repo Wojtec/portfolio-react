@@ -71,7 +71,7 @@ class Index extends Component {
                                     </Button>{' '}
                                 </section>
                             </Col>
-                        </Row>
+                        </Row>                       
                         <Portfolio landingPage="off" />
                     </Container>
                 </div>

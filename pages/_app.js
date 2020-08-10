@@ -5,6 +5,8 @@ import auth0 from '../services/auth0';
 //******** CSS/SASS *********
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
+import "react-datepicker/dist/react-datepicker.css";
+
 
 
 export default class MyApp extends App {

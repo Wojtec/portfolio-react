@@ -18,6 +18,7 @@ class PortfolioDate extends Component {
     setFieldTouched(name, true, true);
 
   }    
+
   handleChange = date => {
 
     this.setState({
@@ -39,6 +40,7 @@ class PortfolioDate extends Component {
   render() {
       const { canBeDisabled, label,field, form: { touched, errors} } = this.props;
       const { isHidden, dateValue } = this.state;
+
         return (
             <FormGroup>
                 <Label>{label}</Label>
@@ -56,19 +58,16 @@ class PortfolioDate extends Component {
                     }
                     </div>
                     { canBeDisabled && !isHidden &&  
-                        <>
+                        <FormGroup check inline>
+                        <Label className="margin" check >Currently work</Label>
                         <Input type="checkbox" onChange={() => this.toggleDate() } />
-                        <Label check>Currently work</Label>
-                        </>
+                        </FormGroup>
                          }
                         { canBeDisabled && isHidden &&   
-                        <>
-                        <div>
-                        Currently Work there.
-                        </div>
-                        <Label check>Set End Date</Label>
+                        <FormGroup check inline>
+                        <Label className="margin" check>Set End Date</Label>
                         <Input type="checkbox" onChange={() => this.toggleDate(dateValue) } /> 
-                        </> }
+                        </FormGroup> }
                     { touched[field.name] &&
                         errors[field.name] && <div className="error">{errors[field.name]}</div>}    
             </FormGroup>

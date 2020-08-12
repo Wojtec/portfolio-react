@@ -10,7 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 export default class MyApp extends App {
-    static async getInitialProps({ Component, router, ctx}){
+    static async getInitialProps({ Component, ctx}){
         let pageProps = {};
         const user = process.browser ? await auth0.clientAuth() : await auth0.serverAuth(ctx.req);
 

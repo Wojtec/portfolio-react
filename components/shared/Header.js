@@ -67,8 +67,8 @@ const NavbarComponent = (props) => {
             </NavItem>
             <NavItem className="port-navbar-item">
                 <BsNavLink
-                    route="/portfolio"
-                    title="Portfolio"
+                    route="/projects"
+                    title="Projects"
                 />
             </NavItem>
             <NavItem className="port-navbar-item">

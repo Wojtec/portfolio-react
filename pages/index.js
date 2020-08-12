@@ -2,7 +2,6 @@ import BaseLayout from '../components/layouts/BaseLayout';
 import React, { Component } from 'react';
 import { Row, Container, Col, Button } from 'reactstrap';
 import Typed from 'react-typed';
-import Portfolio from './portfolio';
 
 class Index extends Component {
 
@@ -72,7 +71,6 @@ class Index extends Component {
                                 </section>
                             </Col>
                         </Row>                       
-                        <Portfolio landingPage="off" />
                     </Container>
                 </div>
             </BaseLayout>        

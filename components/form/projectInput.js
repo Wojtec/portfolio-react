@@ -1,7 +1,7 @@
 import { FormGroup, Label, Input } from 'reactstrap';
 
 
-const PortfolioInput = ({
+const ProjectInput = ({
     label,
     field,
     type,
@@ -17,4 +17,4 @@ const PortfolioInput = ({
     </FormGroup>
 )
 
-export default PortfolioInput;
+export default ProjectInput;

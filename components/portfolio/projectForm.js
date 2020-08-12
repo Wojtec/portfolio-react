@@ -1,7 +1,7 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import PortfolioInput from '../form/portfolioInput';
-import PortfolioDate from '../form/portfolioDate';
+import { Formik, Form, Field } from 'formik';
+import ProjectInput from '../form/projectInput';
+import ProjectDate from '../form/projectDate';
 import { Button } from 'reactstrap';
 
 
@@ -36,7 +36,7 @@ const INITIAL_VALUES = {
                             endDate: '',
                         }
 
-const PortfolioForm = (props) => (
+const ProjectForm = (props) => (
   <div>
     <Formik
       initialValues={INITIAL_VALUES}
@@ -50,40 +50,40 @@ const PortfolioForm = (props) => (
                     type="text" 
                     name="title" 
                     label="Title"
-                    component={PortfolioInput} />
+                    component={ProjectInput} />
                 <Field 
                     className="form-control" 
                     type="text" 
                     name="company"
                     label="Company" 
-                    component={PortfolioInput} />
+                    component={ProjectInput} />
                 <Field 
                     className="form-control" 
                     type="text" 
                     name="location" 
                     label="Location"
-                    component={PortfolioInput} />
+                    component={ProjectInput} />
                 <Field 
                     className="form-control" 
                     type="text" 
                     name="position" 
                     label="Position"
-                    component={PortfolioInput} />
+                    component={ProjectInput} />
                 <Field 
                     className="form-control" 
                     type="textarea" 
                     name="description" 
                     label="Description" 
-                    component={PortfolioInput} />
+                    component={ProjectInput} />
                 <Field 
                     name="startDate"
                     label="Start Date" 
-                    component={PortfolioDate} />
+                    component={ProjectDate} />
                 <Field 
                     name="endDate" 
                     label="End Date"
                     canBeDisabled={true}
-                    component={PortfolioDate} />
+                    component={ProjectDate} />
               
                 <Button color="success" size="lg" type="submit" disabled={isSubmitting}>
                     Submit
@@ -94,4 +94,4 @@ const PortfolioForm = (props) => (
   </div>
 );
 
-export default PortfolioForm;
+export default ProjectForm;

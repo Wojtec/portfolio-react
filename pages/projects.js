@@ -33,8 +33,8 @@ class Portfolio extends Component {
 
         return ( projectsData.map((project, index) => {
             return (
-                <Col md="4">
-                    <Fragment key={index}>
+                <Col md="4" key={index}>
+                    <Fragment>
                         <span>
                             <Card className="portfolio-card">
                                 <CardHeader className="portfolio-card-header">{project.position}</CardHeader>

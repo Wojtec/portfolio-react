@@ -1,9 +1,9 @@
 import React, { Component }from "react";
 import DatePicker from "react-datepicker";
-import { Button, FormGroup, Label, Input } from 'reactstrap';
+import { FormGroup, Label, Input } from 'reactstrap';
 
 
-class PortfolioDate extends Component {
+class ProjectDate extends Component {
 
       state = {
         dateValue: new Date(),
@@ -15,7 +15,7 @@ class PortfolioDate extends Component {
     const { name } = this.props.field;
 
     setFieldValue(name, date, true);
-    setFieldTouched(name, true, true);
+    setFieldTouched(name, touched, true);
 
   }    
 
@@ -75,4 +75,4 @@ class PortfolioDate extends Component {
   }
 }
 
-export default PortfolioDate;
+export default ProjectDate;

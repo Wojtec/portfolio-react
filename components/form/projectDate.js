@@ -4,23 +4,21 @@ import { FormGroup, Label, Input } from 'reactstrap';
 
 
 class ProjectDate extends Component {
-
-      state = {
-        dateValue: new Date(),
-        isHidden: false,
-      };
+    state = {
+      dateValue: new Date(),
+      isHidden: false,
+    };
   
   setFieldValueAndTouched (date, touched) {
     const { setFieldValue, setFieldTouched } = this.props.form;
     const { name } = this.props.field;
 
-    setFieldValue(name, date, true);
     setFieldTouched(name, touched, true);
+    setFieldValue(name, date, true);
 
   }    
 
-  handleChange = date => {
-
+  handleChange = (date) => {
     this.setState({
         dateValue: date
     });
@@ -48,6 +46,7 @@ class ProjectDate extends Component {
                     { !isHidden &&
                         <DatePicker
                             selected={dateValue}
+                            name="date"
                             onChange={this.handleChange}
                             peekNextMonth
                             showMonthDropdown

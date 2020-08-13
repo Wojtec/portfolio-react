@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import ProjectInput from '../form/projectInput';
 import ProjectDate from '../form/projectDate';
-import { Button } from 'reactstrap';
+import { Button, Alert } from 'reactstrap';
 
 
 const validateInputs = (values) => {
+
  const errors = {};
     
     Object.entries(values).forEach(([key, value]) => {
-        if(!values[key]  &&  key !== "startDate" && key !== "endDate") {
+        if(!values[key]  &&  key !== "endDate") {
             let keyUpper = key[0].toUpperCase() + key.slice(1); 
             errors[key] = `${keyUpper} is required!`;
         }    
@@ -18,7 +19,7 @@ const validateInputs = (values) => {
     const startDate = values.startDate;
     const endDate = values.endDate;
 
-    if(startDate && endDate && (Date.parse(startDate) > Date.parse(endDate))){
+    if(startDate && endDate && Date.parse(startDate) > Date.parse(endDate)){
         errors.endDate = 'End Date cannot be before start date!';
 
     }
@@ -28,15 +29,14 @@ const validateInputs = (values) => {
 
 const INITIAL_VALUES = { 
                             title: '', 
-                            company: '', 
-                            location: '', 
-                            position: '',
                             description: '',
                             startDate: '',
                             endDate: '',
                         }
 
-const ProjectForm = (props) => (
+const ProjectForm = (props) => {
+
+    return(
   <div>
     <Formik
       initialValues={INITIAL_VALUES}
@@ -53,24 +53,6 @@ const ProjectForm = (props) => (
                     component={ProjectInput} />
                 <Field 
                     className="form-control" 
-                    type="text" 
-                    name="company"
-                    label="Company" 
-                    component={ProjectInput} />
-                <Field 
-                    className="form-control" 
-                    type="text" 
-                    name="location" 
-                    label="Location"
-                    component={ProjectInput} />
-                <Field 
-                    className="form-control" 
-                    type="text" 
-                    name="position" 
-                    label="Position"
-                    component={ProjectInput} />
-                <Field 
-                    className="form-control" 
                     type="textarea" 
                     name="description" 
                     label="Description" 
@@ -84,7 +66,9 @@ const ProjectForm = (props) => (
                     label="End Date"
                     canBeDisabled={true}
                     component={ProjectDate} />
-              
+                {props.error && <Alert color="danger">
+                    {props.error}
+                </Alert>}
                 <Button color="success" size="lg" type="submit" disabled={isSubmitting}>
                     Submit
                 </Button>
@@ -92,6 +76,7 @@ const ProjectForm = (props) => (
         )}
     </Formik>
   </div>
-);
+    )
+};
 
 export default ProjectForm;

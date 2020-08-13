@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage';
-import PortfolioForm from '../components/portfolio/portfolioForm';
-import withAuth from '../components/hoc/withAuth';
+import ProjectForm from '../components/project/projectForm';
 import { Row, Col } from 'reactstrap';
+import withAuth from '../components/hoc/withAuth';
 
-class PortfolioNew extends Component {
-   
+import { createProject } from '../actions';
 
-    savePortfolio = (portfolioData) => {
-        alert(JSON.stringify(portfolioData, null, 2));
 
+class ProjectNew extends Component {
+   state = {
+       error: undefined
+   }
+
+    saveProject = (projectData) => {
+        createProject(projectData).then((project) => { 
+            this.setState({
+                error: undefined
+            })
+        }).catch((err) => {
+           this.setState({
+               error: err.message
+           })
+        });
+        
     }
     
     render() {
+        const { error } = this.state;
         return (
                 <BaseLayout {...this.props.auth}>
-                    <BasePage className="portfolio-create-page" title="Portfolio new page">
+                    <BasePage className="portfolio-create-page" title="Create new project">
                     <Row>
-                        <Col md="3"></Col>
                         <Col md="6">
-                            <PortfolioForm onSubmit={this.savePortfolio}/>
+                            <ProjectForm  error={error} onSubmit={this.saveProject}/>
                         </Col>
-                        <Col md="3"></Col>
                     </Row>
                     </BasePage>
                 </BaseLayout>
@@ -30,5 +42,5 @@ class PortfolioNew extends Component {
     }
 }
 
-export default withAuth('siteOwner')(PortfolioNew);
+export default withAuth('siteOwner')(ProjectNew);
 

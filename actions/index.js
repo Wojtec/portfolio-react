@@ -8,6 +8,18 @@ const axiosInstance = axios.create({
     timeout: 3000
 })
 
+const rejectPromise = (resError) => {
+    let error = {};
+
+    if (resError && resError.response && resError.response.data) {
+        error = resError.response.data;
+    } else {
+        error = resError;
+    }
+
+    return Promise.reject(error);
+}
+
 const setAuthHeader = (req) => {
     const token = req ? getCookieFromReq(req, 'jwt') : Cookies.getJSON('jwt');
     
@@ -27,5 +39,7 @@ export const getProjects = async () => {
 
 export const createProject = async (projectData) => {
 
-    return await axiosInstance.post('/projects',projectData, setAuthHeader(req)).then(response => response.data);
+    return await axiosInstance.post('/projects',projectData, setAuthHeader())
+    .then(response => response.data)
+    .catch(error => rejectPromise(error));
 }

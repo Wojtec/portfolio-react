@@ -38,8 +38,22 @@ export const getProjects = async () => {
 }
 
 export const createProject = async (projectData) => {
-
     return await axiosInstance.post('/projects',projectData, setAuthHeader())
     .then(response => response.data)
     .catch(error => rejectPromise(error));
+}
+
+export const getProjectById = async (id) => {
+    return axiosInstance.get(`/projects/${id}`)
+    .then(response => response.data);
+}
+
+export const updateProject = async (projectData) => {
+    return await axiosInstance.patch(`/projects/${projectData._id}`,projectData, setAuthHeader())
+    .then(response => response.data)
+    .catch(error => rejectPromise(error));
+}
+
+export const deleteProject = (projectId) => {
+    return axiosInstance.delete(`/projects/${projectId}`, setAuthHeader()).then(response => response.data);
 }

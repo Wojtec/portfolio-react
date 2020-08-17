@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
 import "react-datepicker/dist/react-datepicker.css";
 
+const nameSpace = 'http://localhost:3000//';
 
 
 export default class MyApp extends App {
@@ -17,7 +18,9 @@ export default class MyApp extends App {
         if(Component.getInitialProps){
             pageProps = await Component.getInitialProps(ctx);
         }
-        const auth = { user, isAuthenticated: !!user };
+        const isSideOwner = user && user[`${nameSpace}role`] === 'siteOwner';
+
+        const auth = { user, isAuthenticated: !!user, isSideOwner};
         return { pageProps, auth };
     }
 

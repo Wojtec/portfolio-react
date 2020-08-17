@@ -4,11 +4,16 @@ import { FormGroup, Label, Input } from 'reactstrap';
 
 
 class ProjectDate extends Component {
-    state = {
-      dateValue: new Date(),
+  constructor(props){
+    super(props);
+    const dateValue = this.props.initialDate ? new Date(this.props.initialDate) : new Date();
+
+    this.state = {
+      dateValue: dateValue,
       isHidden: false,
     };
-  
+  }
+   
   setFieldValueAndTouched (date, touched) {
     const { setFieldValue, setFieldTouched } = this.props.form;
     const { name } = this.props.field;

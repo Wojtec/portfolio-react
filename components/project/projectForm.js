@@ -6,8 +6,7 @@ import { Button, Alert } from 'reactstrap';
 
 
 const validateInputs = (values) => {
-
- const errors = {};
+const errors = {};
     
     Object.entries(values).forEach(([key, value]) => {
         if(!values[key]  &&  key !== "endDate") {
@@ -16,8 +15,8 @@ const validateInputs = (values) => {
         }    
     });
 
-    const startDate = values.startDate;
-    const endDate = values.endDate;
+const startDate = values.startDate;
+const endDate = values.endDate;
 
     if(startDate && endDate && Date.parse(startDate) > Date.parse(endDate)){
         errors.endDate = 'End Date cannot be before start date!';
@@ -27,21 +26,13 @@ const validateInputs = (values) => {
     return errors;
 }
 
-const INITIAL_VALUES = { 
-                            title: '', 
-                            description: '',
-                            startDate: '',
-                            endDate: '',
-                        }
-
-const ProjectForm = (props) => {
-
-    return(
+const ProjectForm = ({onSubmit, initialValues, error}) => {
+return(
   <div>
     <Formik
-      initialValues={INITIAL_VALUES}
+      initialValues={initialValues}
         validate={validateInputs}
-        onSubmit={props.onSubmit}
+        onSubmit={onSubmit}
         >
         {({ isSubmitting }) => (
             <Form>
@@ -60,14 +51,16 @@ const ProjectForm = (props) => {
                 <Field 
                     name="startDate"
                     label="Start Date" 
+                    initialDate={initialValues.startDate}
                     component={ProjectDate} />
                 <Field 
                     name="endDate" 
                     label="End Date"
                     canBeDisabled={true}
+                    initialDate={initialValues.endDate}
                     component={ProjectDate} />
-                {props.error && <Alert color="danger">
-                    {props.error}
+                {error && <Alert color="danger">
+                    {error}
                 </Alert>}
                 <Button color="success" size="lg" type="submit" disabled={isSubmitting}>
                     Submit

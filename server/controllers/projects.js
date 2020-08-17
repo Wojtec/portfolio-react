@@ -12,6 +12,19 @@ module.exports = {
         })
     },
     
+    getProjectById: (req, res) => {
+        const projectId = req.params.id;
+
+        Projects.findById(projectId)
+                .select('-__v')
+                .exec((err, foundProject) => {
+                if(err) {
+                    return res.status(422).send(err);
+                }
+                return res.json(foundProject);
+        })
+    },
+
     saveProject: (req, res) => {
         const projectsData = req.body;
         const userAuthId = req.user && req.user.sub;
@@ -37,7 +50,7 @@ module.exports = {
     
             projectForUpdate.set(projectData);
     
-            projtectForUpdate.save((err, savedProject) => {
+            projectForUpdate.save((err, savedProject) => {
                 if(err) {
                     return res.status(422).send(err);
                 }
@@ -49,12 +62,12 @@ module.exports = {
     deleteProject: (req, res) => {
         const projectId = req.params.id;
     
-        Projects.deleteOne({_id: projectId}, (err) => {
+        Projects.deleteOne({_id: projectId}, (err, deletedProject) => {
             if(err) {
                 return res.status(422).send(err);
             }
     
-            return res.json({status: `Portfolio with ID: ${projtectId} deleted.`})
+            return res.json({status: `Portfolio with ID: ${deletedProject._id} deleted.`})
         })
     }
 

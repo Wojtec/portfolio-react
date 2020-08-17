@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage';
-import Link from 'next/link';
-
-import { getProjects } from '../actions';
+import { Router } from '../routes';
+import { getProjects, deleteProject } from '../actions';
 
 import { 
+    Button,
     Col, 
     Row, 
     CardHeader, 
@@ -15,50 +15,92 @@ import {
     CardTitle 
 } from "reactstrap";
 
-class Portfolio extends Component {
-
-    static async getInitialProps() {
-        let projectsData = {};
-        try{
-            projectsData = await getProjects();
-            
-        } catch(err){
-            console.log(err);
-        }
+class Projects extends Component {
+    
+static async getInitialProps() {
+    let projectsData = {};
+    try{
+        projectsData = await getProjects();
         
-        return { projectsData };
+    } catch(err){
+        console.log(err);
     }
     
-    renderPosts(projectsData){
+    return { projectsData };
+}
 
-        return ( projectsData.map((project, index) => {
-            return (
-                <Col md="4" key={index}>
-                    <Fragment>
-                        <span>
-                            <Card className="portfolio-card">
-                                <CardHeader className="portfolio-card-header">{project.position}</CardHeader>
-                                <CardBody >
-                                    <p className="portfolio-card-city">{project.location}</p>
-                                    <CardTitle className="portfolio-card-title">{project.title}</CardTitle>
-                                    <CardText className="portfolio-card-text">{project.description}</CardText>
-                                    <div className="readMore">{project.company}</div>
-                                </CardBody>
-                            </Card>
-                        </span>
-                    </Fragment>
-                </Col>
-            )
-            }))
+displayDeleteWarning(projectId) {
+    const isConfirm = confirm('Are you sure that you wanna delete project?');
+
+    if(isConfirm){
+        this.deleteProject(projectId);
     }
+}
 
-    render(){ 
-        const { projectsData } = this.props;
+deleteProject = (projectId) => {
+    deleteProject(projectId)
+    .then(() => {
+        Router.pushRoute('/projects')
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
+    
+renderPosts(projectsData){
+    const { isAuthenticated, isSideOwner } = this.props.auth;
 
+    return ( projectsData.map((project, index) => {
+        return (
+            <Col md="4" key={index}>
+                <Fragment>
+                    <span>
+                        <Card className="portfolio-card">
+                            <CardHeader className="portfolio-card-header">{project.position}</CardHeader>
+                            <CardBody >
+                                <p className="portfolio-card-city">{project.location}</p>
+                                <CardTitle className="portfolio-card-title">{project.title}</CardTitle>
+                                <CardText className="portfolio-card-text">{project.description}</CardText>
+                                <div className="readMore">{project.company}</div>
+                            </CardBody>
+                            { isAuthenticated && isSideOwner &&
+                                <div>
+                                    <Button
+                                        onClick={() => Router.pushRoute(`/projects/${project._id}/edit`)} 
+                                        className="btn btn-warning btn-lg" 
+                                        color="warning">
+                                            Edit
+                                    </Button>
+                                    <Button
+                                        onClick={() => this.displayDeleteWarning(project._id)} 
+                                        className="btn btn-danger btn-lg" 
+                                        color="danger">
+                                            Delete
+                                    </Button>
+                                </div>
+                            }
+                        </Card>
+                    </span>
+                </Fragment>
+            </Col>
+        )
+    }))
+}
+
+render(){ 
+    const { projectsData } = this.props;
+    const { isAuthenticated, isSideOwner } = this.props.auth;
         return(
             <>
             <BaseLayout {...this.props.auth}>
                 <BasePage className="portfolio-page" title="My projects">
+                    { isAuthenticated && isSideOwner &&
+                        <Button 
+                                onClick={() => Router.pushRoute('/projectNew')} 
+                                className="btn btn-success btn-lg" 
+                                color="success">Create Project
+                        </Button>
+                    }
                     <Row>
                         {this.renderPosts(projectsData)}
                     </Row>
@@ -69,4 +111,4 @@ class Portfolio extends Component {
     }
 }
 
-export default Portfolio;
+export default Projects;

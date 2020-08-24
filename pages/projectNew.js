@@ -10,8 +10,8 @@ import { Router } from  '../routes';
 const INITIAL_VALUES = { 
     title: '', 
     description: '',
-    startDate: '',
-    endDate: '',
+    startDate: new Date(),
+    endDate: '' || new Date(),
 }
 
 class ProjectNew extends Component {

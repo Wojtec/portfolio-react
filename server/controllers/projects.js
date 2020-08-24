@@ -3,13 +3,14 @@ const Projects = require('../models/projects');
 module.exports = {
 
     getProject: (req, res) => {
-
-        Projects.find({}, (err, allProjects) => {
-            if(err) {
-                return res.status(422).send(err);
-            }
-            return res.json(allProjects);
-        })
+    Projects.find({})
+            .sort({'startDate': 1})
+            .exec((err, allProjects) => {
+                if(err) {
+                    return res.status(422).send(err);
+                }
+                return res.json(allProjects);
+            })
     },
     
     getProjectById: (req, res) => {

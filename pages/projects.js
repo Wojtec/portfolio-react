@@ -1,18 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage';
+import ProjectCard from '../components/project/projectCard';
 import { Router } from '../routes';
 import { getProjects, deleteProject } from '../actions';
 
 import { 
     Button,
     Col, 
-    Row, 
-    CardHeader, 
-    CardBody, 
-    CardText, 
-    Card, 
-    CardTitle 
+    Row
 } from "reactstrap";
 
 class Projects extends Component {
@@ -29,7 +25,12 @@ static async getInitialProps() {
     return { projectsData };
 }
 
-displayDeleteWarning(projectId) {
+navigateToEdit(projectId, e) {
+    e.stopPropagation();
+    Router.pushRoute(`/projects/${projectId}/edit`)
+}
+displayDeleteWarning(projectId, e) {
+    e.stopPropagation();
     const isConfirm = confirm('Are you sure that you wanna delete project?');
 
     if(isConfirm){
@@ -53,35 +54,24 @@ renderPosts(projectsData){
     return ( projectsData.map((project, index) => {
         return (
             <Col md="4" key={index}>
-                <Fragment>
-                    <span>
-                        <Card className="portfolio-card">
-                            <CardHeader className="portfolio-card-header">{project.position}</CardHeader>
-                            <CardBody >
-                                <p className="portfolio-card-city">{project.location}</p>
-                                <CardTitle className="portfolio-card-title">{project.title}</CardTitle>
-                                <CardText className="portfolio-card-text">{project.description}</CardText>
-                                <div className="readMore">{project.company}</div>
-                            </CardBody>
-                            { isAuthenticated && isSideOwner &&
-                                <div>
-                                    <Button
-                                        onClick={() => Router.pushRoute(`/projects/${project._id}/edit`)} 
-                                        className="btn btn-warning btn-lg" 
-                                        color="warning">
-                                            Edit
-                                    </Button>
-                                    <Button
-                                        onClick={() => this.displayDeleteWarning(project._id)} 
-                                        className="btn btn-danger btn-lg" 
-                                        color="danger">
-                                            Delete
-                                    </Button>
-                                </div>
-                            }
-                        </Card>
-                    </span>
-                </Fragment>
+                <ProjectCard project={project}>
+                    { isAuthenticated && isSideOwner &&
+                        <div>
+                            <Button
+                                onClick={(e) => this.navigateToEdit(project._id, e)} 
+                                className="btn btn-warning btn-lg" 
+                                color="warning">
+                                    Edit
+                            </Button>
+                            <Button
+                                onClick={(e) => this.displayDeleteWarning(project._id, e)} 
+                                className="btn btn-danger btn-lg" 
+                                color="danger">
+                                    Delete
+                            </Button>
+                        </div>
+                    }
+                </ProjectCard>
             </Col>
         )
     }))

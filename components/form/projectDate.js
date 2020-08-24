@@ -6,11 +6,12 @@ import { FormGroup, Label, Input } from 'reactstrap';
 class ProjectDate extends Component {
   constructor(props){
     super(props);
-    const dateValue = this.props.initialDate ? new Date(this.props.initialDate) : new Date();
+    const dateValue = props.initialDate ? new Date(props.initialDate) : new Date();
+    const isHidden = props.initialDate ? false : true;
 
     this.state = {
       dateValue: dateValue,
-      isHidden: false,
+      isHidden,
     };
   }
    

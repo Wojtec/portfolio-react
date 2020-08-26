@@ -9,6 +9,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  Container,
 } from 'reactstrap';
 
 const BsNavLink = (props) => {
@@ -49,6 +50,7 @@ const NavbarComponent = (props) => {
   return (
     <div>
       <Navbar fluid  className={`port-navbar port-nav-base absolute ${className}`} color="transparent" light expand="md">
+      <Container>
         <NavbarBrand  className="port-navbar-brand" href="/"><span className="logo">W</span> Poninski</NavbarBrand>
           <NavbarToggler onClick={toggle} />
              <Collapse isOpen={isOpen} navbar>
@@ -95,6 +97,7 @@ const NavbarComponent = (props) => {
             }
             </Nav>
         </Collapse>
+        </Container>
       </Navbar>
     </div>
   );

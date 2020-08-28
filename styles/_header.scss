@@ -4,7 +4,8 @@
     z-index: 15;
     padding: 20px;
     background-color: $primary;
-    box-shadow: 0 3px 2px rgba(0,0,0,.21);
+    box-shadow: 0 3px 2px rgba(0,0,0,0.3);
+    
     .port-navbar {
         &-brand {
             color: $secondary;
@@ -21,17 +22,21 @@
         }
 
         &-link {
-            color: $secondary;
+            color: rgb(130, 130, 130);
             font-weight: bold;
             letter-spacing: 0.8px;
             font-size: 14px;
             text-transform: uppercase;
             &.active {
-                color: wheat !important;
+                color: $secondary !important;
             }
             &:hover, &:focus {
-                color: wheat !important;
+                color: $secondary !important;
             }
+        }
+
+        &-brand{
+            color:rgb(130, 130, 130);
         }
        
     }
@@ -39,8 +44,8 @@
 }
 
 .navbar-toggler{
-    background-color: wheat;
-    border: 1px solid wheat;
+    background-color: $secondary;
+    border: 1px solid $secondary;
 }
 
 .logo{
@@ -48,6 +53,8 @@
     font-size: 34px;
     margin: 5px;
     padding: 5px;
+    color:$secondary;
+
 
 }
 

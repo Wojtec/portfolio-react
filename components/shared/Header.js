@@ -48,7 +48,7 @@ const NavbarComponent = (props) => {
   const  { isAuthenticated, className }  = props;
   
   return (
-    <div>
+    <>
       <Navbar fluid  className={`port-navbar port-nav-base absolute ${className}`} light expand="md">
       <Container>
         <NavbarBrand  className="port-navbar-brand" href="/"><span className="logo">W</span> Poninski</NavbarBrand>
@@ -99,7 +99,7 @@ const NavbarComponent = (props) => {
         </Collapse>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 }
 

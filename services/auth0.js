@@ -8,8 +8,8 @@ import { getCookieFromReq } from '../helpers/utils';
 class Auth0 {
     constructor() {
         this.auth0 = new auth0.WebAuth({
-            domain: process.env.NEXT_PUBLIC_DOMAIN,
-            clientID: process.env.NEXT_PUBLIC_CLIENTID,
+            domain: "dev-828n9808.eu.auth0.com",
+            clientID: "55e7WXrTq2s9lfxMIdnEjtKPohVDR2PY",
             redirectUri: "http://localhost:3000/callback",
             responseType: "token id_token", 
             scope: "openid profile"

@@ -17,72 +17,42 @@
 
 }
 
-.hero-section{
-    h2 {
-        color: wheat;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    perspective: 1000px;
-    color: wheat;
-    width: 348px;
-    position: relative;
-    &-content {
-        position: absolute;
-        bottom: 0px;
-        width: 348px;
-        background-color: rgba(68, 67, 67, 0.562);
-        text-align: center;
-        border-right: 1px solid rgb(77, 77, 77);
-        border-left: 1px solid rgb(77, 77, 77);
-        z-index: 1;
-
-    &-intro {
-        
-        font-size: 25px;
-    }
-  }
-}
-
-.image{
-    width: auto;
-    max-width: 100%;
-}
-
-.hero-welcome-text {
-        min-height: 250px;
-        margin-top: 35px;
-        > h1 {
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 27px;
-        margin-top: 80px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 15px;
-    }
-}
-.hero-welcome-bio{
-    margin-top: 20px;
-    color:white;
-    
-
-    .fa-stack {
-        font-size:28px;
-    }
-    
-    .list-inline-item {
-        > a {
-            color: #373737;
-        }
-    }
-}
-
-.hero-welcome-wrapper{
+.hero-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-   background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    margin: 0 auto;
 
+    &-title{
+        width: 50%;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-weight: 400;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-text{
+            margin: 0px 15px;
+        }
+        &-decoration{
+            width: 30%;
+            height: 2px;
+            background-color: white;
+    
+        }
+        
+    }
+
+    &-subtitle{
+        color:white;
+        font-size:40px;
+        font-weight: 700;
+    }
 
 }
 
@@ -100,34 +70,7 @@
 
 .background-image{
     width: 1762px;
-    height: 70px;
-    filter: brightness(90%);
+    height: 170px;
 }
 
-.shadow-custom {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    box-shadow: -17px 13px 41px rgba(255, 255, 255, 0.5);
-    border: 1px solid rgb(77, 77, 77);
 
-    .shadow-inner {
-
-        width: 100%;
-        height: 100%;
-        box-shadow:  -17px 13px 13px rgba(0, 0, 0, 0.9);
-    }
-}
-
-.shadow-custom-2 {
-    border: 2px solid #f37d49;
-    box-shadow: -17px 13px 41px rgba(13,78,158,0.3);
-  }
-
-.self-type-row{
-    margin:0 auto;
-    width: 65%;
-    padding-bottom: 30px;
-    
-}

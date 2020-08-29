@@ -24,17 +24,6 @@ static async getInitialProps() {
     
     return { projectsData };
 }
-async componentDidMount(){
-    let projectsData = {};
-    try{
-        projectsData = await getProjects();
-        
-    } catch(err){
-        console.log(err);
-    }
-    
-    return { projectsData };
-}
 
 navigateToEdit(projectId, e) {
     e.stopPropagation();

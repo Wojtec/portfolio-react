@@ -30,7 +30,7 @@ const secretData = [
 
 
 //MONGODB
-mongoose.connect(config.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(config.DB_URI || DATABASE_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
     console.log("MongoDB connected");
 

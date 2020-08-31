@@ -1,0 +1,52 @@
+.projects{
+    width: 100%;
+    min-height: auto;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-title{
+        position: relative;
+        margin: 50px 0px;
+        font-size: 50px;
+        font-weight: 400;
+        color:rgb(130, 130, 130);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-text{
+            margin: 10px 15px;
+
+    
+        }
+
+        &-decoration{
+            width: 10%;
+            height: 4px;
+            background-color: $secondary;
+    
+            &-long{
+                position: absolute;
+                bottom: 0;
+                width: 20%;
+                height: 4px;
+                background-color: $secondary;
+        
+            }
+        } 
+    }
+}
+
+
+.background-projects{
+    width: 100%;
+    min-height: 925px;
+    object-fit: cover;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("/images/background-projects1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+
+}
+

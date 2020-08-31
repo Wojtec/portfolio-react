@@ -4,27 +4,29 @@ import {Row, Col, Container} from 'reactstrap';
 const About = (props) => {
 
     return(
+        <section className="section-about">
         <Container>
         <Row>
             <Col xs="12">
-                <section className="about">
-                <h1 className="about-title">
+                <div className="about">
+                <h2 className="about-title">
                     <span className="about-title-decoration"></span>
                     <span className="about-title-text">About</span>
                     <span className="about-title-decoration"></span>     
                     <span className="about-title-decoration-long"></span>               
-                </h1>
+                </h2>
                 <article>
-                <Row>
                     <Row>
                         <Col xs="12">
                             <div className="about-content">
-                                <h1 className="about-content-title">
-                                    My name is Wojtek Poninski. My passion is creative Web Application creating.
-                                </h1>
+                                <h2 className="about-content-title">
+                                    <span>My name is Wojtek Poninski.</span><br/>
+                                    <span>My passion is creative Web Application creating.</span>
+                                </h2>
                             </div>
                         </Col>
                     </Row>
+                    <Row>
                     <Col md="4">
                         <img className="about-content-image" src="images/hero600.png"></img>
                     </Col>
@@ -45,10 +47,11 @@ const About = (props) => {
                 </Row>      
                 <div className="about-long"></div>   
                 </article>                     
-                </section>
+                </div>
             </Col>            
         </Row>
         </Container>
+        </section>
     )
 }
 

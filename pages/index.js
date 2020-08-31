@@ -1,10 +1,10 @@
 import BaseLayout from '../components/layouts/BaseLayout';
 import React, { Component } from 'react';
-import { Row, Container, Col, Button } from 'reactstrap';
+
 import Typed from 'react-typed';
 import Hero from '../components/Hero';
 import About from '../components/About';
-
+import Projects from '../components/Projects';
 class Index extends Component {
 
     render(){
@@ -15,6 +15,8 @@ class Index extends Component {
                 <section className="main-section ">
                         <Hero/>
                         <About/>
+                        <Projects/>
+                        
                 </section>
             </BaseLayout>        
         )

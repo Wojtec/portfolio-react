@@ -13,69 +13,70 @@ import {
 
 class Projects extends Component {
     
-static async getInitialProps() {
-    let projectsData = {};
-    try{
-        projectsData = await getProjects();
+    static async getInitialProps() {
+        let projectsData = {};
+        try{
+            projectsData = await getProjects();
+            
+        } catch(err){
+            console.log(err);
+        }
         
-    } catch(err){
-        console.log(err);
+        return { projectsData };
     }
-    
-    return { projectsData };
-}
 
-navigateToEdit(projectId, e) {
-    e.stopPropagation();
-    Router.pushRoute(`/projects/${projectId}/edit`)
-}
-displayDeleteWarning(projectId, e) {
-    e.stopPropagation();
-    const isConfirm = confirm('Are you sure that you wanna delete project?');
-
-    if(isConfirm){
-        this.deleteProject(projectId);
+    navigateToEdit(projectId, e) {
+        e.stopPropagation();
+        Router.pushRoute(`/projects/${projectId}/edit`)
     }
-}
 
-deleteProject = (projectId) => {
-    deleteProject(projectId)
-    .then(() => {
-        Router.pushRoute('/projects')
-    })
-    .catch(err => {
-        console.log(err);
-    })
-}
-    
-renderPosts(projectsData){
-    const { isAuthenticated, isSideOwner } = this.props.auth;
+    displayDeleteWarning(projectId, e) {
+        e.stopPropagation();
+        const isConfirm = confirm('Are you sure that you wanna delete project?');
 
-    return ( projectsData.map((project, index) => {
-        return (
-            <Col md="4" key={index}>
-                <ProjectCard project={project}>
-                    { isAuthenticated && isSideOwner &&
-                        <div>
-                            <Button
-                                onClick={(e) => this.navigateToEdit(project._id, e)} 
-                                className="btn btn-warning btn-lg" 
-                                color="warning">
-                                    Edit
-                            </Button>
-                            <Button
-                                onClick={(e) => this.displayDeleteWarning(project._id, e)} 
-                                className="btn btn-danger btn-lg" 
-                                color="danger">
-                                    Delete
-                            </Button>
-                        </div>
-                    }
-                </ProjectCard>
-            </Col>
-        )
-    }))
-}
+        if(isConfirm){
+            this.deleteProject(projectId);
+        }
+    }
+
+    deleteProject = (projectId) => {
+        deleteProject(projectId)
+        .then(() => {
+            Router.pushRoute('/projects')
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+        
+    renderPosts(projectsData){
+        const { isAuthenticated, isSideOwner } = this.props.auth;
+
+        return ( projectsData.map((project, index) => {
+            return (
+                <Col md="4" key={index}>
+                    <ProjectCard project={project}>
+                        { isAuthenticated && isSideOwner &&
+                            <div>
+                                <Button
+                                    onClick={(e) => this.navigateToEdit(project._id, e)} 
+                                    className="btn btn-warning btn-lg" 
+                                    color="warning">
+                                        Edit
+                                </Button>
+                                <Button
+                                    onClick={(e) => this.displayDeleteWarning(project._id, e)} 
+                                    className="btn btn-danger btn-lg" 
+                                    color="danger">
+                                        Delete
+                                </Button>
+                            </div>
+                        }
+                    </ProjectCard>
+                </Col>
+            )
+        }))
+    }
 
 render(){ 
     const { projectsData } = this.props;

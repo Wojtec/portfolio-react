@@ -37,6 +37,8 @@
     "react-router-dom": "^5.2.0",
     "react-typed": "^1.2.0",
     "reactstrap": "^8.5.1",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "slate": "^0.58.4",
+    "slate-react": "^0.58.4"
   }
 }

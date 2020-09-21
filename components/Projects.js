@@ -29,8 +29,8 @@ renderPosts(projectsData){
 }
 
 render() {
-    console.log(this.state.projects);
     const { projects } = this.state;
+    console.log(projects);
     return(
         <section  className="background-projects">
             <Row >

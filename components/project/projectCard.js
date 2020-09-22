@@ -4,7 +4,8 @@ import {
     CardBody, 
     CardText, 
     Card, 
-    CardTitle 
+    CardTitle,
+    CardImg
 } from "reactstrap";
 
 import ProjectCardDetail from './projectCardDetail';
@@ -27,11 +28,13 @@ class ProjectCard extends Component {
         return(
             <div  onClick={this.handleTaggle}>
             <ProjectCardDetail isOpen={isOpen} project={project} toggle={this.handleTaggle}/>
-            <Card className="portfolio-card">
-                <CardHeader className="portfolio-card-header">{project.position}</CardHeader>
+            <Card className="project-card">
+            <div className="project-card-image">
+            <CardImg className="project-card-image-img" top width="100%" src={project.img} alt="Card image cap" />
+            </div>
                 <CardBody >
-                    <CardTitle className="portfolio-card-title">{project.title}</CardTitle>
-                    <CardText className="portfolio-card-text">{project.description}</CardText>
+                    <CardTitle className="project-card-title">{project.title}</CardTitle>
+                    <CardText className="project-card-text">{project.subtitle}</CardText>
                 </CardBody>
                 {children}
             </Card>

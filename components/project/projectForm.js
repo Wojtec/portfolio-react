@@ -44,6 +44,18 @@ return(
                     component={ProjectInput} />
                 <Field 
                     className="form-control" 
+                    type="text" 
+                    name="subtitle" 
+                    label="Subtitle" 
+                    component={ProjectInput} />
+                <Field 
+                    className="form-control" 
+                    type="text" 
+                    name="img" 
+                    label="Image" 
+                    component={ProjectInput} />
+                <Field 
+                    className="form-control" 
                     type="textarea" 
                     name="description" 
                     label="Description" 

@@ -1,7 +1,6 @@
 .section-about{
     position: relative;
     padding-bottom:50px;
-    box-shadow: 0 1px 7px rgba(0,0,0,0.3);
     z-index: 1;
 
 }
@@ -13,7 +12,7 @@
     min-height: auto;
     justify-content: flex-end;
     align-items: center;
-    margin: 50px 0px;
+    padding: 150px 0px;
 
     &-title{
         position: relative;
@@ -56,7 +55,7 @@
 
         &-image{
             width: 100%;
-            border: 6px  solid $secondary;
+            border: 3px  solid $secondary;
             margin:-5px;
             box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 

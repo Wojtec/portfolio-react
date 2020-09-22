@@ -84,7 +84,7 @@ render(){
         return(
             <>
             <BaseLayout {...this.props.auth}>
-                <BasePage className="portfolio-page" title="My projects">
+                <BasePage className="project-page" title="My projects">
                     { isAuthenticated && isSideOwner &&
                         <Button 
                                 onClick={() => Router.pushRoute('/projectNew')} 

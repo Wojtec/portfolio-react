@@ -9,7 +9,7 @@ module.exports = {
                 if(err) {
                     return res.status(422).send(err);
                 }
-                return res.status(200).header("Access-Control-Allow-Origin","*").json(allProjects);
+                return res.status(200).json(allProjects);
             })
     },
     

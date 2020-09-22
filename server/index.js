@@ -43,10 +43,7 @@ app.prepare()
     const server = express();
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: false }));
-    server.use((req, res, next) => {
-        res.header('Access-Control-Allow-Origin', '*');
-        next();
-      });
+    
 
     server.use('/api/v1/projects', projectsRoutes);
 

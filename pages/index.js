@@ -1,7 +1,6 @@
 import BaseLayout from '../components/layouts/BaseLayout';
 import React, { Component } from 'react';
 
-import Typed from 'react-typed';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Projects from '../components/Projects';

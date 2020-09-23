@@ -1,4 +1,4 @@
-import { Row, Col, Container, Button } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import { getProjects } from '../actions';
 import React, { Component } from 'react';
 import ProjectCard from './project/projectCard';
@@ -30,7 +30,7 @@ renderPosts(projectsData){
 
 render() {
     const { projects } = this.state;
-    console.log(projects);
+
     return(
         <section  className="background-projects">
             <Row >
@@ -44,7 +44,9 @@ render() {
                                     <span className="projects-title-decoration-long"></span>               
                                 </h2>
                                 <article>
+                                <Row>
                                 {this.renderPosts(projects)}
+                                </Row>
                                 </article>                     
                             </div>
                         </Container>

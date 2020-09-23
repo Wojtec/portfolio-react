@@ -1,18 +1,19 @@
 .project-page {
     min-height: 100vh;
-    padding: 150px 0 0;
+    padding: 150px 0;
+}
+.projects-title{
+    margin-bottom: 75px;
 }
 
 .project-card {
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
     color: black;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0%;
-    margin-bottom: 50px;
+    margin: 50px 0;
     border: none;
     
     &:hover {
         cursor: pointer;
-        transform: translateY(0px);
     }
 
     &-image {
@@ -54,4 +55,11 @@
         margin-bottom: 50px;
     }
 
+}
+
+
+@media (max-width: 991px) {
+    .project-card {
+        margin: 25px 0;
+    }
 }

@@ -62,3 +62,9 @@
     background-size: cover;
   }
 
+  @media (max-width: 991px) {
+    .projects {
+        padding: 50px 0;
+    }
+}
+

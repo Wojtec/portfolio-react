@@ -16,7 +16,7 @@
 
     &-title{
         position: relative;
-        margin-bottom: 50px;
+        margin-bottom: 75px;
         font-size: 50px;
         font-weight: 400;
         color:rgb(130, 130, 130);
@@ -92,8 +92,52 @@
     }
 }
 
+.list-inline {
+    margin: 0;
+    padding-bottom: 15px;
+
+    &-item:nth-child(2){
+
+        a {
+            span{
+                color: red ;
+            }
+            span:hover {
+                color: rgb(192, 0, 0);
+            }
+        }
+    }
+
+    &-item:nth-child(3){
+
+        a {
+    
+            span{
+                color: black ;
+            }
+
+            span:hover {
+                color: rgb(85, 85, 85) ;
+            }
+        }
+    }
+    &-item:nth-child(4){
+
+        a {
+    
+            span{
+                color: rgb(3, 196, 3) ;
+            }
+
+            span:hover {
+                color: rgb(0, 155, 0);
+            }
+        }
+    }
+}
 @media (max-width: 991px) {
     .about{
+        padding: 50px 0px;
 
         &-title{
             margin-bottom: 50px;
@@ -117,6 +161,7 @@
                 margin-top:15px;
                 padding:15px;
                 font-size: 18px;
+                text-align: center;
 
                 p{
                     padding:5px;

@@ -2,7 +2,6 @@ import {Row, Col, Container} from 'reactstrap';
 import SocialMedia from "./SocialMedia";
 
 const About = () => {
-
     return(
         <section className="section-about">
             <Container>

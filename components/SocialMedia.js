@@ -1,5 +1,35 @@
 import { Row } from 'reactstrap';
+import React, { useEffect, useState } from "react";
 
+function whatsapp() {
+const [link, setLink] = useState(null);
+const bigScreen =  "https://web.whatsapp.com/send?phone=34602410491";
+const mobileScreen = "https://wa.me/34602410491"
+  useEffect(() => {
+      if(window.screen.width === 1920){
+           setLink(
+           <a target="_blank" href={`${bigScreen}`}>
+           <span className="fa-stack fa-lg">
+               <i className="fas fa-circle fa-stack-2x"></i>
+               <i className="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+           </span>
+           </a>
+           );
+      }
+      if(window.screen.width <= 991){
+        setLink(
+            <a target="_blank" href={`${mobileScreen}`}>
+            <span className="fa-stack fa-lg">
+                <i className="fas fa-circle fa-stack-2x"></i>
+                <i className="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+            );
+      }
+  },[]);
+
+  return link;
+}
 
 const SocialMedia = () => {
     return(
@@ -31,12 +61,7 @@ const SocialMedia = () => {
                 </a>
             </li>
             <li className="list-inline-item">
-                <a target="_blank" href="https://web.whatsapp.com/send?phone=34602410491">
-                <span className="fa-stack fa-lg">
-                    <i className="fas fa-circle fa-stack-2x"></i>
-                    <i className="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
-                </span>
-                </a>
+                {whatsapp()}
             </li>
             </ul>
         </div>

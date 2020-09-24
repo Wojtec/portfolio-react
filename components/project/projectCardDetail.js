@@ -15,12 +15,15 @@ class ProjectCardDetail extends Component{
 
     render(){
         const { isOpen, toggle, project } = this.props;
+        console.log(project);
         return(
             <div>
                 <Modal isOpen={isOpen} toggle={toggle}>
                 <ModalHeader toggle={toggle}>{project.title}</ModalHeader>
                 <ModalBody>
+                <img className="modal-body-image" src={project.img}></img>
                 <p><b>Description: </b>{project.description}</p>
+                <p><b>Stack: </b>{project.stack}</p>
                 <p><b>Start Date: </b>{this.formatDate(project.startDate)}</p>
                 <p><b>End Date: </b>{this.formatDate(project.endDate)}</p>
 

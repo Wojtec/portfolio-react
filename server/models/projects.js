@@ -12,6 +12,7 @@ const projtectSchema = new Schema({
     subtitle: setTypeString(256),
     description: setTypeString(1256),
     img:setTypeString(512),
+    stack:setTypeString(512),
     startDate: {type: Date, required: true},
     endDate: Date
 });

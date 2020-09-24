@@ -1,5 +1,5 @@
 import {Row, Col, Container} from 'reactstrap';
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "./shared/SocialMedia";
 
 const About = () => {
     return(

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import auth0 from '../../services/auth0';
 import Link from 'next/link';
 
@@ -43,61 +43,94 @@ const Logout = () => {
   );
 }
 const NavbarComponent = (props) => {
+
+  const [headerText, setHeaderText] = useState(false);
+    useEffect(() => {
+      const header = document.getElementById("navbar");
+      const scrollCallBack = window.addEventListener("scroll", () => {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 80) {
+          header.classList.add("navbar-sticky");
+          header.classList.remove("absolute");
+
+            if (headerText !== true) {
+              setHeaderText(true);
+            }
+        } else {
+          header.classList.remove("navbar-sticky");
+          header.classList.add("absolute");
+
+            if (headerText !== false) {
+              setHeaderText(false);
+            }
+        }
+      });
+
+      return () => {
+        window.removeEventListener("scroll", scrollCallBack);
+      };
+
+    }, []);
+
+
+
+
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const  { isAuthenticated, className }  = props;
   
   return (
     <>
-      <Navbar className={`port-navbar port-nav-base absolute ${className}`} light expand="md">
-      <Container>
-        <NavbarBrand  className="port-navbar-brand" href="/"><span className="logo">W</span> Poninski</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-             <Collapse isOpen={isOpen} navbar>
+      <Navbar id="navbar" className={`port-navbar port-nav-base absolute ${className}`} light expand="md">
+        <Container>
+            <NavbarBrand  className="port-navbar-brand" href="/"><span className="logo">W</span> Poninski</NavbarBrand>
+            <NavbarToggler onClick={toggle} />
+              <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                   <NavItem className="port-navbar-item">
-                       <BsNavLink
+                  <NavItem className="port-navbar-item">
+                      <BsNavLink
                             route="/"
                             title="Home"
                         />
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                      <BsNavLink
+                          route="/about"
+                          title="About"
+                      />
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                      <BsNavLink
+                          route="/projects"
+                          title="Projects"
+                      />
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                      <BsNavLink
+                          route="/blog"
+                          title="Blog"
+                      />
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                      <BsNavLink
+                          route="/cv"
+                          title="Cv"
+                      />
+                  </NavItem>
+                  { !isAuthenticated &&
+                    <NavItem className="port-navbar-item">
+                        <Login />
                     </NavItem>
-            <NavItem className="port-navbar-item">
-                <BsNavLink
-                    route="/about"
-                    title="About"
-                />
-            </NavItem>
-            <NavItem className="port-navbar-item">
-                <BsNavLink
-                    route="/projects"
-                    title="Projects"
-                />
-            </NavItem>
-            <NavItem className="port-navbar-item">
-                <BsNavLink
-                    route="/blog"
-                    title="Blog"
-                />
-            </NavItem>
-            <NavItem className="port-navbar-item">
-                <BsNavLink
-                    route="/cv"
-                    title="Cv"
-                />
-            </NavItem>
-            { !isAuthenticated &&
-              <NavItem className="port-navbar-item">
-                  <Login />
-              </NavItem>
-            }
-            { isAuthenticated &&
-              <NavItem className="port-navbar-item">
-                  <Logout />
-              </NavItem>
-            }
-            </Nav>
-        </Collapse>
-        </Container>
+                  }
+                  { isAuthenticated &&
+                    <NavItem className="port-navbar-item">
+                        <Logout />
+                    </NavItem>
+                  }
+                </Nav>
+              </Collapse>
+          </Container>
       </Navbar>
     </>
   );

@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 
 function whatsapp() {
 const [link, setLink] = useState(null);
+
 const bigScreen =  "https://web.whatsapp.com/send?phone=34602410491";
 const mobileScreen = "https://wa.me/34602410491"
+
   useEffect(() => {
       if(window.screen.width === 1920){
            setLink(

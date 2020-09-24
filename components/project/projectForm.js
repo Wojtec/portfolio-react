@@ -51,6 +51,12 @@ return(
                 <Field 
                     className="form-control" 
                     type="text" 
+                    name="stack" 
+                    label="Stack" 
+                    component={ProjectInput} />
+                <Field 
+                    className="form-control" 
+                    type="text" 
                     name="img" 
                     label="Image" 
                     component={ProjectInput} />

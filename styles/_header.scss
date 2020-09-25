@@ -7,6 +7,7 @@
     box-shadow: 0 3px 2px rgba(0,0,0,0.3);
 
     .port-navbar {
+
         &-brand {
             color: $secondary;
             font-size: 18px;
@@ -28,10 +29,10 @@
             font-size: 14px;
             text-transform: uppercase;
             &.active {
-                color: $secondary !important;
+                color: $secondary;
             }
             &:hover, &:focus {
-                color: $secondary !important;
+                color: $secondary;
             }
         }
 
@@ -48,16 +49,6 @@
     border: 1px solid $secondary;
 }
 
-.logo{
-    font-family: "KoronaOne";
-    font-size: 34px;
-    margin: 5px;
-    padding: 5px;
-    color:$secondary;
-
-
-}
-
 .port-navbar.port-nav-base.port-nav-default {
     padding: 20px;
     background-color: $primary !important;
@@ -70,14 +61,62 @@
     width: 100%;
     animation: moveDown 1.5s ease-in-out;
     padding: 5px !important;
+    transition: padding 0.8s ease-in-out;
+
+
+    @keyframes moveDown {
+        from {
+        transform: translateY(-7rem);
+        }
+        to {
+        transform: translateY(0rem);
+        }
+    }
+
+
 }
 
-@keyframes moveDown {
-    from {
-      transform: translateY(-6.5rem);
-    }
-    to {
-      transform: translateY(0rem);
-    }
-  }
+.logo-container {
+    display: flex;
+    padding: 0 5px;
+    margin: 0 5px;
+    margin-bottom: 5px;
+    &-logo{
+        font-family: "KoronaOne";
+        font-size: 34px;
+        padding:0 8px;
+        color:$secondary;
 
+
+    }
+
+    &-text {
+        margin: auto 0;
+        padding-top: 15px;
+    }
+
+
+}
+
+.navbar-rotate{
+    animation: anim  2s ease-in-out  1s!important;
+
+
+    @keyframes anim {
+        0% {
+          transform: rotateY(360deg);
+          
+        }
+        100% {
+          transform: rotateY(0rem);
+        }
+      }  
+    
+}
+
+  
+
+  .active{
+    border-bottom: 3px solid $secondary;
+    transition: border-bottom 0.1s ease-in-out !important;
+  }

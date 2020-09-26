@@ -117,6 +117,18 @@
   
 
   .active{
-    border-bottom: 3px solid $secondary;
-    transition: border-bottom 0.1s ease-in-out !important;
+    animation: navLink 50ms ease-in-out forwards;
+
+    @keyframes navLink {
+
+        from {
+        width: 30%;
+        border-bottom: 3px solid $secondary;
+        }
+        to{
+            width: 100%;
+            border-bottom: 3px solid $secondary;
+        }
+      }  
   }
+ 

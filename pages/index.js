@@ -13,12 +13,9 @@ class Index extends Component {
         
         return (
             <BaseLayout className="cover" {...this.props.auth} headerType="index">
-                <div className="main-section ">
-                        <Hero/>
-                        <About/>
-                        <Projects/>
-                        
-                </div>
+                <Hero/>
+                <About/>
+                <Projects/>  
             </BaseLayout>        
         )
     }

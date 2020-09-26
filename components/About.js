@@ -3,10 +3,11 @@ import SocialMedia from "./shared/SocialMedia";
 
 const About = () => {
     return(
-        <section className="section-about">
-            <Container>
+        <section id="/about" className="section-about">
                 <Row>
                     <Col xs="12">
+                    <Container>
+
                         <div className="about">
                             <h2 className="about-title">
                                 <span className="about-title-decoration"></span>
@@ -43,9 +44,9 @@ const About = () => {
                                 <div className="about-long"></div>   
                             </article>                     
                         </div>
+                        </Container>
                     </Col>            
                 </Row>
-            </Container>
         </section>
     )
 }

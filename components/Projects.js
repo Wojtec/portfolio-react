@@ -32,7 +32,7 @@ render() {
     const { projects } = this.state;
 
     return(
-        <section  className="background-projects">
+        <section id="/projects" className="background-projects">
             <Row >
                 <Col xs="12">
                         <Container>

@@ -15,7 +15,7 @@ import {
 const BsNavLink = (props) => {
   const { route, title } = props;
     return (
-      <Link activeClassName="active"  href={route}>
+      <Link href={route}>
         <a className={ "nav-link port-navbar-link" }>{title}</a>
       </Link>
     )
@@ -53,26 +53,33 @@ const NavbarComponent = (props) => {
     useEffect(() => {
       const header = document.getElementById("navbar");
       const navTags = document.getElementsByClassName("navbar-nav");
-      console.log(navTags);
+
+      const scrollActiveCallBack = window.addEventListener('DOMContentLoaded', () => {
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            console.log(entry.target.id);
+            if (entry.target.id === "/" || entry.target.id === "/about" || entry.target.id === "/projects") {
+              const id = entry.target.id;
+              document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.add('active');
+            } else {
+              document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.remove('active');
+            }
+          });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+          observer.observe(section);
+        });
+	
+      });
+
+
+
+
+
       const scrollCallBack = window.addEventListener("scroll", () => {
-
-        if(window.pageYOffset === 0 || window.pageYOffset < 860){
-          navTags[0].childNodes[1].childNodes[0].classList.remove("active");
-          navTags[0].childNodes[0].childNodes[0].classList.add("active");
-
-        }
-
-        if(window.pageYOffset > 860 || window.pageYOffset < 2100) {
-          navTags[0].childNodes[0].childNodes[0].classList.remove("active");
-          navTags[0].childNodes[1].childNodes[0].classList.add("active");
-
-        }
-
-        if(window.pageYOffset > 2100) {
-          navTags[0].childNodes[1].childNodes[0].classList.remove("active");
-          navTags[0].childNodes[2].childNodes[0].classList.add("active");
-
-        }
 
         if (window.pageYOffset >= 80) {
           header.classList.add("navbar-sticky");
@@ -91,6 +98,8 @@ const NavbarComponent = (props) => {
 
       return () => {
         window.removeEventListener("scroll", scrollCallBack);
+        window.removeEventListener("DOMContentLoaded", scrollActiveCallBack);
+
       };
 
     }, []);

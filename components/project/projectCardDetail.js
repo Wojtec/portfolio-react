@@ -15,7 +15,7 @@ class ProjectCardDetail extends Component{
 
     render(){
         const { isOpen, toggle, project } = this.props;
-        console.log(project);
+        
         return(
             <div>
                 <Modal isOpen={isOpen} toggle={toggle}>

@@ -41,68 +41,82 @@ const Logout = () => {
   );
 }
 
+
+
+
 const NavbarComponent = (props) => {
+  const [headerText, setHeader] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   const { isAuthenticated, className }  = props;
-
-  const [headerText, setHeader] = useState(false);
+  let mount = useRef(false); 
   
+  useEffect(() => {
 
-    useEffect(() => {
+    const scrollActiveNav = () => {
 
-      const scrollActiveCallBack = window.addEventListener('DOMContentLoaded', () => {
-
-        const options = {
-          threshold: 0.5
-        };
-
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-
-            const id = entry.target.id;
+      const options = {
+  
+        threshold: 0.5
+  
+      };
+      
+      const observer = new IntersectionObserver(entries => {
+  
+        entries.forEach(entry => {
+  
+          const id = entry.target.id;
+  
             if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-             
               document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.add('active');
             } else {
               document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.remove('active');
             }
-          });
-        }, options);
-
-        // Track all sections that have an `id` applied
-        document.querySelectorAll('section[id]').forEach((section) => {
-          observer.observe(section);
+  
         });
-	
+  
+      }, options);
+  
+      document.querySelectorAll('section[id]').forEach((section) => {
+  
+        observer.observe(section);
+  
       });
+  
+  }
+  
+    const scrollStickyNav = () => {
+      const header = document.getElementById("navbar");
+  
+      if (window.pageYOffset >= 80) {
+        header.classList.add("navbar-sticky");
+        header.classList.remove("absolute");
+    
+        setHeader(true);
+          
+      } else {
+        header.classList.remove("navbar-sticky");
+        header.classList.add("absolute");
+  
+        setHeader(false);
+          
+      }
+    
+  }
 
-      const scrollCallBack = window.addEventListener("scroll", () => {
-        const header = document.getElementById("navbar");
+    window.addEventListener("scroll", scrollStickyNav);
+    window.addEventListener('DOMContentLoaded', scrollActiveNav);
 
-        if (window.pageYOffset >= 80) {
-          header.classList.add("navbar-sticky");
-          header.classList.remove("absolute");
-      
-              setHeader(true);
-            
-        } else {
-          header.classList.remove("navbar-sticky");
-          header.classList.add("absolute");
+    return () => {
+      window.removeEventListener("scroll",scrollStickyNav);
+      window.removeEventListener('DOMContentLoaded', scrollActiveNav);
 
-              setHeader(false);
-            
-        }
-      });
+    };
 
-      return () => {
-        window.removeEventListener("scroll", scrollCallBack);
-        window.removeEventListener("DOMContentLoaded", scrollActiveCallBack);
-      };
-
-    }, []);
+  }, []);
   
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import auth0 from '../../services/auth0';
 import Link from '../../helpers/nextActiveNav';
 
@@ -15,7 +15,7 @@ import {
 const BsNavLink = (props) => {
   const { route, title } = props;
     return (
-      <Link activeClassName="active" href={route}>
+      <Link activeClassName="active" href={route} >
         <a className={ "nav-link port-navbar-link" }>{title}</a>
       </Link>
     )
@@ -46,78 +46,72 @@ const Logout = () => {
 
 const NavbarComponent = (props) => {
   const [headerText, setHeader] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   const { isAuthenticated, className }  = props;
-  let mount = useRef(false); 
+
+
+const scrollStickyActiveNav = () => {
+  //Sticky
+  const header = document.getElementById("navbar");
+
+  if (window.pageYOffset >= 80) {
+    header.classList.add("navbar-sticky");
+    header.classList.remove("absolute");
+    setHeader(true);
+    
+  } else {
+    header.classList.remove("navbar-sticky");
+    header.classList.add("absolute");
+    setHeader(false);
+    
+  }
+  //Active Nav
+  const options = {
+
+    threshold: 0.5
+
+  };
   
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+    const id = entry.target.id;
+
+      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+
+        document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.add('active');
+
+      } else {
+
+        document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.remove('active');
+
+      }
+
+    });
+
+  }, options);
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+
+    observer.observe(section);
+
+  });
+}
+
   useEffect(() => {
 
-    const scrollActiveNav = () => {
-
-      const options = {
-  
-        threshold: 0.5
-  
-      };
-      
-      const observer = new IntersectionObserver(entries => {
-  
-        entries.forEach(entry => {
-  
-          const id = entry.target.id;
-  
-            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-              document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.add('active');
-            } else {
-              document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.remove('active');
-            }
-  
-        });
-  
-      }, options);
-  
-      document.querySelectorAll('section[id]').forEach((section) => {
-  
-        observer.observe(section);
-  
-      });
-  
-  }
-  
-    const scrollStickyNav = () => {
-      const header = document.getElementById("navbar");
-  
-      if (window.pageYOffset >= 80) {
-        header.classList.add("navbar-sticky");
-        header.classList.remove("absolute");
+    window.addEventListener("scroll", scrollStickyActiveNav);
     
-        setHeader(true);
-          
-      } else {
-        header.classList.remove("navbar-sticky");
-        header.classList.add("absolute");
-  
-        setHeader(false);
-          
-      }
-    
-  }
-
-    window.addEventListener("scroll", scrollStickyNav);
-    window.addEventListener('DOMContentLoaded', scrollActiveNav);
-
     return () => {
-      window.removeEventListener("scroll",scrollStickyNav);
-      window.removeEventListener('DOMContentLoaded', scrollActiveNav);
-
+      window.removeEventListener("scroll",scrollStickyActiveNav);
     };
 
   }, []);
-  
+
   return (
     <>
       <Navbar id="navbar" className={`port-navbar port-nav-base absolute ${className}`} light expand="md">
@@ -145,6 +139,7 @@ const NavbarComponent = (props) => {
                       <BsNavLink
                           route="/about"
                           title="About"
+
                       />
                   </NavItem>
                   <NavItem className="port-navbar-item">

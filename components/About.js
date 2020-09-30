@@ -41,8 +41,8 @@ const About = () => {
                                         <SocialMedia/>
                                     </Col>
                                 </Row>      
-                                <div className="about-long"></div>   
-                            </article>                     
+                            </article>    
+                            <div className="about-long"></div>                    
                         </div>
                         </Container>
                     </Col>            

@@ -18,7 +18,7 @@ const Hero = (props) => {
                                     <a className="hero-content-buttons-btn" href="#">Projects</a>
                                     <a className="hero-content-buttons-btn" href="#">Skills</a>
                                 </div>
-                                <div className="hero-content-description">Learn more about what I do</div>
+                                <div className="hero-content-description">Learn more about me and what I do</div>
                                 <div className="hero-content-arrow">
                                     <span></span>
                                     <span></span>

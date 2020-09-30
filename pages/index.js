@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Projects from '../components/Projects';
-
+import Skills from '../components/skills';
 
 class Index extends Component {
 
@@ -15,6 +15,7 @@ class Index extends Component {
             <BaseLayout className="cover" {...this.props.auth} headerType="index">
                 <Hero/>
                 <About/>
+                <Skills/>
                 <Projects/>  
             </BaseLayout>        
         )

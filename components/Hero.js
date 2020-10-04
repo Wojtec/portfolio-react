@@ -15,8 +15,8 @@ const Hero = (props) => {
                                 </h1>
                                 <p className="hero-content-subtitle">YOUR OWN WEBSITE</p>
                                 <div className="hero-content-buttons">
+                                    <a className="hero-content-buttons-btn" href="#">What I do</a>
                                     <a className="hero-content-buttons-btn" href="#">Projects</a>
-                                    <a className="hero-content-buttons-btn" href="#">Skills</a>
                                 </div>
                                 <div className="hero-content-description">Learn more about me and what I do</div>
                                 <div className="hero-content-arrow">

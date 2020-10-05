@@ -55,9 +55,9 @@ const Skills = () => {
                                     </span>
                                 </li>
                                 </ul>
-                                <h3>Third-party API Integration</h3>
+                                <h3>Third-party API</h3>
                                <p>
-       
+                               Third-party API integration depends on your needs and requirements.
                                </p>
                             </div>
                             </Col>
@@ -75,7 +75,7 @@ const Skills = () => {
                                 </ul>
                                 <h3>Database Design</h3>
                                <p>
-
+                               Relational and Non-Relational Database design for Web development, built with MySQL or MongoDB.
                                </p>
                             </div>
                             </Col>
@@ -90,7 +90,7 @@ const Skills = () => {
                                 </ul>
                                 <h3>Cloud Integration</h3>
                                <p>
-  
+                               Cloud integration on platform AWS with serverless technology like AWS Lambda.
                                </p>
                                 </div>
                             </Col>

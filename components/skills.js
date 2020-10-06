@@ -8,11 +8,11 @@ const Skills = () => {
             <Container>
 
                 <div className="about">
-                    <h2 className="about-title">
-                        <span className="about-title-decoration"></span>
-                        <span className="about-title-text">What I do</span>
-                        <span className="about-title-decoration"></span>     
-                        <span className="about-title-decoration-long"></span>               
+                    <h2 className="title">
+                        <span className="title-decoration"></span>
+                        <span className="title-text">What I do</span>
+                        <span className="title-decoration"></span>     
+                        <span className="title-decoration-long"></span>               
                     </h2>
                     <article>
                         <Row>
@@ -27,7 +27,7 @@ const Skills = () => {
                                 </ul>
                                <h3>Web Applications</h3>
                                <p>
-                               I will create any of your amazing ideas. <br/> Fast web applications with animations and fully responsive content.
+                               I will create any of your amazing ideas. Fast web applications with animations and fully responsive content.
                                </p>
                                </div>
                             </Col>
@@ -42,7 +42,7 @@ const Skills = () => {
                                 </ul>
                                 <h3>API Development</h3>
                                <p>
-                               REST APIs are fast, efficient and secure built following best practices, using technology like Node.js, Express.js.
+                               REST APIs are fast, efficient and secure built following best practices. Using technology like Node.js and Express.js.
                                </p>
                             </div>
                             </Col>
@@ -57,7 +57,7 @@ const Skills = () => {
                                 </ul>
                                 <h3>Third-party API</h3>
                                <p>
-                               Third-party API integration depends on your needs and requirements.
+                               Third-party API integration of any provider, dependent on your needs and requirements.
                                </p>
                             </div>
                             </Col>
@@ -90,7 +90,7 @@ const Skills = () => {
                                 </ul>
                                 <h3>Cloud Integration</h3>
                                <p>
-                               Cloud integration on platform AWS with serverless technology like AWS Lambda.
+                               Cloud integration on platform Amazon Web Services with serverless technology like AWS Lambda.
                                </p>
                                 </div>
                             </Col>

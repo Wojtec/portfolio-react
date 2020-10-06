@@ -37,11 +37,11 @@ render() {
                 <Col xs="12">
                         <Container>
                             <div className="projects">
-                                <h2 className="projects-title">
-                                    <span className="projects-title-decoration"></span>
-                                    <span className="projects-title-text">Projects</span>
-                                    <span className="projects-title-decoration"></span>     
-                                    <span className="projects-title-decoration-long"></span>               
+                                <h2 className="title">
+                                    <span className="title-decoration"></span>
+                                    <span className="title-text">Projects</span>
+                                    <span className="title-decoration"></span>     
+                                    <span className="title-decoration-long"></span>               
                                 </h2>
                                 <article>
                                 <Row>

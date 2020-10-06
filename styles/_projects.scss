@@ -5,36 +5,6 @@
     align-items: center;
     padding: 150px 0px;
 
-    &-title{
-        position: relative;
-        font-size: 50px;
-        font-weight: 400;
-        color:rgb(130, 130, 130);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &-text{
-            margin: 10px 15px;
-
-    
-        }
-
-        &-decoration{
-            width: 10%;
-            height: 4px;
-            background-color: $secondary;
-    
-            &-long{
-                position: absolute;
-                bottom: 0;
-                width: 20%;
-                height: 4px;
-                background-color: $secondary;
-        
-            }
-        } 
-    }
 }
 
 

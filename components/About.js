@@ -9,11 +9,11 @@ const About = () => {
                     <Container>
 
                         <div className="about">
-                            <h2 className="about-title">
-                                <span className="about-title-decoration"></span>
-                                <span className="about-title-text">About</span>
-                                <span className="about-title-decoration"></span>     
-                                <span className="about-title-decoration-long"></span>               
+                            <h2 className="title">
+                                <span className="title-decoration"></span>
+                                <span className="title-text">About</span>
+                                <span className="title-decoration"></span>     
+                                <span className="title-decoration-long"></span>               
                             </h2>
                             <article>
                                 <Row>

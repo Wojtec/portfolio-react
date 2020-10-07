@@ -1,16 +1,35 @@
-.section-skills{
+.section-skills {
     background-color: $background;
 }
 
+.skills {
+    width: 100%;
+    min-height: auto;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 150px 0;
 
+    .skill {
+        border: 5px solid $secondary;
+        border-radius: 5%;
+        margin: 50px 20px 20px;
+        min-height: 360.6px;
+        padding: 15px;
+    }
+}
 
-.exp{
-    width:100%;
-    height:100%;
-    background-color:$secondary;
+.exp {
+    width: 100%;
+    height: 100%;
+    background-color: $secondary;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 60px;
     border-radius: 50%;
+}
+
+.list-inline {
+    margin: 10px;
+    padding: 10px;
 }

@@ -18,11 +18,7 @@ const About = () => {
                             <article>
                                 <Row>
                                     <Col xs="12">
-                                        <div className="about-content">
-                                            <h2 className="about-content-title">
-                                                <span>Hello, my name is Wojtek Poninski.</span>
-                                            </h2>
-                                        </div>
+                                       
                                     </Col>
                                 </Row>
                                 <Row>
@@ -30,8 +26,13 @@ const About = () => {
                                         <img className="about-content-image" src="images/hero600.png"></img>
                                     </Col>
                                     <Col md="8">
+                                        <div className="about-content">
+                                            <h2 className="about-content-title">
+                                                <span>Hello, my name is Wojtek Poninski.</span>
+                                            </h2>
+                                        </div>
                                         <div className="about-content-description">
-                                            <h3>My passion is creative Web Application creating.</h3>
+                                            <span className="about-content-subtitle">My passion is creative Web Application creating.</span>
                                             <p>In October 2019 I decided to become a Fullstack developer. Everyday I work hard to get closer to accomplishing this goal.</p>
                                             <p>I have finished Master Assembler School of Software Engineering in Barcelona.</p>
                                             <p>I chose this path of career because of my passions and interests. Creative creating new things and looking how they develop from nothing to something big gives me a lot of satisfaction and energy to carry on.</p>

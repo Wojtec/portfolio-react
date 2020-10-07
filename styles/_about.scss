@@ -19,8 +19,14 @@
         width: 100%;
         font-size: 30px;
         color: black;
-        margin-bottom: 50px;
-        text-align: center;
+        text-align: left;
+        padding-left: 15px;
+
+        &-subtitle{
+            font-size: 24px;
+            font-weight: 700;
+
+        }
 
         &-image{
             width: 100%;

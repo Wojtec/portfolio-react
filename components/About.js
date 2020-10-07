@@ -32,7 +32,6 @@ const About = () => {
                                             </h2>
                                         </div>
                                         <div className="about-content-description">
-                                            <span className="about-content-subtitle">My passion is creative Web Application creating.</span>
                                             <p>In October 2019 I decided to become a Fullstack developer. Everyday I work hard to get closer to accomplishing this goal.</p>
                                             <p>I have finished Master Assembler School of Software Engineering in Barcelona.</p>
                                             <p>I chose this path of career because of my passions and interests. Creative creating new things and looking how they develop from nothing to something big gives me a lot of satisfaction and energy to carry on.</p>

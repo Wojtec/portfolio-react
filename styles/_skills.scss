@@ -1,6 +1,3 @@
-.section-skills {
-    background-color: $background;
-}
 
 .skills {
     width: 100%;
@@ -12,9 +9,27 @@
     .skill {
         border: 5px solid $secondary;
         border-radius: 5%;
-        margin: 50px 20px 20px;
-        min-height: 360.6px;
-        padding: 15px;
+        margin: 40px 10px;
+        min-height: 330.6px;
+        padding: 5px;
+        background: white;
+
+        &-title {
+            letter-spacing: 1px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            font-weight: 700;
+
+        }
+
+        &-text {
+            letter-spacing: 1px;
+            margin: 5px;
+            padding: 5px;
+            line-height: 25px;
+            text-align: center;
+        }
     }
 }
 
@@ -25,11 +40,42 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 60px;
+    padding: 50px;
     border-radius: 50%;
 }
 
 .list-inline {
     margin: 10px;
     padding: 10px;
+}
+
+.background-skills{
+    width: 100%;
+    min-height: 925px;
+    object-fit: cover;
+    position: relative;
+}
+
+.background-skills::after {
+    content: "";
+    background-image: 
+    linear-gradient(
+        to bottom, 
+        rgb(255, 255, 255) 0%, 
+        rgba(255, 255, 255, 0) 10%, 
+        rgba(255, 255, 255, 0) 90%, 
+        rgb(255, 255, 255) 100%
+    ),
+    url("/images/background-projects1.png");
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+
 }

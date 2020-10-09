@@ -12,15 +12,20 @@
     width: 100%;
     min-height: 925px;
     object-fit: cover;
-
-    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
     position: relative;
 }
 
 .background-projects::after {
     content: "";
-    background: url("/images/background-projects1.png");
-    opacity: 0.3;
+    background-image: 
+    linear-gradient(
+        to bottom, 
+        rgb(255, 255, 255) 0%, 
+        rgba(255, 255, 255, 0) 10%, 
+        rgba(255, 255, 255, 0) 90%, 
+        rgb(255, 255, 255) 100%
+    ),
+    url("/images/background-projects1.png");    opacity: 0.3;
     top: 0;
     left: 0;
     bottom: 0;

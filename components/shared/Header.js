@@ -71,7 +71,6 @@ const scrollStickyActiveNav = () => {
   //Active Nav
   const options = {
 
-    threshold: 0.5
 
   };
   

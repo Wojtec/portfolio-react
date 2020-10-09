@@ -3,7 +3,7 @@ import SocialMedia from "./shared/SocialMedia";
 
 const About = () => {
     return (
-        <section id="/about" className="section-about">
+        <section id="/about" className="background-skills">
             <Container>
                 <div className="about">
                     <h2 className="title">
@@ -12,7 +12,7 @@ const About = () => {
                         <span className="title-decoration"></span>
                         <span className="title-decoration-long"></span>
                     </h2>
-                        <Row>
+                        <Row className="m-1 p-1">
                             <Col md="4">
                                 <img className="about-content-image" src="images/hero600.png"></img>
                             </Col>
@@ -23,9 +23,9 @@ const About = () => {
                                     </h3>
                                 </div>
                                 <div className="about-content-description">
-                                    <p>In October 2019 I decided to become a Fullstack developer. Everyday I work
+                                    <p>In <span>October 2019</span> I decided to become a <span>Fullstack developer</span>. Everyday I work
                                         hard to get closer to accomplishing this goal.</p>
-                                    <p>I have finished Master Assembler School of Software Engineering in Barcelona.</p>
+                                    <p>I have finished <span>Master Assembler School of Software Engineering</span> in <span>Barcelona</span>.</p>
                                     <p>I chose this path of career because of my passions and interests. Creative
                                         creating new things and looking how they develop from nothing to something big
                                         gives me a lot of satisfaction and energy to carry on.</p>
@@ -33,9 +33,9 @@ const About = () => {
                                         work are something that always accompanies me during creating and development.
                                         Also this curiosity together with self-satisfaction are something that is the
                                         most exciting to me in the whole creating process. Currently I am creating a
-                                        Clinic reservation system app React, Next.js, Node.js, Express and no relational
-                                        database Mongodb.</p>
-                                    <p>Check my projects and personally see what I can do.</p>
+                                        Clinic reservation system app <span>React</span>, <span>Next.js</span>, <span>Node.js</span>, <span>Express.js</span> and no relational
+                                        database <span>Mongodb</span>.</p>
+                                    <p className="text-center">Check my projects and personally see what I can do.</p>
                                 </div>
                                 <SocialMedia/>
                             </Col>

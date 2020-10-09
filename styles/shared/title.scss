@@ -1,7 +1,7 @@
 .title{
     position: relative;
     margin-bottom: 75px;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 400;
     color:rgb(130, 130, 130);
     display: flex;
@@ -10,7 +10,8 @@
 
     &-text{
         margin: 10px 15px;
-
+        letter-spacing: 1px;
+        font-weight: 700;
 
     }
 

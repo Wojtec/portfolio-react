@@ -24,12 +24,14 @@
 
         &-link {
             color: rgb(130, 130, 130);
-            font-weight: bold;
-            letter-spacing: 0.8px;
+            font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
+            letter-spacing: 1px;
+
             &.active {
                 color: $secondary;
+
             }
             &:hover, &:focus {
                 color: $secondary;

@@ -4,15 +4,21 @@ import ProjectInput from './form/projectInput';
 
 const Contact = ({onSubmit, initialValues}) => {
     return (
-        <section className="section-contact">
+        <section className="background-projects">
             <Container>
                 <div className="contact">
-                    <h2 className="title">
-                        <span className="title-decoration"></span>
-                        <span className="title-text">Contact</span>
-                        <span className="title-decoration"></span>
-                        <span className="title-decoration-long"></span>
-                    </h2>
+                <div className="title-wrapper">
+                            <div className="title-container">
+                                <span className="title-container-decoration"></span>
+                                <div className="title-container-context">
+                                    <h2>
+                                        <span className="title-container-text">Contact</span>
+                                    </h2>
+                                    <p>Send me a message.</p>
+                                </div>
+                                <span className="title-container-decoration"></span>
+                            </div>
+                        </div>
                     <Formik initialValues={initialValues} validate='' onSubmit={onSubmit}>
                         {
                             ({isSubmitting}) => (

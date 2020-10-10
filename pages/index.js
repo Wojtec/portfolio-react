@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Projects from '../components/Projects';
-import Skills from '../components/Skills';
+import Skills from '../components/whatIDo';
 import Contact from '../components/contactForm';
 class Index extends Component {
 

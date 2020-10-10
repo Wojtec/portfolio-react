@@ -21,15 +21,9 @@
         color: black;
 
         &-title {
-            font-size: 28px;
+            font-size: 24px;
             letter-spacing: 0.5px;
             text-align: center;
-        }
-
-        &-subtitle{
-            font-size: 24px;
-            font-weight: 700;
-
         }
 
         &-image{
@@ -41,7 +35,7 @@
 
         &-description{
             text-align: justify;
-            font-size: 18px;
+            font-size: 16px;
             letter-spacing: 0.5px;
 
             span{

@@ -34,12 +34,18 @@ class Projects extends Component {
             <section id="/projects" className="background-projects">
                 <Container>
                     <div className="projects">
-                        <h2 className="title">
-                            <span className="title-decoration"></span>
-                            <span className="title-text">Projects</span>
-                            <span className="title-decoration"></span>
-                            <span className="title-decoration-long"></span>
-                        </h2>
+                        <div className="title-wrapper">
+                            <div className="title-container">
+                                <span className="title-container-decoration"></span>
+                                <div className="title-container-context">
+                                    <h2>
+                                        <span className="title-container-text">Projects</span>
+                                    </h2>
+                                    <p>Some of my projects.</p>
+                                </div>
+                                <span className="title-container-decoration"></span>
+                            </div>
+                        </div>
                         <Row>
                             {this.renderPosts(projects)}
                         </Row>

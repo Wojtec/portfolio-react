@@ -7,15 +7,13 @@ const Hero = (props) => {
             <Container>
                 <div className="hero-content">
                     <div className="hero-content-wrapper">
-                        <div>
-                            <h1 className="hero-content-subtitle">My name is Wojtek</h1>
-                        </div>
+                            <div className="hero-content-subtitle">My name is Wojtek</div>
                         <h1 className="hero-content-title">
                             <span className="hero-content-title-decoration"></span>
                             <span className="hero-content-title-text">I CAN CREATE</span>
                             <span className="hero-content-title-decoration"></span>
                         </h1>
-                        <p className="hero-content-subtitle">YOUR WEBSITE</p>
+                        <div className="hero-content-subtitle">YOUR WEBSITE</div>
                         <div className="hero-content-buttons">
                             <a className="hero-content-buttons-btn" href="#">What I do</a>
                             <a className="hero-content-buttons-btn" href="#">Projects</a>

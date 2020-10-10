@@ -18,7 +18,7 @@ const About = () => {
                             <span className="title-container-decoration"></span>
                         </div>
                     </div>
-                    <Row className="m-1 p-1">
+                    <Row>
                         <Col md="4">
                             <img className="about-content-image" src="images/hero600.png"></img>
                         </Col>
@@ -30,7 +30,7 @@ const About = () => {
                             </div>
                             <div className="about-content-description">
                                 <p>In
-                                    <span> October 2019</span>
+                                    <span> October 2019 </span>
                                     I decided to become a
                                     <span> Fullstack developer</span>. Everyday I work hard to get closer to accomplishing this goal.</p>
                                 <p>I have finished

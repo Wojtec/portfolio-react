@@ -23,7 +23,7 @@ const Skills = () => {
                                 <div className="skill text-center">
                                     <ul className="list-inline text-center">
                                         <li className="list-inline-item">
-                                            <span className="fa-stack fa-lg exp">
+                                            <span className="fa-stack fa-lg icon">
                                                 <i className="fa fa-code fa-stack-1x fa-inverse fa-2x "></i>
                                             </span>
                                         </li>
@@ -39,7 +39,7 @@ const Skills = () => {
                                 <div className="skill text-center">
                                     <ul className="list-inline text-center">
                                         <li className="list-inline-item">
-                                            <span className="fa-stack fa-lg exp">
+                                            <span className="fa-stack fa-lg icon">
                                                 <i className="fa fa-cogs fa-stack-1x fa-inverse fa-2x "></i>
                                             </span>
                                         </li>
@@ -55,7 +55,7 @@ const Skills = () => {
                                 <div className="skill text-center">
                                     <ul className="list-inline text-center">
                                         <li className="list-inline-item">
-                                            <span className="fa-stack fa-lg exp">
+                                            <span className="fa-stack fa-lg icon">
                                                 <i className="fa fa-link fa-stack-1x fa-inverse fa-2x "></i>
                                             </span>
                                         </li>
@@ -74,7 +74,7 @@ const Skills = () => {
                                 <div className="skill text-center">
                                     <ul className="list-inline text-center">
                                         <li className="list-inline-item">
-                                            <span className="fa-stack fa-lg exp">
+                                            <span className="fa-stack fa-lg icon">
                                                 <i className="fa fa-database fa-stack-1x fa-inverse fa-2x "></i>
                                             </span>
                                         </li>
@@ -90,7 +90,7 @@ const Skills = () => {
                                 <div className="skill text-center">
                                     <ul className="list-inline text-center">
                                         <li className="list-inline-item">
-                                            <span className="fa-stack fa-lg exp">
+                                            <span className="fa-stack fa-lg icon">
                                                 <i className="fa fa-cloud fa-stack-1x fa-inverse fa-2x "></i>
                                             </span>
                                         </li>

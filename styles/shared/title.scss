@@ -1,7 +1,5 @@
 .title-wrapper {
     margin-bottom: 75px;
-    font-size: 40px;
-    font-weight: 400;
     color: rgb(130, 130, 130);
 
     .title-container {
@@ -18,6 +16,67 @@
         }
 
         &-decoration {
+            margin-top: 30px;
+            width: 10%;
+            height: 4px;
+            background-color: $secondary;
+
+            &-long {
+                position: absolute;
+                bottom: 0;
+                width: 20%;
+                height: 4px;
+                background-color: $secondary;
+
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 50px;
+            span {
+                margin: 5px 5px;
+                letter-spacing: 1px;
+                font-weight: 700;
+
+            }
+
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            margin: 5px 5px;
+        }
+    }
+
+}
+
+
+
+@media (max-width: 991px) {
+    .title-wrapper {
+        margin-bottom: 40px;
+        color: rgb(130, 130, 130);
+    }
+
+    .title-container {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        &-context {
+            line-height: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        &-decoration {
+            display: none;
             margin-top: 35px;
             width: 10%;
             height: 4px;
@@ -36,7 +95,8 @@
         h2 {
             text-align: center;
             margin-bottom: 0;
-            font-size: 60px;
+            font-size: 40px !important;
+
             text {
                 margin: 10px 15px;
                 letter-spacing: 1px;
@@ -48,9 +108,10 @@
 
         p {
             text-align: center;
-            font-size: 18px;
+            font-size: 14px !important;
             font-style: italic;
         }
     }
+
 
 }

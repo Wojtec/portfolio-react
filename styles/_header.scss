@@ -49,12 +49,10 @@
 .navbar-toggler{
     background-color: $secondary;
     border: 1px solid $secondary;
+    margin-right: 5px;
 }
 
-.port-navbar.port-nav-base.port-nav-default {
-    padding: 20px;
-    background-color: $primary !important;
-}
+
 
 
 .navbar-sticky {
@@ -62,8 +60,7 @@
     top: 0;
     width: 100%;
     animation: moveDown 1.5s ease-in-out;
-    padding: 5px !important;
-    transition: padding 50ms ease-in-out;
+    padding: 0px !important;
 
 
     @keyframes moveDown {
@@ -141,3 +138,11 @@
         }
       }  
   }
+
+
+  @media (max-width: 991px) {
+    .port-navbar.port-nav-base{
+        padding: 10px;
+    }
+
+}

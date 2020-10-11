@@ -156,6 +156,12 @@ const scrollStickyActiveNav = () => {
                   <NavItem className="port-navbar-item">
                       <BsNavLink
                           route="/cv"
+                          title="Contact"
+                      />
+                  </NavItem>
+                  <NavItem className="port-navbar-item">
+                      <BsNavLink
+                          route="/cv"
                           title="Cv"
                       />
                   </NavItem>

@@ -4,7 +4,7 @@ import ProjectInput from './form/projectInput';
 
 const Contact = ({onSubmit, initialValues}) => {
     return (
-        <section className="background-projects">
+        <section id="/cv" className="background-projects">
             <Container>
                 <div className="contact">
                 <div className="title-wrapper">

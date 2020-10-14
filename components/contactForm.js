@@ -2,6 +2,12 @@ import {Row, Col, Container, Button} from 'reactstrap';
 import {Formik, Form, Field} from 'formik';
 import ProjectInput from './form/projectInput';
 
+const INITIAL_VALUES = {
+    name: "",
+    email: "",
+    message: ""
+}
+
 const Contact = ({onSubmit, initialValues}) => {
     return (
         <section id="/cv" className="background-projects">
@@ -19,7 +25,10 @@ const Contact = ({onSubmit, initialValues}) => {
                                 <span className="title-container-decoration"></span>
                             </div>
                         </div>
-                    <Formik initialValues={initialValues} validate='' onSubmit={onSubmit}>
+                    <Formik 
+                    initialValues={ INITIAL_VALUES } 
+                    validate='' 
+                    onSubmit={onSubmit}>
                         {
                             ({isSubmitting}) => (
                                 <Form>

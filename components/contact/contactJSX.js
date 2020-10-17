@@ -1,34 +1,26 @@
 import {Row, Col, Container, Button} from 'reactstrap';
 import {Formik, Form, Field} from 'formik';
-import ProjectInput from './form/projectInput';
+import ProjectInput from '../form/projectInput';
 
-const INITIAL_VALUES = {
-    name: "",
-    email: "",
-    message: ""
-}
-
-const Contact = ({onSubmit, initialValues}) => {
+const contactJSX = (props) => {
+    const {onSubmit, initialValues, validateInputs} = props;
     return (
         <section id="/cv" className="background-projects">
             <Container>
                 <div className="contact">
-                <div className="title-wrapper">
-                            <div className="title-container">
-                                <span className="title-container-decoration"></span>
-                                <div className="title-container-context">
-                                    <h2>
-                                        <span className="title-container-text">Contact</span>
-                                    </h2>
-                                    <p>Send me a message.</p>
-                                </div>
-                                <span className="title-container-decoration"></span>
+                    <div className="title-wrapper">
+                        <div className="title-container">
+                            <span className="title-container-decoration"></span>
+                            <div className="title-container-context">
+                                <h2>
+                                    <span className="title-container-text">Contact</span>
+                                </h2>
+                                <p>Send me a message.</p>
                             </div>
+                            <span className="title-container-decoration"></span>
                         </div>
-                    <Formik 
-                    initialValues={ INITIAL_VALUES } 
-                    validate='' 
-                    onSubmit={onSubmit}>
+                    </div>
+                    <Formik initialValues={initialValues} validate={validateInputs} onSubmit={onSubmit}>
                         {
                             ({isSubmitting}) => (
                                 <Form>
@@ -63,4 +55,4 @@ const Contact = ({onSubmit, initialValues}) => {
     )
 }
 
-export default Contact;
+export default contactJSX;

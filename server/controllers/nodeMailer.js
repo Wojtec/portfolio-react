@@ -7,14 +7,7 @@ module.exports = {
 
         const email = await sendEmail(data);
         
-        if (email) {
-            return res.status(200).send(email);
-
-        } else {
-            return res.status(500).send("Server problem");
-
-        }
-
+        return res.status(200).send(email);
 
     }
 }

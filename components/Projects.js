@@ -1,6 +1,6 @@
 import {Row, Col, Container} from 'reactstrap';
-import {getProjects} from '../actions';
-import React, {Component} from 'react';
+import { getProjects } from '../actions';
+import React, { Component } from 'react';
 import ProjectCard from './project/projectCard';
 
 class Projects extends Component {

@@ -3,7 +3,7 @@ import {Formik, Form, Field} from 'formik';
 import ProjectInput from '../form/projectInput';
 
 const contactJSX = (props) => {
-    const {onSubmit, initialValues, validateInputs} = props;
+    const {onSubmit, initialValues, validateInputs, submitted} = props;
     return (
         <section id="/cv" className="background-projects">
             <Container>
@@ -20,6 +20,11 @@ const contactJSX = (props) => {
                             <span className="title-container-decoration"></span>
                         </div>
                     </div>
+                    {submitted ? 
+                        <div>
+                            Thank you so much.
+                        </div>
+                    :
                     <Formik initialValues={initialValues} validate={validateInputs} onSubmit={onSubmit}>
                         {
                             ({isSubmitting}) => (
@@ -49,6 +54,7 @@ const contactJSX = (props) => {
                             )
                         }
                     </Formik>
+                    }
                 </div>
             </Container>
         </section>

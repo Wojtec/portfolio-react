@@ -1,4 +1,6 @@
 import ContactJSX from '../contact/contactJSX'; 
+import { sendMail } from '../../actions';
+import React, { Component } from 'react';
 
 const INITIAL_VALUES = {
     name: "",
@@ -6,34 +8,48 @@ const INITIAL_VALUES = {
     message: ""
 }
 
-const onSubmit = (data) => {
-    
-    console.log(data);
-}
 
-const validateInputs = (values) => {
-    const errors = {};
-        
-        Object.entries(values).forEach(([key]) => {
-            if(!values[key]) {
-                let keyUpper = key[0].toUpperCase() + key.slice(1); 
-                errors[key] = `${keyUpper} is required!`;
-            }    
-        });
-    
-        return errors;
+
+class Contact extends Component {
+    state = {
+        submitted: false,
     }
 
-const Contact = () => {
-    return (
-       <>
-        <ContactJSX 
-        onSubmit={onSubmit} 
-        initialValues={INITIAL_VALUES} 
-        validateInputs={validateInputs}
-        />
-       </>
-    )
+    onSubmit = async (data) => {
+
+        const response = await sendMail(data);
+        
+        this.setState({
+            submitted: response
+        });
+     }
+     
+    validateInputs = (values) => {
+         const errors = {};
+             
+             Object.entries(values).forEach(([key]) => {
+                 if(!values[key]) {
+                     let keyUpper = key[0].toUpperCase() + key.slice(1); 
+                     errors[key] = `${keyUpper} is required!`;
+                 }    
+             });
+         
+             return errors;
+         }
+
+    render(){
+        return (
+            <>
+             <ContactJSX 
+             onSubmit={this.onSubmit} 
+             initialValues={INITIAL_VALUES} 
+             validateInputs={this.validateInputs}
+             submitted={this.state.submitted}
+             />
+            </>
+         )
+    }
+  
 }
 
 export default Contact;

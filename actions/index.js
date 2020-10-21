@@ -27,10 +27,7 @@ const setAuthHeader = (req) => {
 
 }
 
-export const getSecretData = async (req) => {
-
-    return await axiosInstance.get('/secret', setAuthHeader(req)).then(response => response.data);
-}
+// PROJECTS 
 
 export const getProjects = async () => {
 
@@ -56,4 +53,14 @@ export const updateProject = async (projectData) => {
 
 export const deleteProject = (projectId) => {
     return axiosInstance.delete(`/projects/${projectId}`, setAuthHeader()).then(response => response.data);
+}
+
+//NODE MAILER
+
+export const sendMail = async (mailData) => {
+
+    return await axiosInstance.post('/mail', mailData)
+    .then(response => response.data)
+    .catch(error => rejectPromise(error));
+    
 }

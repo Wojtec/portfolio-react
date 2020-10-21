@@ -15,18 +15,8 @@ const config = require('./config');
 
 //Routes
 const projectsRoutes = require('./routes/projects');
+const nodeMailerRoutes = require('./routes/nodeMailer');
 
-const secretData = [
-    {   id: '1',
-        title: 'Secret Data',
-        description: 'plans for build something !'
-    },
-    {   
-        id: '2',
-        title: 'Secret Data2',
-        description: 'plans for build something2 !'
-    }
-]
 
 
 //MONGODB
@@ -46,16 +36,8 @@ app.prepare()
     
 
     server.use('/api/v1/projects', projectsRoutes);
+    server.use('/api/v1/mail', nodeMailerRoutes);
 
-    server.get('/api/v1/secret', authService.checkJWT, (req,res) => {
-        return res.json(secretData);
-
-    })
-
-    server.get('/api/v1/ownersite', authService.checkJWT, authService.checkRole('siteOwner'),(req,res) => {
-        return res.json(secretData);
-
-    })
 
     server.get('*',(req,res) => {
         return handle(req,res);

@@ -6,13 +6,13 @@ module.exports = {
         const data = req.body;
 
         const email = await sendEmail(data);
-        if (email) {
+        
+        if (!email) {
 
-            return res.status(200).send(true);
-        } else {
             return res.status(500).send("Server problem");
-        }
+        } 
+
+        return res.status(200).send(true);
 
     }
-
 }

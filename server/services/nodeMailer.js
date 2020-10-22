@@ -9,11 +9,20 @@ module.exports = {
 
             let transporter = nodemailer.createTransport({
                 host: 'smtp.gmail.com', 
-                port: 587, 
+                port: 465, 
                 secure: true, 
                 auth: {
                     user: process.env.EMAIL_USER, 
                     pass: process.env.EMAIL_PASS, 
+                }
+            });
+
+            // verify connection configuration
+            transporter.verify(function(error, success) {
+                if (error) {
+                console.log(error);
+                } else {
+                console.log("Server is ready to take our messages");
                 }
             });
 
@@ -24,6 +33,7 @@ module.exports = {
                 subject: `${name} ${email}`,
                 text: message, 
             });
+
 
             return {info, name};
 

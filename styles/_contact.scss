@@ -1,0 +1,23 @@
+
+.contact{
+    width: 100%;
+    min-height: auto;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 150px 0px;
+
+    &-submitted{
+        text-align: center;
+
+        &-text{
+            font-size: 24px;
+        }
+    }
+
+    .form-wrapper{
+        width: 65%;
+        margin: 0 auto;
+    }
+
+
+}

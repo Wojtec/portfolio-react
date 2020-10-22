@@ -2,25 +2,26 @@ import ContactJSX from '../contact/contactJSX';
 import { sendMail } from '../../actions';
 import React, { Component } from 'react';
 
-const INITIAL_VALUES = {
-    name: "",
-    email: "",
-    message: ""
-}
-
-
 
 class Contact extends Component {
+
     state = {
         submitted: false,
+        response:{},
+        initialValues: { 
+        name: "",
+        email: "",
+        message: ""
+        }
     }
 
     onSubmit = async (data) => {
 
         const response = await sendMail(data);
-        
+
         this.setState({
-            submitted: response
+            submitted: true,
+            response: response
         });
      }
      
@@ -42,9 +43,10 @@ class Contact extends Component {
             <>
              <ContactJSX 
              onSubmit={this.onSubmit} 
-             initialValues={INITIAL_VALUES} 
+             initialValues={this.state.initialValues} 
              validateInputs={this.validateInputs}
              submitted={this.state.submitted}
+             response={this.state.response}
              />
             </>
          )

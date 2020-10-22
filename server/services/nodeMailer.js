@@ -25,7 +25,7 @@ module.exports = {
                 text: message, 
             });
 
-            return info;
+            return {info, name};
 
         } catch (err) {
             console.log(err);

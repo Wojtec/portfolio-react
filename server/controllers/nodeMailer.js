@@ -6,7 +6,7 @@ module.exports = {
         const data = req.body;
 
         const email = await sendEmail(data);
-        console.log(email);
+        
         if (email) {
             return res.status(200).send(email);
 

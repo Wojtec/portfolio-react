@@ -8,7 +8,7 @@ module.exports = {
             const {name, email, message} = data;
 
             let transporter = nodemailer.createTransport({
-                host: 'smtp-relay.gmail.com', 
+                host: 'smtp.gmail.com', 
                 port: 465, 
                 service:'gmail',
                 secure: true, 

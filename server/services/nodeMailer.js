@@ -10,8 +10,8 @@ module.exports = {
             let transporter = nodemailer.createTransport({
                 host: 'smtp.gmail.com', 
                 port: 465, 
-                service:'gmail',
-                secure: true, 
+                secure: true,
+                service:'gmail', 
                 auth: {
                     user: process.env.EMAIL_USER, 
                     pass: process.env.EMAIL_PASS, 
@@ -27,7 +27,7 @@ module.exports = {
                 subject: `${name} ${email}`,
                 text: message, 
             });
-
+            
 
             return {info, name};
 

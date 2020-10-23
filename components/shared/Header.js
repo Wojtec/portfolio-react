@@ -15,11 +15,12 @@ import {
 const BsNavLink = (props) => {
   const { route, title } = props;
     return (
-      <Link activeClassName="active" href={route} >
-        <a className={ "nav-link port-navbar-link" }>{title}</a>
+      <Link activeClassName="active" href={route}>
+        <a className={ `nav-link port-navbar-link` }>{title}</a>
       </Link>
     )
 }
+
 
 const Login = () => {
   return (
@@ -68,12 +69,8 @@ const scrollStickyActiveNav = () => {
     setHeader(false);
     
   }
-  //Active Nav
-  const options = {
 
-
-  };
-  
+  //Active Nav  
   const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
@@ -92,7 +89,7 @@ const scrollStickyActiveNav = () => {
 
     });
 
-  }, options);
+  });
 
     document.querySelectorAll('section[id]').forEach((section) => {
 
@@ -101,12 +98,21 @@ const scrollStickyActiveNav = () => {
   });
 }
 
+const scrollPage = (e) =>{
+console.log(e);
+
+
+}
+
   useEffect(() => {
 
     window.addEventListener("scroll", scrollStickyActiveNav);
+    window.addEventListener("click", scrollPage);
     
     return () => {
       window.removeEventListener("scroll",scrollStickyActiveNav);
+      window.removeEventListener("click", scrollPage);
+
     };
 
   }, []);
@@ -138,7 +144,6 @@ const scrollStickyActiveNav = () => {
                       <BsNavLink
                           route="/about"
                           title="About"
-
                       />
                   </NavItem>
                   <NavItem className="port-navbar-item">

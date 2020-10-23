@@ -15,5 +15,5 @@ class About extends Component {
     }
 }
 
-export default withRouter(About);
+export default About;
 

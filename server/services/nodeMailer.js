@@ -8,22 +8,16 @@ module.exports = {
             const {name, email, message} = data;
 
             let transporter = nodemailer.createTransport({
-                host: 'smtp.gmail.com', 
+                host: 'smtp-relay.gmail.com', 
                 port: 465, 
+                service:'gmail',
                 secure: true, 
                 auth: {
                     user: process.env.EMAIL_USER, 
                     pass: process.env.EMAIL_PASS, 
-                }
-            });
-
-            // verify connection configuration
-            transporter.verify(function(error, success) {
-                if (error) {
-                console.log(error);
-                } else {
-                console.log("Server is ready to take our messages");
-                }
+                },
+                debug: false,
+                logger: true 
             });
 
             // transport object

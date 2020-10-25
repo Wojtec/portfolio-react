@@ -10,7 +10,7 @@ class Auth0 {
         this.auth0 = new auth0.WebAuth({
             domain: "dev-828n9808.eu.auth0.com",
             clientID: "55e7WXrTq2s9lfxMIdnEjtKPohVDR2PY",
-            redirectUri: "http://localhost:3000/callback",
+            redirectUri: "https://poninski.herokuapp.com/callback",
             responseType: "token id_token", 
             scope: "openid profile"
         });

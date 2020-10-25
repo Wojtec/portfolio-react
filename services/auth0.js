@@ -51,7 +51,7 @@ class Auth0 {
         Cookies.remove('expiresAt');
         
         this.auth0.logout({
-            returnTo: '',
+            returnTo: 'https://poninski.herokuapp.com/',
             clientID: process.env.NEXT_PUBLIC_CLIENTID
         });
 

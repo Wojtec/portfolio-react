@@ -1,3 +1,11 @@
+
+const Tracker = dynamic(
+    () => Tracking(),
+    { ssr: false }
+  )
+
+
+
 function Tracking() {
     (function (v, i, s, a) {
         if (!v._visaSettings) {
@@ -25,4 +33,4 @@ function Tracking() {
     )
 }
 
-export default Tracking;
+export default Tracker();

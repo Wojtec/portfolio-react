@@ -2,12 +2,6 @@ import React from 'react';
 import Header from '../shared/Header';
 import Footer from '../shared/Footer';
 import Head from 'next/head';
-import dynamic from 'next/dynamic'
-
-const Tracking = dynamic(
-    () => import('../../helpers/traker'),
-    { ssr: false }
-  )
 
 const BaseLayout = (props) => {
 const { children, className, isAuthenticated, user } = props;
@@ -16,7 +10,6 @@ const  headerType  = props.headerType || 'default';
     return(
         <>
             <Head>
-                <script>{Tracking}</script>
                 <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png"/>
                 <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png"/>
                 <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png"/>
@@ -36,6 +29,8 @@ const  headerType  = props.headerType || 'default';
                 <meta name="theme-color" content="#ffffff"/>
                 <title>W. Poninski</title>
                 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
+                <script src='../../helpers/traker'></script>
+
             </Head>
             <div className="layout-container">
                 <Header className={`port-nav-${headerType}`} isAuthenticated={ isAuthenticated } user={user}/>

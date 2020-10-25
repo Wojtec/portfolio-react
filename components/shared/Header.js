@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import auth0 from '../../services/auth0';
-import Link from '../../helpers/nextActiveNav';
+import BsNavLink from '../../helpers/BsNavLink';
+import { Link, animateScroll as scroll} from 'react-scroll';
+import { Router } from '../../routes';
+
 
 import {
   Collapse,
@@ -12,14 +15,6 @@ import {
   Container,
 } from 'reactstrap';
 
-const BsNavLink = (props) => {
-  const { route, title } = props;
-    return (
-      <Link activeClassName="active" href={route}>
-        <a className={ `nav-link port-navbar-link` }>{title}</a>
-      </Link>
-    )
-}
 
 
 const Login = () => {
@@ -46,12 +41,35 @@ const Logout = () => {
 
 
 const NavbarComponent = (props) => {
-  const [headerText, setHeader] = useState(false);
+  const [headerLogo, setHeader] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [path, setPath] = useState('');
+
+  const { isAuthenticated, className }  = props;
+
+
+  const NavLinkClick = async (props) => {
+    props.preventDefault();
+    props.persist();
+
+   const changeRoute = await Router.pushRoute('/');
+    if(changeRoute){
+      
+      const anchor = document.getElementById(props.target.id);
+
+      if(anchor.id === "Contact"){
+        anchor.onClick = scroll.scrollToBottom();
+        anchor.click();
+      } else {
+        anchor.click();
+      }
+
+    }
+  };
+
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const { isAuthenticated, className }  = props;
 
 
 const scrollStickyActiveNav = () => {
@@ -70,48 +88,15 @@ const scrollStickyActiveNav = () => {
     
   }
 
-  //Active Nav  
-  const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-    const id = entry.target.id;
-
-      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-
-        document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.add('active');
-
-      } else {
-
-        document.querySelector(`.navbar-nav li a[href="${id}"]`).classList.remove('active');
-
-      }
-
-    });
-
-  });
-
-    document.querySelectorAll('section[id]').forEach((section) => {
-
-    observer.observe(section);
-
-  });
 }
-
-const scrollPage = (e) =>{
-console.log(e);
-
-
-}
-
   useEffect(() => {
+    setPath(window.location.pathname);
 
-    window.addEventListener("scroll", scrollStickyActiveNav);
-    window.addEventListener("click", scrollPage);
-    
+      window.addEventListener("scroll", scrollStickyActiveNav);
+
     return () => {
       window.removeEventListener("scroll",scrollStickyActiveNav);
-      window.removeEventListener("click", scrollPage);
+
 
     };
 
@@ -123,7 +108,7 @@ console.log(e);
         <Container>
             <NavbarBrand  className="port-navbar-brand" href="/">
               <div className="logo-container">
-                <div className={headerText ? "logo-container-logo navbar-rotate" : "logo-container-logo"}>
+                <div className={headerLogo ? "logo-container-logo navbar-rotate" : "logo-container-logo"}>
                   W
                 </div>
                 <div className="logo-container-text">
@@ -135,34 +120,140 @@ console.log(e);
               <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem className="port-navbar-item">
-                      <BsNavLink
-                            route="/"
-                            title="Home"
-                        />
+                  {path  === '/cv' ?
+                                        <BsNavLink
+                                        route="/"
+                                        title="Home"
+                                        id="Home"
+                                        clickOn={ NavLinkClick}
+
+                                    />
+                  :
+                  <Link activeClass="active"
+                        to="/"
+                        spy={true}
+                        smooth={true}
+                        hashSpy={false}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        ignoreCancelEvents={false}
+                        className={ `nav-link port-navbar-link` }
+                        section='/'
+                        id="Home"
+                        >
+                          Home
+                  </Link>
+                  }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                      <BsNavLink
-                          route="/about"
-                          title="About"
-                      />
+                  {path  === '/cv' ?
+                                    <BsNavLink
+                                        route="/"
+                                        title="About"
+                                        id="About"
+                                        clickOn={NavLinkClick}
+                                    />
+                  :
+                  <Link activeClass="active"
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        hashSpy={false}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        ignoreCancelEvents={false}
+                        className={ `nav-link port-navbar-link` }
+                        section='/about'
+                        id="About"
+                        >
+                          About
+                  </Link>
+                  }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                      <BsNavLink
-                          route="/blog"
-                          title="What I do"
-                      />
+                  {path  === '/cv' ?
+                                    <BsNavLink
+                                        route="/"
+                                        title="What I do"
+                                        id="What"
+                                        clickOn={NavLinkClick}
+                                    />
+                  :
+                  <Link activeClass="active"
+                        to="what"
+                        spy={true}
+                        smooth={true}
+                        hashSpy={false}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        ignoreCancelEvents={false}
+                        className={ `nav-link port-navbar-link` }
+                        section='/what'
+                        id="What"
+                        >
+                          What I do
+                  </Link>
+                  }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                      <BsNavLink
-                          route="/projects"
-                          title="Projects"
-                      />
+                  {path  === '/cv' ?
+                                    <BsNavLink
+                                        route="/"
+                                        title="Projects"
+                                        id="Projects"
+                                        clickOn={NavLinkClick}
+                                    />
+                  :
+                  <Link activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        hashSpy={false}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        ignoreCancelEvents={false}
+                        className={ `nav-link port-navbar-link` }
+                        section='/projects'
+                        id="Projects"
+                        >
+                          Projects
+                  </Link>
+                  }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                      <BsNavLink
-                          route="/cv"
-                          title="Contact"
-                      />
+                  {path  === '/cv' ?
+                                    <BsNavLink
+                                        route="/"
+                                        title="Contact"
+                                        id="Contact"
+                                        clickOn={NavLinkClick}
+                                    />
+                  :
+                  <Link activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        hashSpy={false}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        ignoreCancelEvents={false}
+                        className={ `nav-link port-navbar-link` }
+                        section='/contact'
+                        id="Contact"
+                        >
+                          Contact
+                  </Link>
+                  } 
                   </NavItem>
                   <NavItem className="port-navbar-item">
                       <BsNavLink

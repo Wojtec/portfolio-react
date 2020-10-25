@@ -31,7 +31,7 @@ class Projects extends Component {
         const {projects} = this.state;
 
         return (
-            <section id="/projects" className="background-projects">
+            <section id="projects" className="background-projects">
                 <Container>
                     <div className="projects">
                         <div className="title-wrapper">

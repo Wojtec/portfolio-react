@@ -2,7 +2,7 @@ import {Row, Col, Container} from 'reactstrap';
 
 const Skills = () => {
     return (
-        <section id="/blog" className="background-skills">
+        <section id="what" className="background-skills">
             <Container>
                 <div className="skills">
                 <div className="title-wrapper">

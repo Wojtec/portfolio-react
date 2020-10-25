@@ -139,7 +139,7 @@ const scrollStickyActiveNav = () => {
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
-                        className={ `nav-link port-navbar-link` }
+                        className={ `nav-link port-navbar-link pointer` }
                         section='/'
                         id="Home"
                         >
@@ -166,7 +166,7 @@ const scrollStickyActiveNav = () => {
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
-                        className={ `nav-link port-navbar-link` }
+                        className={ `nav-link port-navbar-link pointer` }
                         section='/about'
                         id="About"
                         >
@@ -193,7 +193,7 @@ const scrollStickyActiveNav = () => {
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
-                        className={ `nav-link port-navbar-link` }
+                        className={ `nav-link port-navbar-link pointer` }
                         section='/what'
                         id="What"
                         >
@@ -220,7 +220,7 @@ const scrollStickyActiveNav = () => {
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
-                        className={ `nav-link port-navbar-link` }
+                        className={ `nav-link port-navbar-link pointer` }
                         section='/projects'
                         id="Projects"
                         >
@@ -247,7 +247,7 @@ const scrollStickyActiveNav = () => {
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
-                        className={ `nav-link port-navbar-link` }
+                        className={ `nav-link port-navbar-link pointer` }
                         section='/contact'
                         id="Contact"
                         >

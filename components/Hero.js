@@ -1,4 +1,5 @@
 import {Row, Col, Container} from 'reactstrap';
+import { Link, animateScroll as scroll} from 'react-scroll';
 
 const Hero = (props) => {
 
@@ -15,8 +16,38 @@ const Hero = (props) => {
                         </h1>
                         <div className="hero-content-subtitle">YOUR WEBSITE</div>
                         <div className="hero-content-buttons">
-                            <a className="hero-content-buttons-btn" href="#">What I do</a>
-                            <a className="hero-content-buttons-btn" href="#">Projects</a>
+                        <Link
+                            activeClass="active"
+                            to="what"
+                            spy={true}
+                            smooth={true}
+                            hashSpy={false}
+                            offset={0}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            ignoreCancelEvents={false}
+                            className={ `hero-content-buttons-btn` }
+                            href="/what"
+                            >
+                          What I do
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="projects"
+                            spy={true}
+                            smooth={true}
+                            hashSpy={false}
+                            offset={0}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            ignoreCancelEvents={false}
+                            className={ `hero-content-buttons-btn` }
+                            href="/projects"
+                            >
+                                Projects
+                        </Link>                      
                         </div>
                     </div>
                     <div className="hero-content-arrow">

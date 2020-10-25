@@ -1,7 +1,7 @@
 const jwt = require('express-jwt');
 const jwksRsa = require('jwks-rsa');
 
-const nameSpace = 'http://localhost:3000//';
+const nameSpace = 'https://poninski.herokuapp.com//';
 
 // MIDDLEWARE
 exports.checkJWT = jwt({

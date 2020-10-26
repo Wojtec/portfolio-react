@@ -11,6 +11,7 @@
 @import './modal';
 @import './whatIDo';
 @import './contact';
+@import './cv';
 @import './footer';
 
 html, body {
@@ -50,7 +51,7 @@ html, body {
     .page-header {
         .page-header-title {
             font-weight: 700;
-            color: wheat;
+            color: $title;
             display: inline-block;
             margin-bottom: 20px;
     

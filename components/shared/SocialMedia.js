@@ -33,10 +33,10 @@ const mobileScreen = "https://wa.me/34602410491"
   return link;
 }
 
-const SocialMedia = () => {
+const SocialMedia = (props) => {
     return(
         <Row>
-        <div className="col-lg-8 col-md-10 mx-auto">
+        <div className={`col-lg-8 col-md-10 mx-auto ${props ? props.className : ''}`}>
             <ul className="list-inline text-center">
             <li className="list-inline-item">
                 <a  target="_blank" href="https://www.linkedin.com/in/poninski/">

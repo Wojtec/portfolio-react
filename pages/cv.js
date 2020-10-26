@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage';
-
+import {Row, Col, Container} from 'reactstrap';
+import SocialMedia from '../components/shared/SocialMedia';
 class Cv extends Component {
     render(){
         return(
             <>
             <BaseLayout {...this.props.auth}>
-                <BasePage>
+                <BasePage title="Get my CV" className="page-cv">
+                        <Row>
+                            <Col md={{size:'10', offset:'1'}}>
+                                <Row>
+                                <SocialMedia className="cv-container-socialMedia"></SocialMedia>
+
+                                <div className="cv-container">
+                                    <a download="PoninskiCV.pdf" className="btn btn-success" href="/static/PoninskiCV.pdf">
+                                        Download
+                                    </a>
+                                </div>
+                                </Row>
+                                <iframe style={{width: '100%', height: '1000px'}} src="/static/PoninskiCV.pdf"></iframe>
+                            </Col>
+                        </Row>
                     <h1>Hi I'm CV page</h1>
                 </BasePage>
             </BaseLayout>

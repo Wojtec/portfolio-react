@@ -2,46 +2,67 @@
     min-height: 100vh;
     padding: 150px 0;
 }
-.projects-title{
-    margin-bottom: 75px;
-}
 
 .form-group{
     color: black;
 }
 
+
 .project-card {
+    position: relative;
+    overflow: hidden;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
     color: black;
     margin-bottom: 30px;
     border: none;
     border-radius: 0%;
+    min-height: 289px;
+
     .card-img {
         border-radius: 0%;
 
     }
+    .card-body-container{
+        position: absolute;
+        width: 100%;
+        top:70%;
+        background-color: white;
+
+        animation: return 500ms ease-in forwards ;
+        @keyframes return {
+            from { top: 0%; }
+            to   { top: 70%; }
+        }
+
+    }
     .card-body{
         border-top: solid 5px $secondary;
+        min-height: 300px;
+        position: absolute;
+        width: 100%;
+        background-color: white;
     }
     
     &:hover {
         cursor: pointer;
     }
 
-    &-image {
-        background-color: $secondary;
+    &:hover #card-body-container{
+        cursor: default;
 
+        animation: upCard 500ms ease-in forwards ;
+        @keyframes upCard {
+            from { top: 70%; }
+            to   { top: -2%; }
+        }
+
+    }
+
+
+    &-image {
         &-img {
             height: 225px;
             opacity: 1;
-            transition-property: opacity;
-            transition-duration: 0.2s;
-            transition-delay: .1s;
-            transition-timing-function: linear;
-        }
-
-        &-img:hover {
-            opacity: 0.3;
             transition-property: opacity;
             transition-duration: 0.2s;
             transition-delay: .1s;
@@ -54,6 +75,7 @@
         text-align: center;
         font-size: 18px;
         letter-spacing: 0.5px;
+        margin-bottom: 0px;
 
     }
 
@@ -62,9 +84,61 @@
         font-size: 14px;
         letter-spacing: 0.5px;
     }
+    &-main {
+        min-height: 100px;
+        margin: 5px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    &-decoration {
 
+        &-long {
+            margin: 10px auto;
+            width: 100%;
+            height: 2px;
+            background-color: $secondary;
+
+        }
+    }
 }
 
+.card-body-buttons {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        &-btn {
+            margin: 5px;
+            width: 120px;
+            height: 50px;
+            border: 2px solid $secondary;
+            border-radius: 10px;
+            color: $secondary;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 1px;
+
+        }
+
+        &-btn:hover {
+            color: black;
+            background-color: wheat;
+            text-decoration: none;
+
+        }
+
+        &-btn:active {
+            color: black;
+            background-color: wheat;
+            text-decoration: none;
+
+        }
+}
 
 @media (max-width: 991px) {
     .project-card {

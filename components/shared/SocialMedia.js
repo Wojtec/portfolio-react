@@ -35,7 +35,7 @@ const mobileScreen = "https://wa.me/34602410491"
 
 const SocialMedia = (props) => {
     return(
-        <Row>
+        <Row className={props.className || ''}>
         <div className={`col-lg-8 col-md-10 mx-auto ${props ? props.className : ''}`}>
             <ul className="list-inline text-center">
             <li className="list-inline-item">

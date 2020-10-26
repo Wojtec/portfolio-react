@@ -1,4 +1,9 @@
-.page-cv{
+.page-cv {
+
+    .iframe{
+        width: 100%;
+        min-height: 1000px;
+    }
     .cv-container{
         width: 50%;
         text-align: right;
@@ -13,4 +18,35 @@
         margin-left: 0px !important;
 
     }
+}
+
+
+@media (max-width: 991px) {
+    .page-cv {
+
+        .iframe{
+            width: 100%;
+            min-height: 500px;
+        }
+        .cv-container{
+            width: 22%;
+            a{
+                font-size: 14px;
+                padding: 5px;
+            }
+      
+        }
+        .cv-container-socialMedia{
+            width: 78%;
+            text-align: left;
+            
+            .fa-lg{
+                font-size: 1rem;
+                margin: 0px !important;
+
+            }
+        }
+    }
+
+
 }

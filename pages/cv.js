@@ -20,7 +20,7 @@ class Cv extends Component {
                                     </a>
                                 </div>
                                 </Row>
-                                <iframe style={{width: '100%', height: '1000px'}} src="/static/PoninskiCV.pdf"></iframe>
+                                <iframe  className="iframe" src="/static/PoninskiCV.pdf"></iframe>
                             </Col>
                         </Row>
                     <h1>Hi I'm CV page</h1>

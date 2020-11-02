@@ -17,6 +17,8 @@
 
 .background-projects::after {
     content: "";
+    height: 100%;
+    width: 100%;
     background-image: 
     linear-gradient(
         to bottom, 
@@ -33,9 +35,7 @@
     right: 0;
     position: absolute;
     z-index: -1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
   }
 
   @media (max-width: 991px) {

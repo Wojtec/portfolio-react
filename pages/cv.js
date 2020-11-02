@@ -8,22 +8,21 @@ class Cv extends Component {
         return(
             <>
             <BaseLayout {...this.props.auth}>
-                <BasePage title="Get my CV" className="page-cv">
-                        <Row>
-                            <Col md={{size:'10', offset:'1'}}>
-                                <Row>
-                                <SocialMedia className="cv-container-socialMedia"></SocialMedia>
+                <BasePage title="Get my CV" className="page-cv background-skills">
+                            <Row>
+                                <Col md={{size:'10', offset:'1'}}>
+                                    <Row>
+                                    <SocialMedia className="cv-container-socialMedia"></SocialMedia>
 
-                                <div className="cv-container">
-                                    <a download="PoninskiCV.pdf" className="btn btn-success" href="/static/PoninskiCV.pdf">
-                                        Download
-                                    </a>
-                                </div>
-                                </Row>
-                                <iframe  className="iframe" src="/static/PoninskiCV.pdf"></iframe>
-                            </Col>
-                        </Row>
-                    <h1>Hi I'm CV page</h1>
+                                    <div className="cv-container">
+                                        <a download="PoninskiCV.pdf" className="btn btn-success" href="/static/PoninskiCV.pdf">
+                                            Download
+                                        </a>
+                                    </div>
+                                    </Row>
+                                    <iframe  className="iframe" src="/static/PoninskiCV.pdf"></iframe>
+                                </Col>
+                            </Row>
                 </BasePage>
             </BaseLayout>
             </>

@@ -23,8 +23,10 @@ class ProjectCard extends Component {
         })
     }
 
+
     render(){
-        const { project, children} = this.props;
+        const { project, children } = this.props;
+
         const { isOpen } = this.state;
         return(
             <div>
@@ -46,10 +48,10 @@ class ProjectCard extends Component {
                         <Link
                            href="https://music-poninski.herokuapp.com"
                             >
-                              <a className={ `card-body-buttons-btn` }>Demo</a>  
+                              <a className={ `card-body-buttons-btn` }>Demo</a>
                         </Link>
                         <Link
-                            href="/projects"
+                            href={`/project/${project._id}`}
                             >
                                <a className={ `card-body-buttons-btn` }> More </a> 
                         </Link>                      

@@ -9,7 +9,8 @@ class Cv extends Component {
             <>
             <BaseLayout {...this.props.auth}>
                 <BasePage title="Get my CV" className="page-cv background-skills">
-                            <Row>
+                    <Container>
+                             <Row>
                                 <Col md={{size:'10', offset:'1'}}>
                                     <Row>
                                     <SocialMedia className="cv-container-socialMedia"></SocialMedia>
@@ -23,6 +24,7 @@ class Cv extends Component {
                                     <iframe  className="iframe" src="/static/PoninskiCV.pdf"></iframe>
                                 </Col>
                             </Row>
+                    </Container>
                 </BasePage>
             </BaseLayout>
             </>

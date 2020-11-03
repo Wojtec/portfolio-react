@@ -15,8 +15,9 @@
         border-radius: 5%;
         min-height: 250.6px;
         background: white;
-        box-shadow: 3px 3px 5px rgba(0,0,0,.3);
-
+        -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9));
+        filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9));
+        
         &-title {
             letter-spacing: 1px;
             margin: 5px;
@@ -52,33 +53,33 @@
     margin-top: 10px;
 }
 
-.background-skills {
-    width: 100%;
-    min-height: 925px;
-    object-fit: cover;
-    position: relative;
-}
+// .background-skills {
+//     width: 100%;
+//     min-height: 925px;
+//     object-fit: cover;
+//     position: relative;
+// }
 
-.background-skills::after {
-    content: "";
-    background-image: 
-    linear-gradient(to bottom, 
-    rgb(255, 255, 255) 0%,
-     rgba(255, 255, 255, 0) 10%, 
-     rgba(255, 255, 255, 0) 90%, 
-     rgb(255, 255, 255) 100%), 
-     url("/images/background-projects1.png");
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
+// .background-skills::after {
+//     content: "";
+//     background-image: 
+//     linear-gradient(to bottom, 
+//     rgb(255, 255, 255) 0%,
+//      rgba(255, 255, 255, 0) 10%, 
+//      rgba(255, 255, 255, 0) 90%, 
+//      rgb(255, 255, 255) 100%), 
+//      url("/images/background-projects1.png");
+//     opacity: 0.3;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     position: absolute;
+//     z-index: -1;
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-}
+// }
 
 @media (max-width: 991px) {
 

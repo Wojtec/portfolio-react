@@ -33,7 +33,7 @@ const  headerType  = props.headerType || 'default';
             </Head>
             <div className="layout-container">
                 <Header className={`port-nav-${headerType}`} isAuthenticated={ isAuthenticated } user={user}/>
-                <div className="wrapper">
+                <div className="wrapper background-test">
                     <main className={`cover ${className}`}>
                             {children}
                     </main>

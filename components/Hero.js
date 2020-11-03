@@ -9,7 +9,7 @@ const Hero = (props) => {
                 <div className="hero-content">
                     <div className="hero-content-wrapper">
                             <div className="hero-content-subtitle">My name is Wojtek</div>
-                        <h1 className="hero-content-title">
+                             <h1 className="hero-content-title">
                             <span className="hero-content-title-decoration"></span>
                             <span className="hero-content-title-text">I CAN CREATE</span>
                             <span className="hero-content-title-decoration"></span>

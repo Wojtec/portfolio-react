@@ -17,7 +17,7 @@ class Projects extends Component {
     }
 
     renderPosts(projectsData) {
-
+        console.log(projectsData);
         return (projectsData.map((project, index) => {
             return (
                 <Col md="4" key={index}>

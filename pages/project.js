@@ -10,7 +10,6 @@ class Project extends Component {
 
     static async getInitialProps({query}) {
         let project = {};
-        console.log(query.id)
 
         try {
            project = await getProjectById(query.id);
@@ -23,7 +22,7 @@ class Project extends Component {
 
     stackList = (stacks) =>{
 
-        return  stacks.map(stack => <p>{"-"+stack }</p>)
+        return  stacks.map(stack => <p key={stack}>{"-"+stack }</p>)
 
 
     }
@@ -46,7 +45,7 @@ class Project extends Component {
                                         <a target="_blank" className="btn btn-success" href={project.demoLink}>
                                             Demo
                                         </a>
-                                        <a target="_blank" className="btn btn-success" href={project.demoLink}>
+                                        <a target="_blank" className="btn btn-success" href={project.github}>
                                             Github
                                         </a>
                                         <a target="_blank" className="btn btn-success">

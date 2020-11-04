@@ -46,12 +46,12 @@ class ProjectCard extends Component {
                         <div className="project-card-decoration-long"></div>
                         <div className="card-body-buttons">
                         <Link
-                           href="https://music-poninski.herokuapp.com"
+                          target="_blank" href={project.demoLink}
                             >
                               <a className={ `card-body-buttons-btn` }>Demo</a>
                         </Link>
                         <Link
-                            href={`/project/${project._id}`}
+                            href={`project/[id]`} as={`project/${project._id}`} 
                             >
                                <a className={ `card-body-buttons-btn` }> More </a> 
                         </Link>                      

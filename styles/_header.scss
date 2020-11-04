@@ -3,13 +3,13 @@
     width: 100%;
     z-index: 9999;
     padding: 20px;
-    background-color: $primary;
+    background-color: black;
     box-shadow: 0 3px 2px rgba(0,0,0,0.3);
     
     .port-navbar {
 
         &-brand {
-            color: $secondary;
+            color: $primary;
             font-size: 18px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -23,7 +23,7 @@
         }
 
         &-link {
-            color: black;
+            color: white;
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
@@ -39,7 +39,7 @@
         }
 
         &-brand{
-            color:rgb(130, 130, 130);
+            color: white;
         }
        
     }

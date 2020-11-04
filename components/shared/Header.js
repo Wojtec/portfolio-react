@@ -44,7 +44,7 @@ const NavbarComponent = (props) => {
   const [headerLogo, setHeader] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [path, setPath] = useState('');
-
+  
   const { isAuthenticated, className }  = props;
 
 
@@ -120,7 +120,7 @@ const scrollStickyActiveNav = () => {
               <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem className="port-navbar-item">
-                  {path  === '/cv' ?
+                  {path !== "/" ?
                                         <BsNavLink
                                         route="/"
                                         title="Home"
@@ -148,7 +148,7 @@ const scrollStickyActiveNav = () => {
                   }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                  {path  === '/cv' ?
+                  {path  !== '/' ?
                                     <BsNavLink
                                         route="/"
                                         title="About"
@@ -161,7 +161,7 @@ const scrollStickyActiveNav = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={false}
-                        offset={0}
+                        offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
@@ -175,7 +175,7 @@ const scrollStickyActiveNav = () => {
                   }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                  {path  === '/cv' ?
+                  {path  !== '/' ?
                                     <BsNavLink
                                         route="/"
                                         title="What I do"
@@ -188,7 +188,7 @@ const scrollStickyActiveNav = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={false}
-                        offset={0}
+                        offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
@@ -202,7 +202,7 @@ const scrollStickyActiveNav = () => {
                   }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                  {path  === '/cv' ?
+                  {path  !== '/' ?
                                     <BsNavLink
                                         route="/"
                                         title="Projects"
@@ -215,7 +215,7 @@ const scrollStickyActiveNav = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={false}
-                        offset={0}
+                        offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
@@ -229,7 +229,7 @@ const scrollStickyActiveNav = () => {
                   }
                   </NavItem>
                   <NavItem className="port-navbar-item">
-                  {path  === '/cv' ?
+                  {path  !== '/' ?
                                     <BsNavLink
                                         route="/"
                                         title="Contact"
@@ -242,7 +242,7 @@ const scrollStickyActiveNav = () => {
                         spy={true}
                         smooth={true}
                         hashSpy={false}
-                        offset={0}
+                        offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}

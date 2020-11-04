@@ -44,14 +44,13 @@ html, body {
 }
 
 .base-page {
-    padding: 150px 0;
+    margin: 150px 0px;
     color: white;
     min-height: 100vh;
-
     .page-header {
         .page-header-title {
             font-weight: 700;
-            color: $title;
+            color: black;
             display: inline-block;
             margin-bottom: 20px;
     

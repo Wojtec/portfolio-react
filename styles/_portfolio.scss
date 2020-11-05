@@ -11,8 +11,8 @@
 .project-card {
     position: relative;
     overflow: hidden;
-    -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9));
-    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9));
+    -webkit-filter: drop-shadow(1px 1px 8px rgba(0,0,0,0.3));
+    filter: drop-shadow(1px 1px 8px rgba(0,0,0,0.3));
     color: black;
     margin-bottom: 30px;
     border: none;
@@ -28,12 +28,12 @@
         width: 100%;
         top:70%;
         background-color: white;
-
-        animation: return 500ms ease-in forwards ;
+        animation: return 500ms ease-in ;
         @keyframes return {
             from { top: 0%; }
             to   { top: 70%; }
         }
+
 
     }
     .card-body{
@@ -42,6 +42,7 @@
         position: absolute;
         width: 100%;
         background-color: white;
+
     }
     
     &:hover {

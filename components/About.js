@@ -3,7 +3,7 @@ import SocialMedia from "./shared/SocialMedia";
 
 const About = () => {
     return (
-        <section id="about" className="background-skills">
+        <section id="about">
             <Container>
                 <div className="about">
                     <div className="title-wrapper">

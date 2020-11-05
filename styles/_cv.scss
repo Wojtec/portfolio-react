@@ -13,9 +13,18 @@
     }
     .cv-container-socialMedia{
         width: 50%;
-        text-align: left;
         margin-bottom: 5px;
         margin-left: 0px !important;
+        ul {
+            text-align: left !important;            
+            li {
+                text-align: left;
+                margin: 0px;
+                a{
+                    margin: 0px;
+                }
+            }
+        }
 
     }
 }

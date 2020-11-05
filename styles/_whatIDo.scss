@@ -15,9 +15,9 @@
         border-radius: 5%;
         min-height: 250.6px;
         background: white;
-        -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9));
-        filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9));
-        
+        -webkit-filter: drop-shadow(1px 1px 8px rgba(0,0,0,0.3));
+        filter: drop-shadow(1px 1px 8px rgba(0,0,0,0.3));
+
         &-title {
             letter-spacing: 1px;
             margin: 5px;
@@ -53,12 +53,11 @@
     margin-top: 10px;
 }
 
-// .background-skills {
-//     width: 100%;
-//     min-height: 925px;
-//     object-fit: cover;
-//     position: relative;
-// }
+.background-skills {
+    width: 100%;
+    min-height: 925px;
+    background-color: $background;
+}
 
 // .background-skills::after {
 //     content: "";

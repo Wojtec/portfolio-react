@@ -5,7 +5,7 @@ import ProjectInput from '../form/projectInput';
 const contactJSX = (props) => {
     const {onSubmit, initialValues, validateInputs, submitted, response:{name, response}} = props;
     return (
-        <section id="contact" className="background-projects">
+        <section id="contact" className="background-skills">
             <Container>
                 <div className="contact">
                     <div className="title-wrapper">

@@ -14,40 +14,45 @@ class Project extends Component {
     }
 
     static async getInitialProps({query}) {
+
         let project = {};
 
         try {
-            if(!query) {
-                project = "";
-            }
-           project = await getProjectById(query.id);
+
+            query.id ? project = await getProjectById(query.id) : null;
+            
         } catch(error) {
+
             console.log(error);
         }
-        console.log(project);
+
         return { project };
     }
 
     stackList = (stacks) =>{
-        return  stacks.map(stack => <p key={stack}>{"-"+stack }</p>)
 
+        return  stacks.map(stack => <p key={stack}>{"-"+stack }</p>)
 
     }
 
     setProjects = (boolen) => {
-        if(boolen === true){
-        Router.pushRoute('/project')
+
+        if(boolen === true) {
+
+            Router.pushRoute('/project')
         }
+
         this.setState({
+
             moreProjects: boolen
+
         })
 
     }
 
     render(){
-        console.log(this.state.moreProjects);
         const {project } = this.props;
-        console.log(project)
+
         return(
             <>
             <BaseLayout {...this.props.auth}>

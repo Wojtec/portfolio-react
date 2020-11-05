@@ -14,6 +14,8 @@ const projtectSchema = new Schema({
     img: setTypeString(512),
     stack: [String],
     imgLong: setTypeString(512),
+    demoLink: setTypeString(512),
+    github: setTypeString(512),
     startDate: {type: Date, required: true},
     endDate: Date
 });

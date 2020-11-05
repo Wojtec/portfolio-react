@@ -37,7 +37,7 @@ const SocialMedia = (props) => {
     return(
         <Row className={props.className || ''}>
         <div className={`col-lg-8 col-md-10 mx-auto ${props ? props.className : ''}`}>
-            <ul className="list-inline text-center">
+            <ul className="list-inline">
             <li className="list-inline-item">
                 <a  target="_blank" href="https://www.linkedin.com/in/poninski/">
                 <span className="fa-stack fa-lg">

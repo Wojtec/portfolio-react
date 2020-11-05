@@ -8,7 +8,7 @@ class Cv extends Component {
         return(
             <>
             <BaseLayout {...this.props.auth}>
-                <BasePage title="Get my CV" className="page-cv background-skills">
+                <BasePage title="Get my CV" className="page-cv">
                     <Container>
                              <Row>
                                 <Col md={{size:'10', offset:'1'}}>

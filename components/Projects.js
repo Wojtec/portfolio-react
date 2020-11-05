@@ -16,12 +16,12 @@ class Projects extends Component {
 
     }
 
-    renderPosts(projectsData, setProjects) {
+    renderPosts(projectsData) {
 
         return (projectsData.map((project, index) => {
             return (
                 <Col md="4" key={index}>
-                    <ProjectCard setProjects={setProjects} project={project}/>
+                    <ProjectCard project={project}/>
                 </Col>
             )
         }))
@@ -29,7 +29,6 @@ class Projects extends Component {
 
     render() {
         const { projects } = this.state;
-        const { setProjects } = this.props;
         return (
             <section id="projects" className="background-projects">
                 <Container>
@@ -47,7 +46,7 @@ class Projects extends Component {
                             </div>
                         </div>
                         <Row>
-                            {this.renderPosts(projects, setProjects)}
+                            {this.renderPosts(projects)}
                         </Row>
                     </div>
                 </Container>

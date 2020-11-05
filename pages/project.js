@@ -9,10 +9,6 @@ import { Router } from  '../routes';
 
 class Project extends Component {
 
-    state = {
-        moreProjects: false,
-    }
-
     static async getInitialProps({query}) {
 
         let project = {};
@@ -29,34 +25,28 @@ class Project extends Component {
         return { project };
     }
 
+
     stackList = (stacks) =>{
 
         return  stacks.map(stack => <p key={stack}>{"-"+stack }</p>)
 
     }
 
-    setProjects = (boolen) => {
+    setProjects = () => {
 
-        if(boolen === true) {
 
             Router.pushRoute('/project')
-        }
 
-        this.setState({
-
-            moreProjects: boolen
-
-        })
-
+        
     }
 
     render(){
         const {project } = this.props;
-
+        
         return(
             <>
             <BaseLayout {...this.props.auth}>
-            {this.state.moreProjects ?  
+            {Object.entries(project).length === 0 ?  
                        <Projects setProjects={this.setProjects}/>
                     :
                 <BasePage title={project.title} className="project-page">
@@ -74,7 +64,7 @@ class Project extends Component {
                                                 <a target="_blank" className="btn btn-success" href={project.github}>
                                                     Github
                                                 </a>
-                                                <a onClick={()=> this.setProjects(true)} className="btn btn-success">
+                                                <a onClick={()=> this.setProjects()} className="btn btn-success">
                                                     More Projects
                                                 </a>
                                             </div>

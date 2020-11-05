@@ -26,7 +26,7 @@ class ProjectCard extends Component {
 
 
     render(){
-        const { project, children, setProjects } = this.props;
+        const { project, children } = this.props;
         const id = project._id;
         const { isOpen } = this.state;
         return(
@@ -46,18 +46,11 @@ class ProjectCard extends Component {
 
                         <div className="project-card-decoration-long"></div>
                         <div className="card-body-buttons">
-                        <Link
-                          target="_blank" href={project.demoLink}
-                            >
+                        <Link target="_blank" href={project.demoLink}>
                               <a className={ `card-body-buttons-btn` }>Demo</a>
                         </Link>     
                         <Link href={{ pathname: "/project",   query: {id}}} >
-                        {!setProjects ? 
-                               <a className={ `card-body-buttons-btn` }> More </a> 
-                               :
-                               <a onClick={() => setProjects(false)} className={ `card-body-buttons-btn` }> More </a> 
-
-                        }
+                            <a className={ `card-body-buttons-btn` }> More </a> 
                         </Link>    
                         </div>
                      </CardBody>

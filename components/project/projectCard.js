@@ -23,7 +23,15 @@ class ProjectCard extends Component {
         })
     }
 
+    shortenText = (text) => {
 
+        if (text &&text.length > 40 ) {
+            return text.substr(0, 40) + '...';
+        } 
+    
+        return text;
+         
+    }
 
     render(){
         const { project, children } = this.props;
@@ -39,7 +47,7 @@ class ProjectCard extends Component {
             <div id="card-body-container" className="card-body-container">
                 <CardBody >
                         <CardTitle className="project-card-title">{project.title}</CardTitle>
-                        <CardText className="project-card-text">{project.subtitle}</CardText>
+                        <CardText className="project-card-text">{this.shortenText(project.subtitle)}</CardText>
                         <div className="project-card-decoration-long"></div>
 
                         <CardText className="project-card-main">{project.description}</CardText>

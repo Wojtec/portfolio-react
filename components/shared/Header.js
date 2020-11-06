@@ -4,7 +4,6 @@ import BsNavLink from '../../helpers/BsNavLink';
 import { Link, animateScroll as scroll} from 'react-scroll';
 import { Router } from '../../routes';
 
-
 import {
   Collapse,
   Navbar,
@@ -36,9 +35,6 @@ const Logout = () => {
     </span>
   );
 }
-
-
-
 
 const NavbarComponent = (props) => {
   const [headerLogo, setHeader] = useState(false);
@@ -130,17 +126,16 @@ const scrollStickyActiveNav = () => {
                                     />
                   :
                   <Link activeClass="active"
-                        to="/"
+                        to="home"
                         spy={true}
                         smooth={true}
-                        hashSpy={false}
+                        hashSpy={true}
                         offset={0}
                         duration={500}
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
                         className={ `nav-link port-navbar-link pointer` }
-                        section='/'
                         id="Home"
                         >
                           Home
@@ -160,14 +155,13 @@ const scrollStickyActiveNav = () => {
                         to="about"
                         spy={true}
                         smooth={true}
-                        hashSpy={false}
+                        hashSpy={true}
                         offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
-                        ignoreCancelEvents={false}
+                        ignoreCancelEvents={true}
                         className={ `nav-link port-navbar-link pointer` }
-                        section='/about'
                         id="About"
                         >
                           About
@@ -187,14 +181,13 @@ const scrollStickyActiveNav = () => {
                         to="what"
                         spy={true}
                         smooth={true}
-                        hashSpy={false}
+                        hashSpy={true}
                         offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
                         className={ `nav-link port-navbar-link pointer` }
-                        section='/what'
                         id="What"
                         >
                           What I do
@@ -214,14 +207,13 @@ const scrollStickyActiveNav = () => {
                         to="projects"
                         spy={true}
                         smooth={true}
-                        hashSpy={false}
+                        hashSpy={true}
                         offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
                         className={ `nav-link port-navbar-link pointer` }
-                        section='/projects'
                         id="Projects"
                         >
                           Projects
@@ -241,14 +233,13 @@ const scrollStickyActiveNav = () => {
                         to="contact"
                         spy={true}
                         smooth={true}
-                        hashSpy={false}
+                        hashSpy={true}
                         offset={20}
                         duration={500}
                         delay={250}
                         isDynamic={true}
                         ignoreCancelEvents={false}
                         className={ `nav-link port-navbar-link pointer` }
-                        section='/contact'
                         id="Contact"
                         >
                           Contact

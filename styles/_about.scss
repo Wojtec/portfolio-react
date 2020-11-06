@@ -5,7 +5,9 @@
     justify-content: flex-end;
     align-items: center;
     padding: 150px 0px;
-
+    .col-md-4 {
+        text-align: center;
+    }
    
     &-content{
         width: 100%;

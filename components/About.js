@@ -30,7 +30,7 @@ const About = () => {
                             </div>
                             <div className="about-content-description">
                                 <p>In
-                                    <span> October 2019 </span>
+                                    <span> 2018 </span>
                                     I decided to become a
                                     <span> Fullstack developer</span>. Everyday I work hard to get closer to accomplishing this goal.</p>
                                 <p>I have finished

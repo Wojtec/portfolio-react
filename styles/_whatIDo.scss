@@ -4,7 +4,7 @@
     min-height: auto;
     justify-content: flex-end;
     align-items: center;
-    padding: 150px 0;
+    padding: 150px 20px;
 
     &-container div.row:nth-child(2) {
         margin-top: 30px;
@@ -13,7 +13,7 @@
     .skill {
         border: 5px solid $secondary;
         border-radius: 5%;
-        min-height: 250.6px;
+        min-height: 260.8px;
         background: white;
         -webkit-filter: drop-shadow(1px 1px 8px rgba(0,0,0,0.3));
         filter: drop-shadow(1px 1px 8px rgba(0,0,0,0.3));

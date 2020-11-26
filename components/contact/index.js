@@ -14,6 +14,7 @@ class Contact extends Component {
   };
 
   onSubmit = async (data) => {
+    console.log(data);
     const response = await sendMail(data);
 
     this.setState({

@@ -70,8 +70,29 @@ const NavbarComponent = (props) => {
       setHeader(false);
     }
   };
+  const handleSetActive = (link) => {
+    if (link === "/home") {
+      console.log(path);
+      return Router.replace("/", link, { shallow: true });
+    }
+    if (link === "/about") {
+      console.log(path);
+      return Router.replace("/", link, { shallow: true });
+    }
+    if (link === "/whatIDo") {
+      return Router.replace("/", link, { shallow: true });
+    }
+    if (link === "/projects") {
+      console.log(path);
+      return Router.replace("/", link, { shallow: true });
+    }
+    if (link === "/contact") {
+      return Router.replace("/", link, { shallow: true });
+    }
+  };
   useEffect(() => {
     setPath(window.location.pathname);
+    console.log(path);
 
     window.addEventListener("scroll", scrollStickyActiveNav);
 
@@ -107,11 +128,12 @@ const NavbarComponent = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="port-navbar-item">
-                {path !== "/" ? (
+                {path !== "/" && path !== "/projects" ? (
                   <BsNavLink
                     route="/"
                     title="Home"
                     id="Home"
+                    passHref={true}
                     clickOn={NavLinkClick}
                   />
                 ) : (
@@ -127,13 +149,14 @@ const NavbarComponent = (props) => {
                     ignoreCancelEvents={false}
                     className={`nav-link port-navbar-link pointer`}
                     id="Home"
+                    onClick={() => handleSetActive("/home")}
                   >
                     Home
                   </Link>
                 )}
               </NavItem>
               <NavItem className="port-navbar-item">
-                {path !== "/" ? (
+                {path !== "/" && path !== "/projects" ? (
                   <BsNavLink
                     route="/"
                     title="About"
@@ -146,20 +169,21 @@ const NavbarComponent = (props) => {
                     to="about"
                     spy={true}
                     smooth={true}
-                    hashSpy={true}
+                    hashSpy={false}
                     duration={500}
                     delay={250}
                     isDynamic={true}
                     ignoreCancelEvents={true}
                     className={`nav-link port-navbar-link pointer`}
                     id="About"
+                    onClick={() => handleSetActive("/about")}
                   >
                     About
                   </Link>
                 )}
               </NavItem>
               <NavItem className="port-navbar-item">
-                {path !== "/" ? (
+                {path !== "/" && path !== "/projects" ? (
                   <BsNavLink
                     route="/"
                     title="What I do"
@@ -172,20 +196,21 @@ const NavbarComponent = (props) => {
                     to="what"
                     spy={true}
                     smooth={true}
-                    hashSpy={true}
+                    hashSpy={false}
                     duration={500}
                     delay={250}
                     isDynamic={true}
                     ignoreCancelEvents={false}
                     className={`nav-link port-navbar-link pointer`}
                     id="What"
+                    onClick={() => handleSetActive("/whatIDo")}
                   >
                     What I do
                   </Link>
                 )}
               </NavItem>
               <NavItem className="port-navbar-item">
-                {path !== "/" ? (
+                {path !== "/" && path !== "/projects" ? (
                   <BsNavLink
                     route="/"
                     title="Projects"
@@ -198,20 +223,21 @@ const NavbarComponent = (props) => {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    hashSpy={true}
+                    hashSpy={false}
                     duration={500}
                     delay={250}
                     isDynamic={true}
                     ignoreCancelEvents={false}
                     className={`nav-link port-navbar-link pointer`}
                     id="Projects"
+                    onClick={() => handleSetActive("/projects")}
                   >
                     Projects
                   </Link>
                 )}
               </NavItem>
               <NavItem className="port-navbar-item">
-                {path !== "/" ? (
+                {path !== "/" && path !== "/projects" ? (
                   <BsNavLink
                     route="/"
                     title="Contact"
@@ -224,13 +250,14 @@ const NavbarComponent = (props) => {
                     to="contact"
                     spy={true}
                     smooth={true}
-                    hashSpy={true}
+                    hashSpy={false}
                     duration={500}
                     delay={250}
                     isDynamic={true}
                     ignoreCancelEvents={false}
                     className={`nav-link port-navbar-link pointer`}
                     id="Contact"
+                    onClick={() => handleSetActive("/contact")}
                   >
                     Contact
                   </Link>

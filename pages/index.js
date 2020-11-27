@@ -6,6 +6,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/whatIDo";
 import Contact from "../components/contact";
+
 class Index extends Component {
   render() {
     return (

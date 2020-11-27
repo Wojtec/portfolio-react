@@ -24,7 +24,7 @@ class Project extends Component {
   };
 
   setProjects = () => {
-    Router.pushRoute("/project");
+    Router.pushRoute("/projects");
   };
 
   render() {

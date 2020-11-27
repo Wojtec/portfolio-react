@@ -73,8 +73,8 @@ class ProjectCard extends Component {
                     </a>
                   </Link>
                 )}
-                <Link href={{ pathname: "/project", query: { id } }}>
-                  <a className={`card-body-buttons-btn`}> More </a>
+                <Link href={"projects/[id]"} as={`projects/${project._id}`}>
+                  <a className={`card-body-buttons-btn`}>More</a>
                 </Link>
               </div>
             </CardBody>
